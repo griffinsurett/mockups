@@ -1,0 +1,25 @@
+---
+// Serves the self-contained HTML mockup in an iframe so the hub chrome stays intact.
+// The raw file is also accessible at /ebersole/ebersole-enterprises.html via public/.
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C. Ebersole Enterprises — Mockup</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body, html { height: 100%; }
+      iframe {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe src="/ebersole/ebersole-enterprises.html" title="C. Ebersole Enterprises Mockup"></iframe>
+  </body>
+</html>
