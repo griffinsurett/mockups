@@ -1,7 +1,6 @@
 /* ─── Reset & base ─────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; border: 0; }
-html, body { margin: 0; padding: 0; }
-body { overflow-x: hidden; }
+html, body { margin: 0; padding: 0; height: 100%; overflow-x: hidden; }
 body { min-height: 100vh; color: #202d3d; font-family: "Source Sans 3","Segoe UI",sans-serif; line-height: 1.55; text-rendering: optimizeLegibility; }
 body.menu-open { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
