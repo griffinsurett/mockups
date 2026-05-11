@@ -125,6 +125,13 @@ const footer = `
           <span>646 NJ-18 Suite 215, East Brunswick, NJ 08816</span>
           <span>Phone: (732) 510-8149</span>
         </div>
+        <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:10px 16px;margin-top:20px;">
+          <svg width="26" height="26" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 20-7.8 20-21 0-1.4-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.7l7 5.1C15 16.1 19.2 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3c-7.7 0-14.3 4.4-17.7 11.7z"/><path fill="#FBBC05" d="M24 45c5.5 0 10.5-1.9 14.4-5.1l-6.7-5.5C29.6 36 26.9 37 24 37c-6 0-11.1-4-12.9-9.5l-7 5.4C7.6 40.5 15.2 45 24 45z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-1 3-3.3 5.4-6.3 7l6.7 5.5C40.3 37.6 45 31.5 45 24c0-1.4-.2-2.7-.5-4z"/></svg>
+          <div>
+            <div style="color:#FBBC05;font-size:0.95rem;line-height:1;margin-bottom:2px;">★★★★★</div>
+            <div style="font-family:'Sora','Segoe UI',sans-serif;font-weight:700;color:#fff;font-size:0.75rem;">Rated 5 Stars on Google</div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer-meta" style="text-align:center;">© ${new Date().getFullYear()} Action Restoration Services.</div>

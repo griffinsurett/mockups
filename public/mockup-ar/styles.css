@@ -53,9 +53,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* ─── Footer ────────────────────────────────────────────────── */
 .site-footer { margin-top: 0; background: #08172e; color: rgba(255,255,255,0.9); border-top: 1px solid rgba(255,255,255,0.08); }
-.footer-inner { padding: 32px 20px; }
+.footer-inner { padding: 64px 20px 48px; }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr; gap: 18px; }
-.footer-title { margin-bottom: 10px; font-size: 0.95rem; font-family: "Sora","Segoe UI",sans-serif; color: #fff; }
+.footer-title { margin-bottom: 14px; font-size: 0.75rem; font-family: "Sora","Segoe UI",sans-serif; color: #fff; text-transform: uppercase; letter-spacing: 0.08em; }
 .footer-logo { width: 200px; height: 200px; object-fit: contain; margin-bottom: 10px; }
 .footer-links { display: flex; flex-direction: column; gap: 8px; font-size: 0.94rem; }
 .footer-links a { color: rgba(255,255,255,0.82); }
