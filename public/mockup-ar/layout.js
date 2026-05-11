@@ -30,13 +30,17 @@ const header = `
       </div>
     </nav>
     <div class="header-actions">
-      <a class="btn btn-primary" href="contact.html#emergency">Schedule Service</a>
+      <a class="btn btn-primary header-schedule-btn" href="contact.html#emergency">Schedule Service</a>
       <div class="emergency-call-block">
         <span class="emergency-call-label">24/7 Emergency Service</span>
-        <a class="emergency-call-number" href="tel:+17325550199">&#128222; (732) 555-0199</a>
+        <a class="emergency-call-number" href="tel:+17325108149">&#128222; (732) 510-8149</a>
       </div>
     </div>
   </div>
+  <a class="mobile-call-bar" href="tel:+17325108149">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15.15 15.15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C9.61 22 2 14.39 2 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.26.2 2.47.57 3.58a1 1 0 0 1-.25 1.02L6.6 10.8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Call Now &mdash; (732) 510-8149
+  </a>
 </header>`;
 
 const faqBar = `

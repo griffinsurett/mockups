@@ -109,7 +109,7 @@
             <p class="text-slate-ar-700 text-[1rem] leading-[1.7]">We serve homeowners, property managers, and commercial facilities with a single-vendor recovery approach — so you don't have to coordinate multiple contractors during an already stressful event.</p>
             <div class="flex flex-col gap-0.5 mt-2">
               <span class="text-[0.78rem] font-semibold text-water-blue uppercase tracking-[0.06em]">Call For More Information</span>
-              <a class="font-sora text-[1.7rem] font-bold text-navy-950 transition-colors duration-200 hover:text-orange-500" href="tel:+17325550199">&#128222; (732) 555-0199</a>
+              <a class="font-sora text-[1.7rem] font-bold text-navy-950 transition-colors duration-200 hover:text-orange-500" href="tel:+17325108149">&#128222; (732) 510-8149</a>
             </div>
           </div>
           <div class="overflow-hidden relative max-sm:order-last">
@@ -199,28 +199,27 @@
               <span class="inline-flex mb-[9px] items-center gap-2 text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold" style="color:#d2e8ff;"><img src="assets/water-and-fire.png" alt="" aria-hidden="true" class="w-5 h-5 object-contain" />Client Reviews</span>
               <h2 class="font-sora text-[clamp(1.8rem,3.5vw,3rem)] font-extrabold text-white leading-[1.08] uppercase">What Our Clients Are Saying</h2>
             </div>
-            <!-- Card -->
-            <div class="bg-white/[0.12] backdrop-blur-[10px] border border-white/[0.18] rounded-[14px] px-5 py-6 flex flex-col gap-5 text-left w-full" id="reviewsCardMobile">
-              <div class="flex justify-between items-start">
-                <span class="text-[3.5rem] leading-none text-white/80 font-[Georgia,serif]">&ldquo;</span>
-                <div class="text-[#f5a623] text-[1.3rem] tracking-[2px]">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              </div>
-              <p class="text-white/90 text-[1rem] leading-[1.7] italic m-0" id="reviewsTextMobile"></p>
-              <div class="flex items-center gap-[14px]">
-                <div class="w-11 h-11 rounded-full bg-orange-500 text-white font-sora font-bold text-[1.1rem] flex items-center justify-center flex-shrink-0" id="reviewsAvatarMobile"></div>
-                <div class="flex-1 min-w-0">
-                  <strong class="block text-white text-[1rem] font-bold" id="reviewsNameMobile"></strong>
-                  <span class="text-white/65 text-[0.85rem]" id="reviewsRoleMobile"></span>
-                </div>
-                <svg class="w-6 h-6 flex-shrink-0 ml-auto" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-              </div>
-            </div>
-            <!-- Nav arrows -->
-            <div class="flex gap-3 justify-center">
-              <button class="w-11 h-11 rounded-full border border-white/40 bg-navy-700 text-white flex items-center justify-center cursor-pointer transition-colors hover:bg-orange-500" id="reviewsPrevMobile" aria-label="Previous review">
+            <!-- Card with side arrows contained inside relative wrapper -->
+            <div class="relative w-full">
+              <button class="absolute top-1/2 -translate-y-1/2 left-0 w-11 h-11 rounded-full border border-white/40 bg-navy-700 text-white flex items-center justify-center cursor-pointer transition-colors hover:bg-orange-500 z-[2]" id="reviewsPrevMobile" aria-label="Previous review">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
-              <button class="w-11 h-11 rounded-full border border-white/40 bg-navy-700 text-white flex items-center justify-center cursor-pointer transition-colors hover:bg-orange-500" id="reviewsNextMobile" aria-label="Next review">
+              <div class="bg-white/[0.12] backdrop-blur-[10px] border border-white/[0.18] rounded-[14px] px-5 py-6 flex flex-col gap-5 text-left mx-[52px]" id="reviewsCardMobile">
+                <div class="flex justify-between items-start">
+                  <span class="text-[3.5rem] leading-none text-white/80 font-[Georgia,serif]">&ldquo;</span>
+                  <div class="text-[#f5a623] text-[1.3rem] tracking-[2px]">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+                <p class="text-white/90 text-[1rem] leading-[1.7] italic m-0" id="reviewsTextMobile"></p>
+                <div class="flex items-center gap-[14px]">
+                  <div class="w-11 h-11 rounded-full bg-orange-500 text-white font-sora font-bold text-[1.1rem] flex items-center justify-center flex-shrink-0" id="reviewsAvatarMobile"></div>
+                  <div class="flex-1 min-w-0">
+                    <strong class="block text-white text-[1rem] font-bold" id="reviewsNameMobile"></strong>
+                    <span class="text-white/65 text-[0.85rem]" id="reviewsRoleMobile"></span>
+                  </div>
+                  <svg class="w-6 h-6 flex-shrink-0 ml-auto" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                </div>
+              </div>
+              <button class="absolute top-1/2 -translate-y-1/2 right-0 w-11 h-11 rounded-full border border-white/40 bg-navy-700 text-white flex items-center justify-center cursor-pointer transition-colors hover:bg-orange-500 z-[2]" id="reviewsNextMobile" aria-label="Next review">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </div>
@@ -265,7 +264,7 @@
 
       <!-- Emergency messaging -->
       <section class="py-[80px] mb-0 bg-slate-ar-50 max-sm:py-[48px]">
-        <div class="w-full max-w-site mx-auto">
+        <div class="w-full max-w-site mx-auto px-5">
           <div class="grid grid-cols-2 gap-[48px] items-start max-lg:grid-cols-1">
             <!-- Image -->
             <div class="overflow-hidden aspect-[4/3] max-lg:aspect-[16/9]">
@@ -276,7 +275,7 @@
             <!-- Content -->
             <div>
               <span class="inline-flex mb-[9px] items-center gap-2 text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold text-water-blue"><img src="assets/water-and-fire.png" alt="" aria-hidden="true" class="w-5 h-5 object-contain" />Emergency Response</span>
-              <h2 class="font-sora text-[clamp(1.5rem,2.1vw,2.2rem)] leading-[1.16] tracking-[-0.01em] text-navy-950 mb-[10px]">When Damage Is Active, the First Hours Matter Most</h2>
+              <h2 class="font-sora text-[clamp(1.7rem,2.1vw,2.2rem)] leading-[1.16] tracking-[-0.01em] text-navy-950 mb-[10px]">When Damage Is Active, the First Hours Matter Most</h2>
               <p class="text-slate-ar-700 text-[1.02rem] mb-5">
                 Water migration, smoke contamination, and mold spread can intensify quickly. Our response model emphasizes immediate stabilization, controlled mitigation, and a clear recovery plan you can act on.
               </p>
@@ -301,11 +300,12 @@
 
       <!-- Process -->
       <section class="flex items-center bg-slate-ar-50 max-sm:py-[48px]">
-        <div class="w-full max-w-site mx-auto py-[80px] max-sm:py-0">
+        <div class="w-full max-w-site mx-auto px-5 py-[80px] max-sm:py-0">
           <span class="inline-flex mb-[9px] items-center gap-2 text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold text-water-blue"><img src="assets/water-and-fire.png" alt="" aria-hidden="true" class="w-5 h-5 object-contain" />Process</span>
-          <h2 class="font-sora text-[clamp(1.5rem,2.1vw,2.2rem)] leading-[1.16] tracking-[-0.01em] text-navy-950 mb-[10px]">Clear 5-Step Recovery Workflow</h2>
+          <h2 class="font-sora text-[clamp(1.7rem,2.1vw,2.2rem)] leading-[1.16] tracking-[-0.01em] text-navy-950 mb-[10px]">Clear 5-Step Recovery Workflow</h2>
           <p class="text-slate-ar-700 text-[1.02rem] mb-5">You get a structured plan from intake through completion, with practical next steps at each phase.</p>
-          <div class="grid gap-3 max-sm:[grid-template-columns:1fr]" style="grid-template-columns:repeat(5,1fr);">
+          <style>#process-grid{display:grid;gap:12px;grid-template-columns:repeat(5,1fr);}@media(max-width:640px){#process-grid{grid-template-columns:1fr;}}</style>
+          <div id="process-grid">
             <article class="bg-white border border-slate-ar-200 p-5 flex flex-col gap-3">
               <div class="font-sora font-black text-[3.5rem] leading-none tracking-[-0.04em] text-navy-950/10 select-none">01</div>
               <div>
@@ -346,15 +346,16 @@
       </section>
 
       <!-- Service Area -->
-      <section class="mb-0 overflow-hidden" style="background:#08172e;height:50vh;min-height:400px;">
-        <div class="grid max-lg:grid-cols-1 h-full" style="grid-template-columns:1fr 3fr;">
+      <section class="mb-0 overflow-hidden" style="background:#08172e;">
+        <style>#service-area-grid{display:grid;grid-template-columns:1fr 3fr;min-height:50vh;}@media(max-width:1024px){#service-area-grid{grid-template-columns:1fr;height:auto;min-height:0;}}</style>
+        <div id="service-area-grid">
 
           <!-- Map -->
-          <div class="h-full">
+          <div style="min-height:260px;">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.5!2d-74.4154!3d40.4318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c5e3b3b3b3b3%3A0x0!2s646%20NJ-18%20Suite%20215%2C%20East%20Brunswick%2C%20NJ%2008816!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus&q=646+NJ-18+Suite+215,+East+Brunswick,+NJ+08816"
               width="100%" height="100%"
-              style="border:0;display:block;filter:grayscale(20%) contrast(1.05);"
+              style="border:0;display:block;filter:grayscale(20%) contrast(1.05);min-height:260px;"
               allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
               title="Action Restoration Services location map"></iframe>
           </div>
@@ -364,7 +365,11 @@
             <span class="inline-flex mb-[9px] items-center gap-2 text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold" style="color:#d2e8ff;"><img src="assets/water-and-fire.png" alt="" aria-hidden="true" class="w-5 h-5 object-contain" />Service Area</span>
             <h2 class="font-sora text-[clamp(1.3rem,1.8vw,1.9rem)] leading-[1.16] tracking-[-0.01em] text-white mb-2">Communities We Serve</h2>
             <p class="text-white/65 text-[0.92rem] mb-6">Based in East Brunswick, NJ — serving Middlesex, Monmouth, Somerset, and Union counties.</p>
-            <ul class="list-none p-0 m-0 grid gap-x-8 gap-y-[8px] min-w-0 w-full" style="grid-auto-flow:column;grid-template-rows:repeat(6,auto);grid-auto-columns:minmax(0,max-content);">
+            <style>
+              #towns-grid{display:grid;column-gap:2rem;row-gap:8px;grid-auto-flow:column;grid-template-rows:repeat(6,auto);grid-auto-columns:minmax(0,max-content);}
+              @media(max-width:1024px){#towns-grid{grid-auto-flow:row;grid-template-rows:none;grid-auto-columns:unset;grid-template-columns:1fr 1fr;column-gap:1rem;}}
+            </style>
+            <ul id="towns-grid" class="list-none p-0 m-0 min-w-0 w-full">
               <li class="flex items-center gap-2 text-white/90 text-[0.88rem] font-semibold"><svg class="w-[14px] h-[14px] flex-shrink-0 text-water-blue" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>East Brunswick</li>
               <li class="flex items-center gap-2 text-white/90 text-[0.88rem] font-semibold"><svg class="w-[14px] h-[14px] flex-shrink-0 text-water-blue" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>New Brunswick</li>
               <li class="flex items-center gap-2 text-white/90 text-[0.88rem] font-semibold"><svg class="w-[14px] h-[14px] flex-shrink-0 text-water-blue" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Edison</li>
