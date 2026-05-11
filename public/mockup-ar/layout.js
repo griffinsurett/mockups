@@ -123,8 +123,7 @@ const footer = `
         <div class="footer-title">Business Details</div>
         <div class="footer-links">
           <span>646 NJ-18 Suite 215, East Brunswick, NJ 08816</span>
-          <span>Phone: Not publicly confirmed</span>
-          <span>Email: Not publicly confirmed</span>
+          <span>Phone: (732) 510-8149</span>
         </div>
       </div>
     </div>
@@ -154,3 +153,19 @@ if (menuToggle && navEl) {
   navLinks.forEach((l) => l.addEventListener("click", () => setMenuState(false)));
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenuState(false); });
 }
+
+(function initScrollCompact() {
+  const siteHeader = document.querySelector(".site-header");
+  if (!siteHeader) return;
+  let ticking = false;
+  const update = () => {
+    siteHeader.classList.toggle("is-compact", window.scrollY > 44);
+    ticking = false;
+  };
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
+  }, { passive: true });
+  update();
+})();
