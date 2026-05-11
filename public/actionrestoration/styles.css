@@ -419,6 +419,7 @@ summary:focus-visible {
   grid-template-columns: 1fr 1fr;
   align-items: start;
   gap: 60px;
+  min-height: 100vh;
 }
 
 .about-content-col {
@@ -623,6 +624,10 @@ summary:focus-visible {
 
 .why-choose {
   background: transparent;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .why-heading {
