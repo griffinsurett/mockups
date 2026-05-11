@@ -52,7 +52,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .btn-utility:hover { border-color: rgba(255,206,179,0.68); background: rgba(255,206,179,0.15); }
 
 /* ─── Footer ────────────────────────────────────────────────── */
-.site-footer { margin-top: 20px; background: #08172e; color: rgba(255,255,255,0.9); border-top: 1px solid rgba(255,255,255,0.08); }
+.site-footer { margin-top: 0; background: #08172e; color: rgba(255,255,255,0.9); border-top: 1px solid rgba(255,255,255,0.08); }
 .footer-inner { padding: 32px 20px; }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr; gap: 18px; }
 .footer-title { margin-bottom: 10px; font-size: 0.95rem; font-family: "Sora","Segoe UI",sans-serif; color: #fff; }

@@ -1,7 +1,7 @@
 const pages = [
   { key: "home",     label: "Home",     href: "index.html" },
   { key: "services", label: "Services", href: "services.html" },
-  { key: "projects", label: "Projects", href: "#" },
+  { key: "projects", label: "Case Studies", href: "#" },
   { key: "about-us", label: "About Us", href: "about-us.html" },
   { key: "contact",  label: "Contact",  href: "contact.html" },
   { key: "faq",      label: "FAQ",      href: "faq.html" },
