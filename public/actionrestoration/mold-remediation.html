@@ -8,89 +8,98 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'navy-950': '#08172e', 'navy-900': '#0f2743', 'navy-700': '#244f79',
+            'water-blue': '#5b99c0',
+            'slate-ar-700': '#4b5f75', 'slate-ar-200': '#d7e2ee', 'slate-ar-50': '#f5f8fc',
+            'orange-600': '#d95b17', 'orange-500': '#f26a21', 'orange-100': '#ffe6d6',
+          },
+          fontFamily: { sora: ['"Sora"','"Segoe UI"','sans-serif'], body: ['"Source Sans 3"','"Segoe UI"','sans-serif'] },
+          maxWidth: { site: '1180px' },
+        },
+      },
+      corePlugins: { preflight: false },
+    };
+  </script>
   <link rel="stylesheet" href="styles.css" />
   <script src="layout.js" defer></script>
 </head>
-<body data-page="mold-remediation">
-  <div id="site-header"></div>
+<body data-page="mold-remediation" class="min-h-screen font-body leading-[1.55] text-[#202d3d] [text-rendering:optimizeLegibility]"
+  style="background:radial-gradient(circle at 90% 0%,rgba(46,110,173,0.1) 0%,rgba(46,110,173,0) 42%),linear-gradient(180deg,#f7fafe 0%,#f2f7fc 45%,#eff4fa 100%);">
+  <div id="site-header" class="sticky top-0 z-40"></div>
   <div class="site-shell">
     <main class="site-main">
-      <section class="hero">
-        <span class="eyebrow" style="color:#cfe3ff;">Mold Remediation Services</span>
-        <h1>Contain, Remove, and Correct Moisture-Driven Mold Issues</h1>
-        <p>
-          Mold problems often trace back to unresolved moisture. Our remediation approach combines containment,
-          source-focused planning, and restoration steps designed for safer indoor spaces.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="contact.html#emergency">Request Emergency Help</a>
-          <a class="btn btn-secondary" href="contact.html#quote">Get a Quote</a>
-          <a class="btn btn-utility" href="contact.html#emergency">Call 24/7</a>
+
+      <section class="relative overflow-visible flex flex-col justify-center items-stretch -mx-5 mb-5 min-h-[70vh] px-[clamp(24px,5vw,80px)] py-[clamp(48px,6vw,80px)] text-white"
+        style="background-image:linear-gradient(to right,rgba(6,18,36,0.93) 0%,rgba(8,24,48,0.88) 50%,rgba(10,30,60,0.55) 100%),url('https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;">
+        <div class="w-full max-w-site mx-auto">
+          <span class="inline-flex mb-[9px] text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold" style="color:#cfe3ff;">Mold Remediation Services</span>
+          <h1 class="font-sora text-[clamp(2rem,4.2vw,3.3rem)] leading-[1.16] tracking-[-0.01em] text-white mb-3">Contain, Remove, and Correct Moisture-Driven Mold Issues</h1>
+          <p class="text-[1.08rem] text-white/90">Mold problems often trace back to unresolved moisture. Our remediation approach combines containment, source-focused planning, and restoration steps designed for safer indoor spaces.</p>
+          <div class="mt-[22px] flex flex-wrap gap-[10px] max-sm:[&_a]:w-full">
+            <a class="btn btn-primary" href="contact.html#emergency">Request Emergency Help</a>
+            <a class="btn btn-secondary" href="contact.html#quote">Get a Quote</a>
+            <a class="btn btn-utility" href="contact.html#emergency">Call 24/7</a>
+          </div>
         </div>
       </section>
 
-      <section class="section section-muted">
-        <span class="eyebrow">Mold Warning Signs</span>
-        <h2>Common Indicators You Should Not Ignore</h2>
-        <div class="checklist">
-          <div>Persistent musty or earthy odor</div>
-          <div>Visible spotting on walls, ceilings, or trim</div>
-          <div>Recurring moisture near plumbing or HVAC zones</div>
-          <div>Discoloration around windows or behind furniture</div>
-          <div>Repeated minor leaks in the same areas</div>
-          <div>Past water damage with incomplete drying</div>
+      <section class="py-[60px] bg-slate-ar-50 max-sm:py-[22px]">
+        <div class="w-full max-w-site mx-auto">
+          <span class="inline-flex mb-[9px] text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold text-water-blue">Mold Warning Signs</span>
+          <h2 class="font-sora text-[clamp(1.5rem,2.1vw,2.2rem)] leading-[1.16] tracking-[-0.01em] text-navy-950 mb-[10px]">Common Indicators You Should Not Ignore</h2>
+          <div class="mt-3 grid grid-cols-2 gap-[10px] max-sm:grid-cols-1">
+            <div class="rounded-[12px] border border-slate-ar-200 bg-white p-3 font-[650] text-navy-900">Persistent musty or earthy odor</div>
+            <div class="rounded-[12px] border border-slate-ar-200 bg-white p-3 font-[650] text-navy-900">Visible spotting on walls, ceilings, or trim</div>
+            <div class="rounded-[12px] border border-slate-ar-200 bg-white p-3 font-[650] text-navy-900">Recurring moisture near plumbing or HVAC zones</div>
+            <div class="rounded-[12px] border border-slate-ar-200 bg-white p-3 font-[650] text-navy-900">Discoloration around windows or behind furniture</div>
+            <div class="rounded-[12px] border border-slate-ar-200 bg-white p-3 font-[650] text-navy-900">Repeated minor leaks in the same areas</div>
+            <div class="rounded-[12px] border border-slate-ar-200 bg-white p-3 font-[650] text-navy-900">Past water damage with incomplete drying</div>
+          </div>
         </div>
       </section>
 
-      <section class="section">
-        <span class="eyebrow">Remediation Path</span>
-        <h2>How We Approach Mold Recovery</h2>
-        <div class="grid grid-2">
-          <article class="info-box">
-            <h3>Assessment and Containment</h3>
-            <p>Affected zones are evaluated and isolated to reduce cross-contamination risk.</p>
-          </article>
-          <article class="info-box">
-            <h3>Source Condition Correction</h3>
-            <p>Moisture contributors are identified so the same problem is less likely to return.</p>
-          </article>
-          <article class="info-box">
-            <h3>Removal and Cleaning</h3>
-            <p>Compromised materials and impacted surfaces are addressed according to project scope.</p>
-          </article>
-          <article class="info-box">
-            <h3>Restoration and Prevention Planning</h3>
-            <p>Repairs and future-moisture controls support long-term indoor environment stability.</p>
-          </article>
+      <section class="py-[60px] max-sm:py-[22px]">
+        <div class="w-full max-w-site mx-auto">
+          <span class="inline-flex mb-[9px] text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold text-water-blue">Remediation Path</span>
+          <h2 class="font-sora text-[clamp(1.5rem,2.1vw,2.2rem)] leading-[1.16] tracking-[-0.01em] text-navy-950 mb-[10px]">How We Approach Mold Recovery</h2>
+          <div class="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
+            <article class="rounded-[14px] border border-slate-ar-200 bg-white shadow-[0_6px_18px_rgba(11,34,58,0.05)] p-4"><h3 class="font-sora text-navy-950 leading-[1.16] mb-2">Assessment and Containment</h3><p class="text-slate-ar-700">Affected zones are evaluated and isolated to reduce cross-contamination risk.</p></article>
+            <article class="rounded-[14px] border border-slate-ar-200 bg-white shadow-[0_6px_18px_rgba(11,34,58,0.05)] p-4"><h3 class="font-sora text-navy-950 leading-[1.16] mb-2">Source Condition Correction</h3><p class="text-slate-ar-700">Moisture contributors are identified so the same problem is less likely to return.</p></article>
+            <article class="rounded-[14px] border border-slate-ar-200 bg-white shadow-[0_6px_18px_rgba(11,34,58,0.05)] p-4"><h3 class="font-sora text-navy-950 leading-[1.16] mb-2">Removal and Cleaning</h3><p class="text-slate-ar-700">Compromised materials and impacted surfaces are addressed according to project scope.</p></article>
+            <article class="rounded-[14px] border border-slate-ar-200 bg-white shadow-[0_6px_18px_rgba(11,34,58,0.05)] p-4"><h3 class="font-sora text-navy-950 leading-[1.16] mb-2">Restoration and Prevention Planning</h3><p class="text-slate-ar-700">Repairs and future-moisture controls support long-term indoor environment stability.</p></article>
+          </div>
         </div>
       </section>
 
-      <section class="section faq section-muted">
-        <span class="eyebrow">Mold FAQ</span>
-        <h2>Frequently Asked Questions</h2>
-        <details>
-          <summary>Is mold remediation only for large visible growth?</summary>
-          <p>No. Hidden moisture and recurring odors can indicate broader issues that still need remediation planning.</p>
-        </details>
-        <details>
-          <summary>Can your team handle related water damage too?</summary>
-          <p>Yes. Water intrusion and mold conditions are often connected, and we address both pathways.</p>
-        </details>
-        <details>
-          <summary>Do you support residential and commercial mold projects?</summary>
-          <p>Yes. Action Restoration Services supports both home and business remediation needs.</p>
-        </details>
-      </section>
-
-      <section class="cta-band">
-        <h2>Need Mold Remediation Guidance Right Away?</h2>
-        <p>Start your emergency request or submit your project details for quote planning and next steps.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="contact.html#emergency">Request Emergency Help</a>
-          <a class="btn btn-secondary" href="contact.html#quote">Get a Quote</a>
-          <a class="btn btn-utility" href="contact.html#emergency">Call 24/7</a>
+      <section class="py-[60px] bg-slate-ar-50 max-sm:py-[22px]">
+        <div class="w-full max-w-site mx-auto">
+          <span class="inline-flex mb-[9px] text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold text-water-blue">Mold FAQ</span>
+          <h2 class="font-sora text-[clamp(1.5rem,2.1vw,2.2rem)] leading-[1.16] tracking-[-0.01em] text-navy-950 mb-[10px]">Frequently Asked Questions</h2>
+          <details class="border border-slate-ar-200 rounded-xl bg-white px-[14px] py-3 mb-[10px]"><summary class="cursor-pointer text-navy-900 font-sora text-[0.99rem]">Is mold remediation only for large visible growth?</summary><p class="mt-2 text-slate-ar-700">No. Hidden moisture and recurring odors can indicate broader issues that still need remediation planning.</p></details>
+          <details class="border border-slate-ar-200 rounded-xl bg-white px-[14px] py-3 mb-[10px]"><summary class="cursor-pointer text-navy-900 font-sora text-[0.99rem]">Can your team handle related water damage too?</summary><p class="mt-2 text-slate-ar-700">Yes. Water intrusion and mold conditions are often connected, and we address both pathways.</p></details>
+          <details class="border border-slate-ar-200 rounded-xl bg-white px-[14px] py-3"><summary class="cursor-pointer text-navy-900 font-sora text-[0.99rem]">Do you support residential and commercial mold projects?</summary><p class="mt-2 text-slate-ar-700">Yes. Action Restoration Services supports both home and business remediation needs.</p></details>
         </div>
       </section>
+
+      <section class="rounded-[24px] p-[30px] text-white shadow-[0_18px_40px_rgba(11,34,58,0.16)] mb-5"
+        style="background:linear-gradient(120deg,rgba(13,39,69,0.95) 0%,rgba(18,54,95,0.95) 65%,rgba(27,76,122,0.95) 100%),url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80');background-size:cover;">
+        <div class="w-full max-w-site mx-auto">
+          <h2 class="font-sora text-[clamp(1.5rem,2.1vw,2.2rem)] leading-[1.16] text-white mb-2">Need Mold Remediation Guidance Right Away?</h2>
+          <p class="text-white/90">Start your emergency request or submit your project details for quote planning and next steps.</p>
+          <div class="mt-[18px] flex flex-wrap gap-[10px] max-sm:[&_a]:w-full">
+            <a class="btn btn-primary" href="contact.html#emergency">Request Emergency Help</a>
+            <a class="btn btn-secondary" href="contact.html#quote">Get a Quote</a>
+            <a class="btn btn-utility" href="contact.html#emergency">Call 24/7</a>
+          </div>
+        </div>
+      </section>
+
     </main>
   </div>
   <div id="site-footer"></div>
