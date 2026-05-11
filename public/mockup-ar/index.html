@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="layout.js" defer></script>
 </head>
-<body data-page="home" class="min-h-screen font-body leading-[1.55] text-slate-ar-900 [text-rendering:optimizeLegibility]"
+<body data-page="home" class="min-h-screen font-body leading-[1.55] text-slate-ar-900 [text-rendering:optimizeLegibility] overflow-x-hidden"
   style="background: radial-gradient(circle at 90% 0%, rgba(46,110,173,0.1) 0%, rgba(46,110,173,0) 42%), linear-gradient(180deg,#f7fafe 0%,#f2f7fc 45%,#eff4fa 100%);">
   <div id="site-header" class="sticky top-0 z-40"></div>
   <div class="max-sm:pb-[84px]">
@@ -98,10 +98,10 @@
       </div>
 
       <!-- About + Why Choose wrapper -->
-      <div class="max-w-site mx-auto" style="position:relative;">
+      <div class="max-w-site mx-auto px-5" style="position:relative;">
         <!-- About split -->
-        <section class="grid grid-cols-2 gap-[60px] items-start min-h-screen py-[60px] max-sm:grid-cols-1 max-sm:-mx-5 max-sm:py-0">
-          <div class="flex flex-col gap-5 max-sm:py-12">
+        <section class="grid grid-cols-2 gap-[60px] items-start py-[80px] max-sm:grid-cols-1 max-sm:py-[48px] max-sm:gap-[32px]">
+          <div class="flex flex-col gap-5 max-sm:px-0">
             <span class="inline-flex mb-[9px] items-center gap-2 text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold text-water-blue"><img src="assets/water-and-fire.png" alt="" aria-hidden="true" class="w-5 h-5 object-contain" />About Us</span>
             <h2 class="font-sora text-[clamp(2rem,3.2vw,3rem)] font-extrabold leading-[1.08] text-navy-950">Welcome to <br>Action Restoration Services</h2>
             <p class="text-[1.05rem] font-semibold text-navy-950">We are a qualified full-service restoration company specializing in emergency property damage recovery across East Brunswick, NJ and surrounding Middlesex County communities.</p>
@@ -112,19 +112,16 @@
               <a class="font-sora text-[1.7rem] font-bold text-navy-950 transition-colors duration-200 hover:text-orange-500" href="tel:+17325550199">&#128222; (732) 555-0199</a>
             </div>
           </div>
-          <div class="overflow-visible relative max-sm:order-first">
-            <img class="w-full h-full min-h-[360px] object-cover block max-sm:min-h-[300px]" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Restoration technician at work" />
-            <div class="absolute bottom-[-150px] left-1/2 -translate-x-1/2 z-[2]">
-              <img class="w-[300px] h-[300px] object-contain" src="assets/favicon.png" alt="Action Restoration Services" />
-            </div>
+          <div class="overflow-hidden relative max-sm:order-last">
+            <img class="w-full h-full min-h-[360px] object-cover block max-sm:min-h-[260px]" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="Restoration technician at work" />
           </div>
         </section>
 
         <!-- Why Choose Us -->
-        <section class="min-h-screen flex flex-col justify-center py-[60px]">
+        <section class="flex flex-col justify-center py-[80px] max-sm:py-[48px]">
           <span class="inline-flex mb-[9px] items-center gap-2 text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold text-water-blue"><img src="assets/water-and-fire.png" alt="" aria-hidden="true" class="w-5 h-5 object-contain" />Why Choose Us</span>
           <h2 class="font-sora text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold leading-[1.1] text-navy-950 mb-12">When Disaster Strikes, <span class="text-orange-500">We Respond</span><br>So You Can Recover</h2>
-          <div class="grid grid-cols-3 gap-12 max-sm:grid-cols-1">
+          <div class="grid grid-cols-3 gap-12 max-sm:grid-cols-1 max-sm:gap-8">
             <div class="flex flex-col gap-[14px]">
               <svg class="w-12 h-12 text-orange-500 flex-shrink-0" viewBox="0 0 48 48" fill="none">
                 <path d="M14 22l-4 2v16h8v-8h12v8h8V24l-4-2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -218,7 +215,7 @@
       </script>
 
       <!-- Emergency messaging -->
-      <section class="py-[60px] mb-0 bg-slate-ar-50 max-sm:py-[22px]">
+      <section class="py-[80px] mb-0 bg-slate-ar-50 max-sm:py-[48px]">
         <div class="w-full max-w-site mx-auto">
           <div class="grid grid-cols-2 gap-[48px] items-start max-lg:grid-cols-1">
             <!-- Image -->
@@ -254,12 +251,12 @@
       </section>
 
       <!-- Process -->
-      <section class="flex items-center bg-slate-ar-50 max-sm:py-[22px]" style="min-height:100vh;">
-        <div class="w-full max-w-site mx-auto py-[60px]">
+      <section class="flex items-center bg-slate-ar-50 max-sm:py-[48px]">
+        <div class="w-full max-w-site mx-auto py-[80px] max-sm:py-0">
           <span class="inline-flex mb-[9px] items-center gap-2 text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold text-water-blue"><img src="assets/water-and-fire.png" alt="" aria-hidden="true" class="w-5 h-5 object-contain" />Process</span>
           <h2 class="font-sora text-[clamp(1.5rem,2.1vw,2.2rem)] leading-[1.16] tracking-[-0.01em] text-navy-950 mb-[10px]">Clear 5-Step Recovery Workflow</h2>
           <p class="text-slate-ar-700 text-[1.02rem] mb-5">You get a structured plan from intake through completion, with practical next steps at each phase.</p>
-          <div class="grid gap-3 max-sm:grid-cols-1" style="grid-template-columns:repeat(5,1fr);">
+          <div class="grid gap-3 max-sm:[grid-template-columns:1fr]" style="grid-template-columns:repeat(5,1fr);">
             <article class="bg-white border border-slate-ar-200 p-5 flex flex-col gap-3">
               <div class="font-sora font-black text-[3.5rem] leading-none tracking-[-0.04em] text-navy-950/10 select-none">01</div>
               <div>
