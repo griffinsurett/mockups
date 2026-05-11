@@ -1,0 +1,126 @@
+/* Tailwind base reset + minimal custom styles that can't be expressed as utilities */
+
+/* CSS custom properties kept for any inline-style / JS references */
+:root {
+  --navy-950: #08172e;
+  --navy-900: #0f2743;
+  --navy-700: #244f79;
+  --slate-900: #202d3d;
+  --slate-700: #4b5f75;
+  --slate-500: #70829a;
+  --slate-300: #c2d0e0;
+  --slate-200: #d7e2ee;
+  --slate-100: #e8f0f7;
+  --slate-50:  #f5f8fc;
+  --white:     #ffffff;
+  --orange-700: #bf4a13;
+  --orange-600: #d95b17;
+  --orange-500: #f26a21;
+  --orange-100: #ffe6d6;
+  --teal-100:  #e4f3f0;
+  --teal-700:  #236e65;
+  --success-100: #e3f6ed;
+  --success-700: #1d7c4f;
+  --danger-100: #fde5e2;
+  --danger-700: #9f291d;
+}
+
+/* ── Step counter (::before pseudo can't be done with Tailwind utilities) ── */
+.process {
+  counter-reset: step;
+}
+.step::before {
+  counter-increment: step;
+  content: "0" counter(step);
+  display: inline-flex;
+  margin-bottom: 10px;
+  font-family: "Sora", "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #d95b17;
+}
+
+/* ── Section top-edge gradient line ── */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(8,23,46,0.12), rgba(8,23,46,0));
+}
+
+/* ── FAQ details open/close ── */
+.faq details {
+  border: 1px solid #d7e2ee;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 12px 14px;
+}
+.faq details + details {
+  margin-top: 10px;
+}
+.faq summary {
+  cursor: pointer;
+  color: #0f2743;
+  font-family: "Sora", "Segoe UI", sans-serif;
+  font-size: 0.99rem;
+}
+.faq p {
+  margin-top: 8px;
+  color: #4b5f75;
+}
+
+/* ── Mobile nav drawer open-state transform ── */
+@media (max-width: 1160px) {
+  .top-nav {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 55;
+    background: rgba(6,16,30,0.5);
+    backdrop-filter: blur(4px);
+    align-items: stretch;
+    justify-content: flex-end;
+  }
+  .top-nav.open {
+    display: flex;
+  }
+  .drawer-panel {
+    display: flex;
+    flex-direction: column;
+    width: min(100vw, 440px);
+    max-width: 100%;
+    height: 100vh;
+    margin-left: auto;
+    padding: 18px;
+    background: linear-gradient(180deg, #0a2039 0%, #0b2745 100%);
+    box-shadow: -20px 0 48px rgba(7,20,35,0.36);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  .top-nav.open .drawer-panel {
+    transform: translateX(0);
+  }
+}
+
+/* ── Form invalid-field state ── */
+.field.invalid .input,
+.field.invalid .select,
+.field.invalid .textarea {
+  border-color: #cf5141;
+  background: #fff9f8;
+}
+.field.invalid .field-error {
+  display: inline;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
