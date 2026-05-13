@@ -14,8 +14,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .site-header { position: sticky; top: 0; z-index: 40; background: #fff; box-shadow: 0 2px 12px rgba(8,23,46,0.10); width: 100%; }
 .header-inner { min-height: 74px; padding: 0 22px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; background: #fff; }
 .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
-.brand-logo { width: clamp(7rem, 14vw, 10rem); height: auto; object-fit: contain; flex-shrink: 0; transition: width 420ms ease; }
-.site-header[data-compact="true"] .brand-logo { width: clamp(5rem, 10vw, 6.5rem); }
+.brand-logo { width: 104px; height: 104px; object-fit: contain; flex-shrink: 0; }
 .header-inner { transition: padding-top 420ms ease, padding-bottom 420ms ease; }
 .top-nav { display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 2px; min-width: 0; }
 .drawer-panel { display: contents; }
@@ -113,8 +112,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 @media (max-width: 760px) {
-  .brand-logo { width: clamp(7rem, 32vw, 10rem); }
-  .site-header[data-compact="true"] .brand-logo { width: clamp(4rem, 18vw, 6rem); }
+  .brand-logo { width: clamp(7rem, 32vw, 10rem); height: auto; transition: width 420ms ease; }
+  .site-header[data-compact="true"] .brand-logo { width: clamp(4rem, 18vw, 5.5rem); }
   .header-inner { padding: 6px 10px; }
   .header-schedule-btn { display: none; }
   .site-footer { padding-bottom: 84px; }
