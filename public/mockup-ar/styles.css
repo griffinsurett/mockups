@@ -1,6 +1,6 @@
 /* ─── Reset & base ─────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; border: 0; }
-html, body { margin: 0; padding: 0; height: 100%; overflow-x: hidden; }
+html, body { margin: 0; padding: 0; overflow-x: clip; }
 body { min-height: 100vh; color: #202d3d; font-family: "Source Sans 3","Segoe UI",sans-serif; line-height: 1.55; text-rendering: optimizeLegibility; }
 body.menu-open { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
@@ -11,12 +11,12 @@ ul { margin: 0; padding-left: 20px; }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid #8ec4ff; outline-offset: 2px; }
 
 /* ─── Header ────────────────────────────────────────────────── */
-#site-header { position: sticky; top: 0; z-index: 40; width: 100%; }
-.site-header { background: #fff; box-shadow: 0 2px 12px rgba(8,23,46,0.10); width: 100%; }
+.site-header { position: sticky; top: 0; z-index: 40; background: #fff; box-shadow: 0 2px 12px rgba(8,23,46,0.10); width: 100%; }
 .header-inner { min-height: 74px; padding: 0 22px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; background: #fff; }
 .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
-.brand-logo { width: 104px; height: 104px; object-fit: contain; flex-shrink: 0; transition: width 380ms ease, height 380ms ease; }
-.site-header.is-compact .brand-logo { width: 69px; height: 69px; }
+.brand-logo { width: clamp(7rem, 14vw, 10rem); height: auto; object-fit: contain; flex-shrink: 0; transition: width 420ms ease; }
+.site-header[data-compact="true"] .brand-logo { width: clamp(5rem, 10vw, 6.5rem); }
+.header-inner { transition: padding-top 420ms ease, padding-bottom 420ms ease; }
 .top-nav { display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 2px; min-width: 0; }
 .drawer-panel { display: contents; }
 .drawer-head { display: none; }
@@ -113,9 +113,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 @media (max-width: 760px) {
-  .brand-logo { width: 132px; height: 132px; }
-  .site-header.is-compact .brand-logo { width: 88px; height: 88px; }
-  .header-inner { padding: 0 10px; min-height: 60px; }
+  .brand-logo { width: clamp(7rem, 32vw, 10rem); }
+  .site-header[data-compact="true"] .brand-logo { width: clamp(4rem, 18vw, 6rem); }
+  .header-inner { padding: 6px 10px; }
   .header-schedule-btn { display: none; }
   .site-footer { padding-bottom: 84px; }
   .mobile-call-bar {
