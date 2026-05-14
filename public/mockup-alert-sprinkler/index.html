@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#49576c",
+                    "on-tertiary-fixed": "#0d1c2e",
+                    "surface-tint": "#c00007",
+                    "primary-fixed-dim": "#ffb4a9",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "surface-container-low": "#fff0ee",
+                    "surface-container": "#ffe9e6",
+                    "surface-variant": "#fcdbd6",
+                    "on-secondary-fixed": "#131b2e",
+                    "surface-gray": "#F8FAFC",
+                    "primary": "#b10006",
+                    "secondary-container": "#dae2fd",
+                    "secondary-fixed": "#dae2fd",
+                    "inverse-surface": "#402b29",
+                    "surface-container-high": "#ffe2dd",
+                    "on-error": "#ffffff",
+                    "surface": "#fff8f7",
+                    "on-secondary-container": "#5c647a",
+                    "tertiary-fixed-dim": "#b9c7df",
+                    "surface-dim": "#f3d3ce",
+                    "on-surface": "#291715",
+                    "tertiary-fixed": "#d5e3fc",
+                    "outline-variant": "#e7bdb7",
+                    "background": "#fff8f7",
+                    "tertiary-container": "#627085",
+                    "on-background": "#291715",
+                    "on-surface-variant": "#5d3f3b",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#3a485b",
+                    "border-subtle": "#E2E8F0",
+                    "on-error-container": "#93000a",
+                    "blueprint-blue": "#1E40AF",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#ffdad5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#eef3ff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "emergency-red": "#B91C1C",
+                    "primary-container": "#d91e18",
+                    "inverse-on-surface": "#ffedea",
+                    "outline": "#926f6a",
+                    "secondary": "#565e74",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#410001",
+                    "surface-bright": "#fff8f7",
+                    "surface-container-highest": "#fcdbd6",
+                    "inverse-primary": "#ffb4a9",
+                    "on-primary-container": "#ffefed",
+                    "on-primary-fixed-variant": "#930004"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Hanken Grotesk"],
+                    "emergency-callout": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "emergency-callout": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(41, 23, 21, 0.7), rgba(41, 23, 21, 0.7)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim border-b border-subtle dark:border-outline-variant sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop h-20 max-w-7xl mx-auto">
+<div class="font-display-lg text-headline-md font-extrabold tracking-tighter text-primary dark:text-inverse-primary">
+                Alert Sprinkler Co., Inc.
+            </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-primary dark:text-inverse-primary border-b-2 border-primary font-bold pb-1 font-label-caps text-label-caps" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Solutions</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Inspection</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Capabilities</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Service Area</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex flex-col items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant">24/7 SUPPORT</span>
+<span class="font-headline-md text-headline-md text-primary">732-521-1666</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps hover:bg-primary-container transition-all active:scale-95">
+                    Emergency Service
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="hero-gradient relative min-h-[700px] flex items-center" data-alt="A large-scale industrial facility with complex fire sprinkler piping painted bright red, set against a background of high-fidelity engineering blueprints. The lighting is dramatic and clear, emphasizing the precision of the installation. The color palette is dominated by professional charcoal and vibrant primary red, reflecting a sense of safety and technical mastery. Professional, high-contrast photography style.">
+<div class="max-w-7xl mx-auto px-margin-desktop w-full py-20">
+<div class="max-w-3xl">
+<span class="inline-block bg-primary px-3 py-1 text-on-primary font-label-caps text-label-caps mb-6">ESTABLISHED 1977</span>
+<h1 class="font-display-lg text-display-lg text-white mb-3">
+                        Fire Sprinkler System Engineering, Installation, Inspection, Maintenance, and Repair
+                    </h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-5 max-w-2xl">
+                        Providing life safety solutions through technical precision, code compliance, and unwavering reliability for over four decades. Licensed and fully insured in New Jersey.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-headline-md text-headline-md hover:bg-primary-container transition-all">
+                            Request Inspection
+                        </button>
+<button class="bg-transparent border-2 border-white text-white px-8 py-4 font-headline-md text-headline-md hover:bg-white hover:text-on-surface transition-all">
+                            What We Do
+                        </button>
+</div>
+</div>
+</div>
+<!-- Trust Bar -->
+<div class="absolute bottom-0 left-0 w-full bg-surface-gray py-8 border-t border-subtle">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caps text-label-caps">CODE COMPLIANCE</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="engineering" data-weight="fill" style="font-variation-settings: 'FILL' 1;">engineering</span>
+<span class="font-label-caps text-label-caps">EXPERT ENGINEERING</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="support_agent" data-weight="fill" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+<span class="font-label-caps text-label-caps">24/7 EMERGENCY</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="policy" data-weight="fill" style="font-variation-settings: 'FILL' 1;">policy</span>
+<span class="font-label-caps text-label-caps">FULLY INSURED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Solutions Bento Grid -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<span class="text-primary font-label-caps text-label-caps">OUR EXPERTISE</span>
+<h2 class="font-headline-lg text-headline-lg mt-2">Comprehensive Fire Protection Solutions</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[600px]">
+<!-- Commercial -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-gray border border-subtle">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&auto=format&fit=crop&q=80" alt="Commercial high-rise building"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="text-white font-headline-lg text-headline-lg">Commercial</h3>
+<p class="text-white/80 font-body-md text-body-md mt-2 max-w-md">Complete systems for high-rises, retail centers, and professional offices compliant with local fire codes.</p>
+</div>
+</div>
+<!-- Industrial -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-gray border border-subtle">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&auto=format&fit=crop&q=80" alt="Industrial warehouse facility"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="text-white font-headline-md text-headline-md">Industrial</h3>
+<p class="text-white/80 font-body-md text-body-md mt-2">Specialized hazard protection for warehouses and manufacturing.</p>
+</div>
+</div>
+<!-- Institutional -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-gray border border-subtle">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=80" alt="Hospital hallway"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="text-white font-headline-md text-headline-md">Institutional</h3>
+<p class="text-white/80 font-body-md text-body-md mt-2">Life safety systems for hospitals, schools, and government buildings.</p>
+</div>
+</div>
+<!-- Residential -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-gray border border-subtle">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&auto=format&fit=crop&q=80" alt="Modern residential interior"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="text-white font-headline-lg text-headline-lg">Residential</h3>
+<p class="text-white/80 font-body-md text-body-md mt-2 max-w-md">Multi-family and high-end residential protection that prioritizes both safety and interior aesthetics.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Inspection & Compliance -->
+<section class="py-section-gap bg-surface-gray">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<span class="text-primary font-label-caps text-label-caps">VIGILANCE &amp; COMPLIANCE</span>
+<h2 class="font-headline-lg text-headline-lg mt-2 mb-6">NFPA 25 Inspection &amp; Testing</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        Stay compliant and protected with our rigorous inspection protocols. We ensure your system meets all local fire codes and NFPA standards, providing detailed documentation for fire marshals and insurance providers.
+                    </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="task_alt">task_alt</span>
+<div>
+<span class="font-headline-md text-body-md font-bold block">Annual &amp; Quarterly Inspections</span>
+<span class="text-on-surface-variant text-body-md">Comprehensive checks of valves, pipes, and sprinkler heads.</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="task_alt">task_alt</span>
+<div>
+<span class="font-headline-md text-body-md font-bold block">Main Drain &amp; Water Flow Tests</span>
+<span class="text-on-surface-variant text-body-md">Verification of adequate water supply and alarm functionality.</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="task_alt">task_alt</span>
+<div>
+<span class="font-headline-md text-body-md font-bold block">Deficiency Corrections</span>
+<span class="text-on-surface-variant text-body-md">Rapid repair of any items found during the inspection process.</span>
+</div>
+</li>
+</ul>
+<button class="bg-secondary text-on-secondary px-8 py-4 font-headline-md text-headline-md hover:bg-on-secondary-fixed-variant transition-all">
+                        Schedule an Inspection
+                    </button>
+</div>
+<div class="relative">
+<div class="aspect-square overflow-hidden">
+<img class="w-full h-full object-cover" src="unnamed.png" alt="Fire safety engineer inspecting sprinkler system"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-white p-8 border border-subtle shadow-sm max-w-xs">
+<span class="text-primary font-display-lg text-display-lg block mb-2">45+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Years of Continuous NJ Safety Service</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Emergency Service CTA -->
+<section class="bg-primary text-on-primary py-24">
+<div class="max-w-7xl mx-auto px-margin-desktop text-center">
+<span class="material-symbols-outlined text-6xl mb-6" data-icon="emergency_home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+<h2 class="font-display-lg text-display-lg mb-6">24/7 Emergency Repairs</h2>
+<p class="font-body-lg text-body-lg mb-10 max-w-2xl mx-auto opacity-90">
+                    A leak or system failure can't wait. Our rapid-response teams are on standby 24 hours a day, 365 days a year to keep your facility protected.
+                </p>
+<div class="inline-flex flex-col md:flex-row items-center gap-8 bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-label-caps text-label-caps opacity-75">IMMEDIATE ASSISTANCE</span>
+<span class="font-display-lg text-headline-lg md:text-display-lg">732-521-1666</span>
+</div>
+<div class="h-10 w-px bg-white/20 hidden md:block"></div>
+<button class="bg-white text-primary px-10 py-5 font-headline-md text-headline-md hover:bg-on-primary-container transition-all active:scale-95">
+                        Dispatch Technician Now
+                    </button>
+</div>
+</div>
+</section>
+<!-- Our Credentials -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<span class="text-primary font-label-caps text-label-caps">OUR CREDENTIALS</span>
+<h2 class="font-headline-lg text-headline-lg mt-2">Licensed, Certified &amp; Fully Insured</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">We maintain the highest levels of certification and professional insurance to give you peace of mind.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-white p-8 border border-subtle flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="verified_user">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Licensed in NJ</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Fully state-licensed for fire protection services and system engineering.</p>
+</div>
+<div class="bg-white p-8 border border-subtle flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="security">security</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Fully Insured</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">General liability and workers' compensation coverage for all industrial worksites.</p>
+</div>
+<div class="bg-white p-8 border border-subtle flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">NFPA Member</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Committed to the highest standards of the National Fire Protection Association.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-on-tertiary-fixed border-t border-subtle dark:border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-16 w-full max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-display-lg text-headline-md font-extrabold text-on-surface dark:text-surface-bright">
+                    Alert Sprinkler Co., Inc.
+                </div>
+<p class="text-on-surface-variant dark:text-on-tertiary-fixed-variant font-body-md text-body-md">
+                    Leading the fire protection industry since 1977. Precision engineering, reliable service, and 24/7 protection for what matters most.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center bg-white border border-subtle hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="business">business</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center bg-white border border-subtle hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-caps text-label-caps text-on-surface">CONTACT US</h4>
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="location_on">location_on</span>
+<span>1085 Cranbury South River Rd., Suite 1, Jamesburg, NJ 08331</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="call">call</span>
+<span>Phone: 732-521-1666</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="fax">fax</span>
+<span>Fax: 732-521-2618</span>
+</li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-caps text-label-caps text-on-surface">QUICK LINKS</h4>
+<div class="flex flex-col gap-3 font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">Commercial Solutions</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">Industrial Protection</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">Inspection Scheduling</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">Service Area Map</a>
+<a class="text-primary underline" href="#">Compliance Badges</a>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high border-t border-subtle py-8">
+<div class="max-w-7xl mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<p class="font-label-caps text-label-caps text-on-surface-variant">© 1977 Alert Sprinkler Co., Inc. Licensed &amp; Fully Insured.</p>
+<div class="flex gap-6 font-label-caps text-label-caps text-on-surface-variant">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Accessibility</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
