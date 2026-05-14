@@ -107,9 +107,18 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .hero-gradient {
-            background: linear-gradient(rgba(41, 23, 21, 0.7), rgba(41, 23, 21, 0.7)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&auto=format&fit=crop&q=80');
-            background-size: cover;
-            background-position: center;
+            position: relative;
+        }
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(41, 23, 21, 0.7);
+            z-index: 1;
+        }
+        .hero-gradient > * {
+            position: relative;
+            z-index: 2;
         }
     </style>
 </head>
@@ -140,7 +149,11 @@
 </header>
 <main>
 <!-- Hero Section -->
-<section class="hero-gradient relative min-h-screen flex items-center" data-alt="A large-scale industrial facility with complex fire sprinkler piping painted bright red, set against a background of high-fidelity engineering blueprints. The lighting is dramatic and clear, emphasizing the precision of the installation. The color palette is dominated by professional charcoal and vibrant primary red, reflecting a sense of safety and technical mastery. Professional, high-contrast photography style.">
+<section class="hero-gradient relative min-h-screen flex items-center overflow-hidden">
+<video class="absolute inset-0 w-full h-full object-cover z-0" autoplay muted loop playsinline>
+    <source src="../../alert_sprinkler_website_redesign/alert_sprinkler_home/hero-video.mp4" type="video/mp4">
+</video>
+<!-- <img src="logo.png" alt="Alert Sprinkler Co., Inc." class="absolute right-16 top-1/2 -translate-y-1/2 h-64 w-auto object-contain z-10 opacity-90" /> -->
 <div class="max-w-7xl mx-auto px-margin-desktop w-full py-20 pb-40">
 <div class="max-w-3xl">
 <span class="inline-block bg-primary px-3 py-1 text-on-primary font-label-caps text-label-caps mb-6">ESTABLISHED 1977</span>
@@ -276,6 +289,7 @@
 <div class="aspect-square overflow-hidden">
 <img class="w-full h-full object-cover" src="unnamed.png" alt="Fire safety engineer inspecting sprinkler system"/>
 </div>
+<img src="logo.png" alt="Alert Sprinkler Co., Inc." class="absolute -top-8 -right-8 h-44 w-auto object-contain" />
 <div class="absolute -bottom-8 -left-8 bg-white p-8 border border-subtle shadow-sm max-w-xs">
 <span class="text-primary font-display-lg text-display-lg block mb-2">45+</span>
 <span class="font-label-caps text-label-caps text-on-surface-variant">Years of Continuous NJ Safety Service</span>
