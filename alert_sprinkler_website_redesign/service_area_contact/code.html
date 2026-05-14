@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#49576c",
+                    "on-tertiary-fixed": "#0d1c2e",
+                    "surface-tint": "#c00007",
+                    "primary-fixed-dim": "#ffb4a9",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "surface-container-low": "#fff0ee",
+                    "surface-container": "#ffe9e6",
+                    "surface-variant": "#fcdbd6",
+                    "on-secondary-fixed": "#131b2e",
+                    "surface-gray": "#F8FAFC",
+                    "primary": "#b10006",
+                    "secondary-container": "#dae2fd",
+                    "secondary-fixed": "#dae2fd",
+                    "inverse-surface": "#402b29",
+                    "surface-container-high": "#ffe2dd",
+                    "on-error": "#ffffff",
+                    "surface": "#fff8f7",
+                    "on-secondary-container": "#5c647a",
+                    "tertiary-fixed-dim": "#b9c7df",
+                    "surface-dim": "#f3d3ce",
+                    "on-surface": "#291715",
+                    "tertiary-fixed": "#d5e3fc",
+                    "outline-variant": "#e7bdb7",
+                    "background": "#fff8f7",
+                    "tertiary-container": "#627085",
+                    "on-background": "#291715",
+                    "on-surface-variant": "#5d3f3b",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#3a485b",
+                    "border-subtle": "#E2E8F0",
+                    "on-error-container": "#93000a",
+                    "blueprint-blue": "#1E40AF",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#ffdad5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#eef3ff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "emergency-red": "#B91C1C",
+                    "primary-container": "#d91e18",
+                    "inverse-on-surface": "#ffedea",
+                    "outline": "#926f6a",
+                    "secondary": "#565e74",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#410001",
+                    "surface-bright": "#fff8f7",
+                    "surface-container-highest": "#fcdbd6",
+                    "inverse-primary": "#ffb4a9",
+                    "on-primary-container": "#ffefed",
+                    "on-primary-fixed-variant": "#930004"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Hanken Grotesk"],
+                    "emergency-callout": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "emergency-callout": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f7;
+            color: #291715;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-subtle fixed top-0 z-50 w-full">
+<div class="flex justify-between items-center w-full px-margin-desktop h-20 max-w-7xl mx-auto">
+<div class="font-display-lg text-headline-md font-extrabold tracking-tighter text-primary">
+                Alert Sprinkler Co., Inc.
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Solutions</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Inspection</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Capabilities</a>
+<a class="text-primary border-b-2 border-primary font-bold pb-1 font-label-caps text-label-caps" href="#">Service Area</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex flex-col items-end">
+<span class="font-label-caps text-[10px] text-on-surface-variant">DIRECT LINE</span>
+<span class="text-primary font-bold">732-521-1666</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded font-label-caps text-label-caps hover:bg-primary-container transition-all active:scale-95">
+                    Emergency Service
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative bg-surface-container py-24 px-margin-desktop overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4 uppercase">Regional Coverage</span>
+<h1 class="font-display-lg text-display-lg mb-6 text-on-surface">Service Area &amp; Operations</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                        Providing code-compliant fire protection solutions across New Jersey and Southeastern Pennsylvania since 1977. Our strategically located teams ensure rapid response for installations and emergency inspections.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-3 bg-white p-4 rounded border border-subtle">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+<span class="font-label-caps text-label-caps">NJ LICENSED</span>
+</div>
+<div class="flex items-center gap-3 bg-white p-4 rounded border border-subtle">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+<span class="font-label-caps text-label-caps">PA COMPLIANT</span>
+</div>
+</div>
+</div>
+<div class="relative h-[500px] w-full rounded-xl overflow-hidden shadow-xl border border-outline-variant bg-surface-gray">
+<img class="w-full h-full object-cover grayscale-[20%]" data-alt="A clean, technical cartographic map of the Mid-Atlantic region specifically highlighting New Jersey and Southeastern Pennsylvania. The map uses a professional corporate color palette with soft slates and whites, featuring subtle red overlays to indicate service coverage areas. The lighting is even and high-fidelity, resembling a premium logistics or engineering dashboard. The visual style is minimal yet data-rich, emphasizing precision and geographical authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSfnhC_xNruN1tOuf0qfobwTc2DeLoUOnGTr7Kr6XqPQGHwL8jTU5sNMEqVAHWJFLoch-2jZb3jkFkKTspNyG9kwvZHgZAvjJFWvVTVHpm-mIg3ZzfZ72l9v8qsaXzpAFTJZv5qCgRfoG9LF0Y9tYSfzd5ofdjlhkhW32WJXoupdHNUYi0ubKL5hAIWdH0mqHW0d6nxzZ56QGncV5OwDAmcjjQIV79Pxae4eRMB1dtXohPm9zRPU8zhgniRZB8okow8iN2cbZDSks"/>
+<div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Service Area Grid -->
+<section class="py-section-gap px-margin-desktop bg-white">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- New Jersey Column -->
+<div class="p-8 border border-subtle rounded-lg bg-surface-gray">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-white" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md">New Jersey</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Central &amp; Southern Coverage</p>
+</div>
+</div>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 font-body-md text-body-md py-3 border-b border-outline-variant/30">
+<span class="w-2 h-2 bg-primary rounded-full"></span> Middlesex County
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md py-3 border-b border-outline-variant/30">
+<span class="w-2 h-2 bg-primary rounded-full"></span> Monmouth County
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md py-3 border-b border-outline-variant/30">
+<span class="w-2 h-2 bg-primary rounded-full"></span> Mercer County
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md py-3 border-b border-outline-variant/30">
+<span class="w-2 h-2 bg-primary rounded-full"></span> Ocean County
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md py-3">
+<span class="w-2 h-2 bg-primary rounded-full"></span> Burlington &amp; Camden Counties
+                            </li>
+</ul>
+</div>
+<!-- Pennsylvania Column -->
+<div class="p-8 border border-subtle rounded-lg bg-surface-gray">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-tertiary flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-white" data-icon="home_pin">home_pin</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md">Pennsylvania</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Southeastern Hubs</p>
+</div>
+</div>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 font-body-md text-body-md py-3 border-b border-outline-variant/30">
+<span class="w-2 h-2 bg-tertiary rounded-full"></span> Bucks County
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md py-3 border-b border-outline-variant/30">
+<span class="w-2 h-2 bg-tertiary rounded-full"></span> Chester County
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md py-3 border-b border-outline-variant/30">
+<span class="w-2 h-2 bg-tertiary rounded-full"></span> Delaware County
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md py-3 border-b border-outline-variant/30">
+<span class="w-2 h-2 bg-tertiary rounded-full"></span> Montgomery County
+                            </li>
+<li class="flex items-center gap-3 font-body-md text-body-md py-3">
+<span class="w-2 h-2 bg-tertiary rounded-full"></span> Philadelphia County
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Emergency Form -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Info Column -->
+<div class="lg:col-span-1 space-y-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Headquarters</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="fmd_good">fmd_good</span>
+<div>
+<p class="font-body-md text-body-md font-bold">Main Office</p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                        1085 Cranbury South River Rd.,<br/>
+                                        Suite 1, Jamesburg, NJ 08331
+                                    </p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+<div>
+<p class="font-body-md text-body-md font-bold">24/7 Operations</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Phone: 732-521-1666</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Fax: 732-521-2618</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 bg-primary/5 rounded border-l-4 border-primary">
+<h4 class="font-headline-md text-headline-md text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="report" data-weight="fill">report</span>
+                            Emergency Status
+                        </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            All sprinkler system failures or leaks are prioritized. Our technicians are dispatched immediately for critical safety issues.
+                        </p>
+</div>
+</div>
+<!-- Form Column -->
+<div class="lg:col-span-2 bg-white p-8 md:p-12 rounded-xl shadow-sm border border-subtle">
+<h2 class="font-headline-lg text-headline-lg mb-8">Priority Service Request</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Company Name</label>
+<input class="w-full p-3 border border-subtle rounded bg-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Full Name</label>
+<input class="w-full p-3 border border-subtle rounded bg-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Service Type</label>
+<select class="w-full p-3 border border-subtle rounded bg-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+<option>System Repair (Emergency)</option>
+<option>Annual Inspection</option>
+<option>Installation Quote</option>
+<option>General Inquiry</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Phone Number</label>
+<input class="w-full p-3 border border-subtle rounded bg-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" type="tel"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Property Address</label>
+<input class="w-full p-3 border border-subtle rounded bg-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" type="text"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Describe the Issue</label>
+<textarea class="w-full p-3 border border-subtle rounded bg-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" rows="4"></textarea>
+</div>
+<div class="md:col-span-2">
+<button class="w-full bg-primary text-on-primary py-4 rounded font-headline-md text-headline-md hover:bg-primary-container transition-all active:scale-[0.98]" type="submit">
+                                Submit Priority Request
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Compliance Section -->
+<section class="py-16 px-margin-desktop border-t border-subtle bg-white">
+<div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl" data-icon="safety_check">safety_check</span>
+<span class="font-label-caps text-label-caps uppercase font-bold">NFPA Certified</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl" data-icon="policy">policy</span>
+<span class="font-label-caps text-label-caps uppercase font-bold">Licensed &amp; Insured</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl" data-icon="engineering">engineering</span>
+<span class="font-label-caps text-label-caps uppercase font-bold">Union Trained</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-subtle mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-16 w-full max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-display-lg text-headline-md font-extrabold text-on-surface">
+                    Alert Sprinkler Co., Inc.
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant pr-8">
+                    Setting the standard in commercial fire protection across New Jersey and Pennsylvania for over four decades.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Contact Us</h4>
+<nav class="flex flex-col gap-3">
+<span class="font-body-md text-body-md text-on-surface-variant">1085 Cranbury South River Rd., Suite 1, Jamesburg, NJ 08331</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Phone: 732-521-1666</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Fax: 732-521-2618</span>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Affiliations</h4>
+<div class="flex gap-4">
+<div class="w-12 h-12 bg-white border border-outline-variant flex items-center justify-center rounded p-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="verified_user">verified_user</span>
+</div>
+<div class="w-12 h-12 bg-white border border-outline-variant flex items-center justify-center rounded p-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="shield">shield</span>
+</div>
+</div>
+<p class="font-label-caps text-[10px] text-on-surface-variant uppercase">© 1977 Alert Sprinkler Co., Inc. Licensed &amp; Fully Insured.</p>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fire Sprinkler Solutions | Alert Sprinkler Co., Inc.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#49576c",
+                    "on-tertiary-fixed": "#0d1c2e",
+                    "surface-tint": "#c00007",
+                    "primary-fixed-dim": "#ffb4a9",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "surface-container-low": "#fff0ee",
+                    "surface-container": "#ffe9e6",
+                    "surface-variant": "#fcdbd6",
+                    "on-secondary-fixed": "#131b2e",
+                    "surface-gray": "#F8FAFC",
+                    "primary": "#b10006",
+                    "secondary-container": "#dae2fd",
+                    "secondary-fixed": "#dae2fd",
+                    "inverse-surface": "#402b29",
+                    "surface-container-high": "#ffe2dd",
+                    "on-error": "#ffffff",
+                    "surface": "#fff8f7",
+                    "on-secondary-container": "#5c647a",
+                    "tertiary-fixed-dim": "#b9c7df",
+                    "surface-dim": "#f3d3ce",
+                    "on-surface": "#291715",
+                    "tertiary-fixed": "#d5e3fc",
+                    "outline-variant": "#e7bdb7",
+                    "background": "#fff8f7",
+                    "tertiary-container": "#627085",
+                    "on-background": "#291715",
+                    "on-surface-variant": "#5d3f3b",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#3a485b",
+                    "border-subtle": "#E2E8F0",
+                    "on-error-container": "#93000a",
+                    "blueprint-blue": "#1E40AF",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#ffdad5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#eef3ff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "emergency-red": "#B91C1C",
+                    "primary-container": "#d91e18",
+                    "inverse-on-surface": "#ffedea",
+                    "outline": "#926f6a",
+                    "secondary": "#565e74",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#410001",
+                    "surface-bright": "#fff8f7",
+                    "surface-container-highest": "#fcdbd6",
+                    "inverse-primary": "#ffb4a9",
+                    "on-primary-container": "#ffefed",
+                    "on-primary-fixed-variant": "#930004"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Hanken Grotesk"],
+                    "emergency-callout": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "emergency-callout": ["20px", {"lineHeight": "24px", "fontWeight": "800"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .technical-grid {
+            background-image: radial-gradient(circle, #E2E8F0 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-subtle sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop h-20 max-w-7xl mx-auto">
+<div class="font-display-lg text-headline-md font-extrabold tracking-tighter text-primary">
+                Alert Sprinkler Co., Inc.
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-primary font-bold pb-1 font-label-caps text-label-caps" href="#">Solutions</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Inspection</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Capabilities</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Service Area</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:block text-on-surface font-bold font-label-caps text-label-caps" href="tel:732-521-1666">732-521-1666</a>
+<button class="bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps font-bold transition-all active:scale-95">
+                    Emergency Service
+                </button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[500px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A professional, high-fidelity close-up of a modern industrial fire sprinkler system installed in a vast, well-lit commercial space. The image features precision metal piping and high-gloss sprinkler heads against a clean, technical background. The lighting is bright and industrial, emphasizing the reliability and engineering quality of the safety equipment. The overall aesthetic is corporate and modern, with a crisp, high-contrast look that aligns with fire protection standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnRJXrWmFX8xqvIAl1WuiQozGVB3984ymnw51nh4oVKKPqHfKeOY7j9hStLH9kSKk_Sugc4yGUTV1mzAOjLdV1pdxy70yc4O4UXhG9antJ6YwD5y0k9r70M3PW_1gArZUV1GM8nvhtPgV9j72BASWAzYvM2-lM1qN_HtqveMr9fCOwMCelKsWmz5uAV6-zCcDZUgzGhYCHDOETtNftExd71XbG-XqpBOSIA95Ncn0sZab3EFh5WEyh3I49wpd6SrHKZmhiKWZFdZY"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/90 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-margin-desktop text-on-primary-container">
+<span class="bg-primary px-4 py-1 font-label-caps text-label-caps mb-4 inline-block">ENGINEERED PROTECTION</span>
+<h1 class="font-display-lg text-display-lg mb-6 max-w-2xl">Precision Fire Sprinkler Solutions</h1>
+<p class="font-body-lg text-body-lg max-w-xl opacity-90">Providing industry-leading fire protection services since 1977. We design, install, and maintain systems tailored to the unique requirements of your facility.</p>
+</div>
+</section>
+<!-- Technical Content Area -->
+<section class="max-w-7xl mx-auto px-margin-desktop py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Solutions Column -->
+<div class="lg:col-span-8 space-y-24">
+<!-- Commercial -->
+<div class="group">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="business">business</span>
+<h2 class="font-headline-lg text-headline-lg">Protection for Commercial Buildings</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+<div class="space-y-4">
+<p class="text-on-surface-variant leading-relaxed">High-rise offices and retail complexes require sophisticated fire suppression that integrates seamlessly with building management systems.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                        Wet-Pipe Systems
+                                    </li>
+<li class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                        Pre-Action Fire Protection
+                                    </li>
+<li class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                        Architectural Integration
+                                    </li>
+</ul>
+</div>
+<img class="w-full h-64 object-cover border border-subtle" data-alt="A wide-angle professional shot of a modern, high-end commercial office lobby with high ceilings and clean architectural lines. Discreet fire sprinkler heads are visible integrated into the ceiling design. The lighting is natural and bright, highlighting the pristine white surfaces and glass elements. The visual style is modern corporate, emphasizing safety without compromising on aesthetic precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlUH5SR3bXBSyvnQECK7-y2uZ9I_fS0FxQy--U3PqGvlxxfMpu_ykqfusoDG4ZCz_At9-8YzKlAQFPoKL4m1zDXU6FumJx29oXXqi0pW6jFlA4GPzvkDvYE1PuWwByWIKULavfNOR_jSW1vR-aha_EjJV3vjqSf0VJsUhVwyM2Xc8dsffUm6RvoUa2JN3IFKmKzr3VOKjTWtC-kTqU4BeD122tkU7OdwPmOLlMKmK31mXgiHj_mmm629_NGLr6BACqBL81RnxjwTg"/>
+</div>
+</div>
+<!-- Industrial -->
+<div class="group">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="factory">factory</span>
+<h2 class="font-headline-lg text-headline-lg">Protection for Industrial Facilities</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+<img class="w-full h-64 object-cover border border-subtle md:order-1" data-alt="An industrial warehouse environment featuring heavy-duty fire protection infrastructure. Large red pipes and specialized sprinkler systems are visible against a backdrop of industrial machinery and storage racks. The lighting is clear and focused, emphasizing the scale and durability of the installation. The mood is functional and secure, showcasing technical expertise in high-hazard environments." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxCweHYlWaRzYmFwL8kA8YlQSNm5fr9oxs6eIK8YdA3HwYgI8Rh8zclGmbEjm-iGRmEN1CoMpeL4DvTWWc_nfsWJOGrXI0CtSGtoCEVzm23LRJV-3EyfK3a29Tvkmka-70gDxrQI_LwKAEE9G2X39-Q68IA-HfDHIhIvc_MDGyUHhXm1JuiLbCWelWwVTeEfusdNuDIRSsGECpo58A7D1O_Zd7tVxH6HRP67V4s6O8YwTxgs6m5OodbDwUOlcm_jzBcRXbo6_wSGY"/>
+<div class="space-y-4 md:order-2">
+<p class="text-on-surface-variant leading-relaxed">Warehousing and manufacturing plants face unique hazards including high-piled storage and hazardous materials. Our ESFR systems provide rapid response.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                        ESFR High-Output Systems
+                                    </li>
+<li class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                        Deluge &amp; Special Hazard
+                                    </li>
+<li class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                        Corrosion Management
+                                    </li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Residential -->
+<div class="group">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="apartment">apartment</span>
+<h2 class="font-headline-lg text-headline-lg">Protection for Residential Developments</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+<div class="space-y-4">
+<p class="text-on-surface-variant leading-relaxed">Multi-family housing and high-density residential developments require NFPA 13R compliant systems that prioritize life safety and property preservation.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                        NFPA 13R Compliance
+                                    </li>
+<li class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                        Concealed Head Design
+                                    </li>
+<li class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                        Tenant Space Retrofitting
+                                    </li>
+</ul>
+</div>
+<img class="w-full h-64 object-cover border border-subtle" data-alt="The exterior and interior common area of a modern residential complex. The focus is on the clean, safe environment, with subtle fire protection features visible in the design. The lighting is warm and welcoming, reflecting a residential aesthetic. The visual style is crisp and modern, emphasizing the balance between safety and lifestyle comfort in a contemporary housing development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChnnFq8NulF5Kx12Q6hKCZOrSjQ1XSeRGfAq5cJnIEu1acF0jkxCMjbHFayjHaD4L6ietHZbxdyE53JVHw6OrWT4LhyV3ig6TO1m23TMAEkoK55VwYI2g1LZSubiv9MUEaCSHtq_Ibh7Hot7hkEGyK5EaGvRf5rHH-hzuBdezGSqh0ndT_m38A15WZsyxA-Srnw3XHbOBMXv1eXy2C8lIYR86c4Kr0c7djvjLZISrqJz_jFz6ct6d32zPhxnnBFnP3KdOGuKTE7bE"/>
+</div>
+</div>
+<!-- Institutional -->
+<div class="group">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="account_balance">account_balance</span>
+<h2 class="font-headline-lg text-headline-lg">Protection for Institutional Properties</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+<img class="w-full h-64 object-cover border border-subtle md:order-1" data-alt="A clean, sterile hospital corridor featuring high-standard safety and fire protection equipment. The environment is bright and white, emphasizing hygiene and technical compliance. Fire sprinkler systems are neatly integrated into the ceiling grid. The mood is calm and professional, conveying a sense of high-level security and expert institutional maintenance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMQDwQg4wx4mn4734o3FSXy21YPd2LyI857TAIBWRVxXSf3S2Jg0dL7SteWlp4hhEP7IqpRE7VE2vdbjrVJURApDxzcKgCYS5ygLtNWoANdZvw1Q6mdmoo9IVhTq2zlfA4ej7AUmsCpwyKuk65pjy1BM4hafr-iEso854Gli6Z8sY4ukcB_fZPzpffptsBAf5o1OsM-OhpkHsz0lcVjPbdYkzqpozEQCzEddwv6vOHyHBdupBJgYjR2-z2eW3GP0WVZ61vCDbZW1Y"/>
+<div class="space-y-4 md:order-2">
+<p class="text-on-surface-variant leading-relaxed">Schools, hospitals, and government facilities demand maximum reliability and strict adherence to specific regulatory codes for public safety.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                        Critical Care Facilities
+                                    </li>
+<li class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                        Educational Complexes
+                                    </li>
+<li class="flex items-center gap-3 text-on-surface font-bold">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                        Code Enforcement Support
+                                    </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar: Why Choose Alert -->
+<aside class="lg:col-span-4">
+<div class="sticky top-28 bg-surface-gray border border-subtle p-8 technical-grid">
+<h3 class="font-headline-md text-headline-md mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+                            Why Choose Alert?
+                        </h3>
+<div class="space-y-8">
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-2">HERITAGE</h4>
+<p class="text-on-surface-variant text-body-md">Established in 1977, our four decades of experience ensure we understand the evolution of fire codes better than anyone.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-2">COMPLIANCE</h4>
+<p class="text-on-surface-variant text-body-md">Fully licensed and insured professionals. Every installation meets or exceeds NFPA standards and local building codes.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-2">AVAILABILITY</h4>
+<p class="text-on-surface-variant text-body-md">Fire emergencies don't wait. Our dedicated 24/7 emergency service line connects you directly to a technician.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-2">PRECISION</h4>
+<p class="text-on-surface-variant text-body-md">We utilize state-of-the-art hydraulic calculations and CAD design to ensure system efficiency and cost-effectiveness.</p>
+</div>
+</div>
+<div class="mt-10 pt-10 border-t border-outline-variant">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" data-icon="engineering">engineering</span>
+</div>
+<div>
+<p class="font-bold">NJ License #</p>
+<p class="text-on-surface-variant">P00423 &amp; B00123</p>
+</div>
+</div>
+<button class="w-full bg-on-surface text-surface py-4 font-label-caps text-label-caps font-bold hover:bg-primary transition-colors">
+                                REQUEST A QUOTE
+                            </button>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<!-- Compliance Badges / Trust Section -->
+<section class="bg-surface-container py-20">
+<div class="max-w-7xl mx-auto px-margin-desktop text-center">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant mb-12">RECOGNIZED FOR TECHNICAL EXCELLENCE</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center opacity-70 grayscale hover:grayscale-0 transition-all">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2" data-icon="safety_check">safety_check</span>
+<span class="font-bold">NFPA Member</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2" data-icon="handyman">handyman</span>
+<span class="font-bold">NICET Certified</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2" data-icon="gavel">gavel</span>
+<span class="font-bold">Licensed Contractor</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-2" data-icon="shield">shield</span>
+<span class="font-bold">Fully Insured</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-subtle">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-16 w-full max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="font-display-lg text-headline-md font-extrabold text-on-surface">
+                    Alert Sprinkler Co., Inc.
+                </div>
+<p class="text-on-surface-variant font-body-md max-w-xs">
+                    Leading New Jersey in fire protection since 1977. Protecting lives and property with precision engineering.
+                </p>
+</div>
+<div class="space-y-4">
+<h3 class="font-label-caps text-label-caps text-primary">CONTACT INFO</h3>
+<ul class="space-y-2 text-on-surface-variant font-body-md">
+<li class="hover:text-primary transition-colors cursor-pointer">1085 Cranbury South River Rd., Suite 1, Jamesburg, NJ 08331</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Phone: 732-521-1666</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Fax: 732-521-2618</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h3 class="font-label-caps text-label-caps text-primary">RESOURCES</h3>
+<ul class="space-y-2 text-on-surface-variant font-body-md">
+<li class="hover:text-primary transition-colors cursor-pointer">Compliance Badges</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Safety Guidelines</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Service Request</li>
+</ul>
+</div>
+</div>
+<div class="w-full max-w-7xl mx-auto px-margin-desktop py-8 border-t border-subtle">
+<p class="text-on-surface-variant font-label-caps text-label-caps">
+                © 1977 Alert Sprinkler Co., Inc. Licensed &amp; Fully Insured.
+            </p>
+</div>
+</footer>
+</body></html>
