@@ -74,8 +74,8 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
           <span class="as-hamburger-bar block w-6 rounded" style="height:2px;"></span>
         </button>
 
-        <!-- Logo centered -->
-        <a href="/alert-sprinkler" class="as-logo-link absolute left-1/2 -translate-x-1/2 flex items-start" style="top: 0;">
+        <!-- Logo centered: hidden at top, fades in on scroll -->
+        <a href="/alert-sprinkler" class="as-logo-mobile absolute left-1/2 -translate-x-1/2 flex items-center" style="top: 50%; transform: translate(-50%, -50%);">
           <img
             src="/alert-sprinkler/alert-logo.png"
             alt="Alert Sprinkler Co., Inc."
@@ -172,19 +172,21 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
     [data-as-header] .as-hamburger-bar { background: rgba(255,255,255,0.9); }
     [data-as-header][data-scrolled="true"] .as-hamburger-bar { background: #291715; }
 
+    /* ── Mobile header logo: hidden at top, fades in on scroll ── */
+    [data-as-header] .as-logo-mobile {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 320ms ease;
+    }
+    [data-as-header][data-scrolled="true"] .as-logo-mobile {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
     /* ── Mobile ── */
     @media (max-width: 767px) {
       [data-as-header] .as-logo-img {
-        width: clamp(9rem, 36vw, 14rem);
-      }
-      [data-as-header][data-compact="true"] .as-logo-img {
         width: clamp(2.8rem, 10vw, 4rem);
-      }
-      [data-as-header] .as-logo-link {
-        padding-top: 0;
-      }
-      [data-as-header][data-compact="true"] .as-logo-link {
-        padding-top: 0;
       }
       [data-as-header][data-scrolled="true"] {
         background: rgba(255, 248, 247, 0.97);
