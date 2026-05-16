@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Action Restoration Services</title>
+  <meta name="description" content="Contact Action Restoration Services for emergency help or restoration quotes in East Brunswick, NJ and surrounding communities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'navy-950': '#08172e', 'navy-900': '#0f2743', 'navy-700': '#244f79',
+            'water-blue': '#5b99c0',
+            'slate-ar-700': '#4b5f75', 'slate-ar-200': '#d7e2ee', 'slate-ar-50': '#f5f8fc',
+            'orange-600': '#d95b17', 'orange-500': '#f26a21', 'orange-100': '#ffe6d6',
+          },
+          fontFamily: { sora: ['"Sora"','"Segoe UI"','sans-serif'], body: ['"Source Sans 3"','"Segoe UI"','sans-serif'] },
+          maxWidth: { site: '1180px' },
+        },
+      },
+      corePlugins: { preflight: false },
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="layout.js" defer></script>
+</head>
+<body data-page="contact" class="min-h-screen font-body leading-[1.55] text-[#202d3d] [text-rendering:optimizeLegibility]"
+  style="background:radial-gradient(circle at 90% 0%,rgba(46,110,173,0.1) 0%,rgba(46,110,173,0) 42%),linear-gradient(180deg,#f7fafe 0%,#f2f7fc 45%,#eff4fa 100%);">
+  <div id="site-header" class="sticky top-0 z-40"></div>
+  <div class="site-shell">
+    <main class="site-main">
+
+      <section class="relative overflow-visible flex flex-col justify-center items-stretch -mx-5 mb-5 min-h-[70vh] px-[clamp(24px,5vw,80px)] py-[clamp(48px,6vw,80px)] text-white" id="emergency"
+        style="background-image:linear-gradient(to right,rgba(6,18,36,0.93) 0%,rgba(8,24,48,0.88) 50%,rgba(10,30,60,0.55) 100%),url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;">
+        <div class="w-full max-w-site mx-auto">
+          <span class="inline-flex mb-[9px] text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold" style="color:#d2e8ff;">Contact and Dispatch Intake</span>
+          <h1 class="font-sora text-[clamp(2rem,4.2vw,3.3rem)] leading-[1.16] tracking-[-0.01em] text-white mb-3">Request Emergency Help or Get a Restoration Quote</h1>
+          <p class="text-[1.08rem] text-white/90">If damage is active or spreading, use emergency intake right away. For planned restoration scope, submit project details and we will route your request to the right next step.</p>
+          <div class="mt-[22px] flex flex-wrap gap-[10px] max-sm:[&_a]:w-full">
+            <a class="btn btn-primary" href="#emergency-details">Request Emergency Help</a>
+            <a class="btn btn-secondary" href="#quote">Get a Quote</a>
+            <a class="btn btn-utility" href="#emergency-details">Call 24/7</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[60px] bg-slate-ar-50 max-sm:py-[22px]" id="emergency-details">
+        <div class="w-full max-w-site mx-auto">
+          <span class="inline-flex mb-[9px] text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold text-water-blue">Emergency Response Messaging</span>
+          <h2 class="font-sora text-[clamp(1.5rem,2.1vw,2.2rem)] leading-[1.16] tracking-[-0.01em] text-navy-950 mb-[10px]">24/7 Emergency Availability for Urgent Property Loss</h2>
+          <p class="text-slate-ar-700 text-[1.02rem] mb-5">Phone and email are not publicly confirmed from available sources, so this intake path is designed to route urgent requests quickly and accurately.</p>
+          <div class="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
+            <article class="rounded-[14px] border border-[#ffd3b6] bg-orange-100 p-[17px]"><h3 class="font-sora text-navy-950 leading-[1.16] mb-2">Urgent Scenario Path</h3><p class="text-[#663519]">Use emergency intake for active leaks, fire impact, smoke spread, or visible mold growth that is escalating.</p></article>
+            <article class="rounded-[14px] border border-[#ffd3b6] bg-orange-100 p-[17px]"><h3 class="font-sora text-navy-950 leading-[1.16] mb-2">Planned Scope Path</h3><p class="text-[#663519]">Use the quote form when damage is stable and you need a structured restoration plan and timeline.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[60px] max-sm:py-[22px]" id="quote">
+        <div class="w-full max-w-site mx-auto">
+          <span class="inline-flex mb-[9px] text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold text-water-blue">Quote Form</span>
+          <h2 class="font-sora text-[clamp(1.5rem,2.1vw,2.2rem)] leading-[1.16] tracking-[-0.01em] text-navy-950 mb-[10px]">Share Your Property Damage Details</h2>
+          <p class="text-slate-ar-700 text-[1.02rem] mb-5">Complete the fields below so we can align your request with emergency mitigation or a quote-based recovery plan.</p>
+
+          <form id="quote-form" class="grid grid-cols-2 gap-3 max-sm:grid-cols-1" novalidate>
+            <div class="field flex flex-col gap-1.5">
+              <label class="text-[0.86rem] font-bold text-navy-900 tracking-[0.01em]" for="full-name">Full Name</label>
+              <input class="input w-full border border-[#c2d0e0] rounded-[10px] px-3 py-[11px] font-[inherit] text-[#202d3d] bg-white transition-colors hover:border-[#abbfd5] focus-visible:border-[#6aa5e3] focus-visible:shadow-[0_0_0_3px_rgba(106,165,227,0.2)] outline-none" id="full-name" name="full_name" type="text" autocomplete="name" required />
+              <span class="field-error text-[0.8rem] text-[#9f291d]">Please enter your full name.</span>
+            </div>
+            <div class="field flex flex-col gap-1.5">
+              <label class="text-[0.86rem] font-bold text-navy-900 tracking-[0.01em]" for="property-address">Property Address</label>
+              <input class="input w-full border border-[#c2d0e0] rounded-[10px] px-3 py-[11px] font-[inherit] text-[#202d3d] bg-white transition-colors hover:border-[#abbfd5] focus-visible:border-[#6aa5e3] focus-visible:shadow-[0_0_0_3px_rgba(106,165,227,0.2)] outline-none" id="property-address" name="property_address" type="text" autocomplete="street-address" required />
+              <span class="field-error text-[0.8rem] text-[#9f291d]">Please enter the affected property address.</span>
+            </div>
+            <div class="field flex flex-col gap-1.5">
+              <label class="text-[0.86rem] font-bold text-navy-900 tracking-[0.01em]" for="contact-number">Best Contact Number</label>
+              <input class="input w-full border border-[#c2d0e0] rounded-[10px] px-3 py-[11px] font-[inherit] text-[#202d3d] bg-white transition-colors hover:border-[#abbfd5] focus-visible:border-[#6aa5e3] focus-visible:shadow-[0_0_0_3px_rgba(106,165,227,0.2)] outline-none" id="contact-number" name="contact_number" type="tel" autocomplete="tel" pattern="[0-9()+\-\s]{7,}" required />
+              <span class="field-error text-[0.8rem] text-[#9f291d]">Please enter a valid phone number.</span>
+            </div>
+            <div class="field flex flex-col gap-1.5">
+              <label class="text-[0.86rem] font-bold text-navy-900 tracking-[0.01em]" for="email">Email</label>
+              <input class="input w-full border border-[#c2d0e0] rounded-[10px] px-3 py-[11px] font-[inherit] text-[#202d3d] bg-white transition-colors hover:border-[#abbfd5] focus-visible:border-[#6aa5e3] focus-visible:shadow-[0_0_0_3px_rgba(106,165,227,0.2)] outline-none" id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" />
+              <span class="field-error text-[0.8rem] text-[#9f291d]">Please enter a valid email address.</span>
+            </div>
+            <div class="field flex flex-col gap-1.5">
+              <label class="text-[0.86rem] font-bold text-navy-900 tracking-[0.01em]" for="service-type">Service Type</label>
+              <select class="select w-full border border-[#c2d0e0] rounded-[10px] px-3 py-[11px] font-[inherit] text-[#202d3d] bg-white transition-colors hover:border-[#abbfd5] focus-visible:border-[#6aa5e3] outline-none" id="service-type" name="service_type" required>
+                <option value="" selected disabled>Select service type</option>
+                <option>Water Damage Restoration</option>
+                <option>Fire Damage Restoration</option>
+                <option>Mold Remediation</option>
+                <option>Multi-Service Recovery</option>
+              </select>
+              <span class="field-error text-[0.8rem] text-[#9f291d]">Please choose a service type.</span>
+            </div>
+            <div class="field flex flex-col gap-1.5">
+              <label class="text-[0.86rem] font-bold text-navy-900 tracking-[0.01em]" for="property-type">Property Type</label>
+              <select class="select w-full border border-[#c2d0e0] rounded-[10px] px-3 py-[11px] font-[inherit] text-[#202d3d] bg-white transition-colors hover:border-[#abbfd5] focus-visible:border-[#6aa5e3] outline-none" id="property-type" name="property_type" required>
+                <option value="" selected disabled>Select property type</option>
+                <option>Residential</option>
+                <option>Commercial</option>
+                <option>Property Management / Multi-Unit</option>
+              </select>
+              <span class="field-error text-[0.8rem] text-[#9f291d]">Please choose a property type.</span>
+            </div>
+            <div class="field col-span-2 flex flex-col gap-1.5 max-sm:col-span-1">
+              <label class="text-[0.86rem] font-bold text-navy-900 tracking-[0.01em]" for="project-details">Project Details</label>
+              <textarea class="textarea w-full border border-[#c2d0e0] rounded-[10px] px-3 py-[11px] font-[inherit] text-[#202d3d] bg-white min-h-[124px] resize-y transition-colors hover:border-[#abbfd5] focus-visible:border-[#6aa5e3] focus-visible:shadow-[0_0_0_3px_rgba(106,165,227,0.2)] outline-none" id="project-details" name="project_details" required></textarea>
+              <span class="field-error text-[0.8rem] text-[#9f291d]">Please describe the damage, timing, and urgent concerns.</span>
+            </div>
+            <div class="col-span-2 max-sm:col-span-1">
+              <button class="btn btn-primary" type="submit">Submit Request</button>
+            </div>
+          </form>
+          <div id="form-status" class="form-status" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="py-[60px] bg-slate-ar-50 max-sm:py-[22px]">
+        <div class="w-full max-w-site mx-auto">
+          <span class="inline-flex mb-[9px] text-[0.75rem] font-sora uppercase tracking-[0.08em] font-bold text-water-blue">Business Details</span>
+          <h2 class="font-sora text-[clamp(1.5rem,2.1vw,2.2rem)] leading-[1.16] tracking-[-0.01em] text-navy-950 mb-[10px]">Office and Service Information</h2>
+          <div class="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
+            <article class="rounded-[14px] border border-slate-ar-200 bg-white shadow-[0_6px_18px_rgba(11,34,58,0.05)] p-4">
+              <h3 class="font-sora text-navy-950 leading-[1.16] mb-2">Location</h3>
+              <div class="flex flex-col gap-2 text-slate-ar-700">
+                <span>Action Restoration Services</span>
+                <span>646 NJ-18 Suite 215</span>
+                <span>East Brunswick, NJ 08816</span>
+              </div>
+            </article>
+            <article class="rounded-[14px] border border-slate-ar-200 bg-white shadow-[0_6px_18px_rgba(11,34,58,0.05)] p-4">
+              <h3 class="font-sora text-navy-950 leading-[1.16] mb-2">Publicly Available Contact Data</h3>
+              <div class="flex flex-col gap-2 text-slate-ar-700">
+                <span>Phone: Not publicly confirmed from the available sources</span>
+                <span>Email: Not publicly confirmed from the available sources</span>
+                <span>Rating: Not publicly confirmed</span>
+                <span>Review Count: Not publicly confirmed</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-[24px] p-[30px] text-white shadow-[0_18px_40px_rgba(11,34,58,0.16)] mb-5"
+        style="background:linear-gradient(120deg,rgba(13,39,69,0.95) 0%,rgba(18,54,95,0.95) 65%,rgba(27,76,122,0.95) 100%),url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80');background-size:cover;">
+        <div class="w-full max-w-site mx-auto">
+          <h2 class="font-sora text-[clamp(1.5rem,2.1vw,2.2rem)] leading-[1.16] text-white mb-2">Need Help Right Now?</h2>
+          <p class="text-white/90">Use emergency intake for urgent situations or submit your quote request for planned restoration scope.</p>
+          <div class="mt-[18px] flex flex-wrap gap-[10px] max-sm:[&_a]:w-full">
+            <a class="btn btn-primary" href="#emergency-details">Request Emergency Help</a>
+            <a class="btn btn-secondary" href="#quote">Get a Quote</a>
+            <a class="btn btn-utility" href="#emergency-details">Call 24/7</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="mobile-emergency-bar" aria-label="Mobile emergency actions">
+    <a class="btn btn-primary" href="#emergency-details">Request Emergency Help</a>
+    <a class="btn btn-secondary" href="#quote">Get a Quote</a>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script>
+    (function () {
+      const form   = document.getElementById("quote-form");
+      const status = document.getElementById("form-status");
+      if (!form || !status) return;
+      const fields = form.querySelectorAll(".field");
+      const setFieldState = (field) => {
+        const input = field.querySelector("input, select, textarea");
+        if (!input) return true;
+        const valid = input.checkValidity();
+        field.classList.toggle("invalid", !valid);
+        return valid;
+      };
+      fields.forEach((field) => {
+        const input = field.querySelector("input, select, textarea");
+        if (!input) return;
+        input.addEventListener("input", () => setFieldState(field));
+        input.addEventListener("blur",  () => setFieldState(field));
+      });
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        status.className = "form-status";
+        let allValid = true;
+        fields.forEach((field) => { if (!setFieldState(field)) allValid = false; });
+        if (!allValid) {
+          status.textContent = "Please fix the highlighted fields, then submit again.";
+          status.classList.add("error");
+          return;
+        }
+        status.textContent = "Thanks. Your request is ready for dispatch/quote routing.";
+        status.classList.add("success");
+        form.reset();
+        fields.forEach((field) => field.classList.remove("invalid"));
+      });
+    })();
+  </script>
+</body>
+</html>
