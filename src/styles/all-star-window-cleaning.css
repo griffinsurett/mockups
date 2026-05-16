@@ -1,5 +1,14 @@
+@font-face {
+  font-family: "Undergrad";
+  src: url("/all-star-window-cleaning/undergrad-font/Undergrad-UltraThin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-aswc-accent:       #974ff5;
+  --font-undergrad: "Undergrad", sans-serif;
   --color-aswc-accent-hover: #7d38d4;
   --color-aswc-lime:         #dcfb19;
   --color-aswc-star-light:   #f9ebc2;
@@ -28,7 +37,8 @@
     gap: 6px;
     padding: 16px 20px;
     font-size: 0.96rem;
-    font-weight: 600;
+    font-family: var(--font-undergrad);
+    font-weight: normal;
     color: #222;
     white-space: nowrap;
     transition: color 0.2s;
