@@ -129,31 +129,35 @@ const UserMessage = memo(({ msg }: { msg: Message }) => (
 
 function Fab({ open, unread, onClick }: { open: boolean; unread: number; onClick: () => void }) {
   return (
-    <button
-      id="chatbot-trigger"
-      onClick={onClick}
-      type="button"
-      aria-label={open ? "Close chat" : "Chat with All Star"}
-      aria-expanded={open}
+    <div
       className={`fixed bottom-[clamp(1.25rem,4vw,1.75rem)] right-[clamp(1.25rem,4vw,1.75rem)] z-[100003]
-        w-14 h-14 rounded-full cursor-pointer
-        border-2 border-black text-white
-        shadow-[0_4px_20px_rgba(0,0,0,.35),0_2px_8px_rgba(0,0,0,.2)]
-        flex items-center justify-center transition-transform duration-300 ease-out
-        hover:scale-110 hover:brightness-110 active:scale-95 ${open ? "scale-105" : ""}`}
-      style={{ background: PURPLE }}
+        rounded-full p-[2.5px] cursor-pointer
+        shadow-[0_4px_20px_rgba(0,0,0,.45),0_2px_8px_rgba(0,0,0,.3)]
+        transition-transform duration-300 ease-out
+        hover:scale-110 active:scale-95 ${open ? "scale-105" : ""}`}
+      style={{ background: "linear-gradient(180deg, #f9ebc2 0%, #cba14b 100%)" }}
     >
-      <span className={`flex items-center justify-center transition-transform duration-300 ease-[cubic-bezier(.34,1.56,.64,1)] ${open ? "rotate-90" : ""}`}>
-        {open ? <CloseIcon size={18} /> : <ChatIcon size={24} />}
-      </span>
-      {!open && unread > 0 && (
-        <span aria-label={`${unread} new`}
-          className="absolute -top-1 -right-1 bg-black text-white text-[.6rem] font-bold min-w-[1.15rem] h-[1.15rem] rounded-full flex items-center justify-center border-2"
-          style={{ borderColor: PURPLE }}>
-          {unread}
+      <button
+        id="chatbot-trigger"
+        onClick={onClick}
+        type="button"
+        aria-label={open ? "Close chat" : "Chat with All Star"}
+        aria-expanded={open}
+        className="relative w-14 h-14 rounded-full bg-black flex items-center justify-center border-0 cursor-pointer"
+        style={{ color: "#dcfb19" }}
+      >
+        <span className={`flex items-center justify-center transition-transform duration-300 ease-[cubic-bezier(.34,1.56,.64,1)] ${open ? "rotate-90" : ""}`}>
+          {open ? <CloseIcon size={18} /> : <ChatIcon size={24} />}
         </span>
-      )}
-    </button>
+        {!open && unread > 0 && (
+          <span aria-label={`${unread} new`}
+            className="absolute -top-1 -right-1 bg-black text-white text-[.6rem] font-bold min-w-[1.15rem] h-[1.15rem] rounded-full flex items-center justify-center border-2"
+            style={{ borderColor: "#dcfb19" }}>
+            {unread}
+          </span>
+        )}
+      </button>
+    </div>
   );
 }
 
