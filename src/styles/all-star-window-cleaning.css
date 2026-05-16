@@ -6,6 +6,13 @@
   --color-aswc-star-dark:    #cba14b;
 }
 
+@utility star-gradient {
+  background: linear-gradient(180deg, var(--color-aswc-star-light) 0%, var(--color-aswc-star-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 @layer components {
   .aswc-rating-stars {
     letter-spacing: 4px;
