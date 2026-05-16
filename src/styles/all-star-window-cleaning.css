@@ -4,6 +4,13 @@
   --color-aswc-lime:         #dcfb19;
   --color-aswc-star-light:   #f9ebc2;
   --color-aswc-star-dark:    #cba14b;
+
+  --animate-marquee: marquee-scroll 40s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
 }
 
 @utility star-gradient {
