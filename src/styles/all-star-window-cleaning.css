@@ -21,6 +21,37 @@
 }
 
 @layer components {
+  .aswc-btn-gold {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 2px;
+    background: linear-gradient(180deg, var(--color-aswc-star-light) 0%, var(--color-aswc-star-dark) 100%);
+    border-radius: 0.25rem;
+  }
+  .aswc-btn-gold > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    height: 100%;
+    padding: 0.875rem 2.5rem;
+    background: #0a0a0a;
+    border-radius: calc(0.25rem - 2px);
+    font-weight: 700;
+    font-size: 0.6875rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #f9ebc2;
+    transition: background 0.2s;
+  }
+  .aswc-btn-gold:hover > span {
+    background: #111;
+  }
+
   .aswc-rating-stars {
     letter-spacing: 4px;
     background: linear-gradient(180deg, var(--color-aswc-star-light) 0%, var(--color-aswc-star-dark) 100%);
