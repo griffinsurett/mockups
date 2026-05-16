@@ -1,0 +1,88 @@
+@theme {
+  --color-as-primary:         #760202;
+  --color-as-primary-dark:    #560101;
+  --color-as-primary-bright:  #8f0303;
+  --color-as-surface:         #fff8f7;
+  --color-as-surface-gray:    #F8FAFC;
+  --color-as-on-surface:      #291715;
+  --color-as-on-surface-dim:  #5d3f3b;
+  --color-as-border:          #E2E8F0;
+  --color-as-secondary:       #565e74;
+}
+
+@layer components {
+  .as-btn-primary {
+    background: var(--color-as-primary);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.5rem;
+    outline: 2px solid var(--color-as-primary);
+    outline-offset: 3px;
+    transition: background 0.2s, transform 0.15s, outline-color 0.2s;
+  }
+  .as-btn-primary:hover {
+    background: var(--color-as-primary-bright);
+    outline-color: var(--color-as-primary-bright);
+    transform: scale(1.03);
+  }
+  .as-btn-primary:active {
+    transform: scale(0.97);
+  }
+
+  .as-btn-outline {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.5rem;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+  }
+  .as-btn-outline:hover {
+    background: #fff;
+    color: var(--color-as-on-surface);
+    transform: scale(1.03);
+  }
+
+  .as-label-caps {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .as-nav-link {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .as-nav-link:hover,
+  .as-nav-link.active {
+    color: #fff;
+  }
+  .as-nav-link.active {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 2px;
+  }
+
+  /* Scrolled header nav styles */
+  #as-header.scrolled .as-nav-link {
+    color: var(--color-as-on-surface-dim);
+  }
+  #as-header.scrolled .as-nav-link:hover,
+  #as-header.scrolled .as-nav-link.active {
+    color: var(--color-as-primary);
+  }
+  #as-header.scrolled .as-nav-link.active {
+    border-bottom-color: var(--color-as-primary);
+  }
+}

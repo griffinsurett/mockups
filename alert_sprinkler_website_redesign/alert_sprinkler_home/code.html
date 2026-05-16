@@ -106,80 +106,213 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .hero-gradient {
-            background: linear-gradient(rgba(41, 23, 21, 0.7), rgba(41, 23, 21, 0.7)), url('image-hero-industrial.jpg');
-            background-size: cover;
-            background-position: center;
+
+        /* Transparent header over hero */
+        #site-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 50;
+            background: transparent;
+        }
+
+        /* Scroll: becomes solid */
+        #site-header.scrolled {
+            position: fixed;
+            background: rgba(255, 248, 247, 0.97);
+            border-bottom: 1px solid #E2E8F0;
+            backdrop-filter: blur(8px);
+        }
+
+        /* Header nav links — white on hero, dark after scroll */
+        #site-header .nav-link {
+            color: rgba(255,255,255,0.85);
+            letter-spacing: 0.05em;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        #site-header.scrolled .nav-link {
+            color: #5d3f3b;
+        }
+        #site-header .nav-link:hover,
+        #site-header .nav-link.active {
+            color: #ffffff;
+        }
+        #site-header.scrolled .nav-link:hover,
+        #site-header.scrolled .nav-link.active {
+            color: #b10006;
+        }
+        #site-header .nav-link.active {
+            border-bottom: 2px solid currentColor;
+            padding-bottom: 2px;
+        }
+
+        /* Phone label */
+        #site-header .phone-label { color: rgba(255,255,255,0.65); }
+        #site-header.scrolled .phone-label { color: #5d3f3b; }
+        #site-header .phone-number { color: #ffffff; }
+        #site-header.scrolled .phone-number { color: #b10006; }
+
+        /* Logo wordmark */
+        #site-header .logo-text { color: #ffffff; }
+        #site-header.scrolled .logo-text { color: #b10006; }
+
+        /* Hero video */
+        .hero-video-wrapper {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .hero-video-wrapper video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .hero-video-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(20, 8, 7, 0.55) 0%,
+                rgba(20, 8, 7, 0.65) 60%,
+                rgba(20, 8, 7, 0.80) 100%
+            );
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            text-align: center;
+            padding: 160px 64px 140px;
+        }
+
+        /* Divider line */
+        .hero-divider {
+            width: 60px;
+            height: 3px;
+            background: #d91e18;
+            margin: 24px auto;
         }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md">
-<!-- TopNavBar -->
-<header class="bg-surface dark:bg-surface-dim border-b border-subtle dark:border-outline-variant sticky top-0 z-50">
-<div class="flex justify-between items-center w-full px-margin-desktop h-20 max-w-7xl mx-auto">
-<div class="font-display-lg text-headline-md font-extrabold tracking-tighter text-primary dark:text-inverse-primary">
-                Alert Sprinkler Co., Inc.
+
+<!-- ============ TRANSPARENT HEADER ============ -->
+<header id="site-header">
+    <div class="flex items-center w-full px-margin-desktop h-20 max-w-7xl mx-auto relative">
+
+        <!-- LEFT: Nav -->
+        <nav class="hidden md:flex gap-8 items-center flex-1">
+            <a class="nav-link active" href="#">Solutions</a>
+            <a class="nav-link" href="#">Inspection</a>
+            <a class="nav-link" href="#">Capabilities</a>
+            <a class="nav-link" href="#">Service Area</a>
+        </nav>
+
+        <!-- CENTER: Logo -->
+        <div class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center leading-none">
+            <!-- Sprinkler head icon -->
+            <span class="material-symbols-outlined logo-text text-2xl mb-0.5" style="font-variation-settings: 'FILL' 1;">water_damage</span>
+            <span class="logo-text font-extrabold tracking-tighter text-[15px] uppercase whitespace-nowrap">Alert Sprinkler Co., Inc.</span>
+        </div>
+
+        <!-- RIGHT: Phone + CTA -->
+        <div class="flex items-center gap-5 flex-1 justify-end">
+            <div class="hidden lg:flex flex-col items-end leading-tight">
+                <span class="phone-label font-label-caps text-label-caps">24/7 SUPPORT</span>
+                <span class="phone-number font-extrabold text-[18px] tracking-tight">732-521-1666</span>
             </div>
-<nav class="hidden md:flex gap-8 items-center">
-<a class="text-primary dark:text-inverse-primary border-b-2 border-primary font-bold pb-1 font-label-caps text-label-caps" href="#">Solutions</a>
-<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Inspection</a>
-<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Capabilities</a>
-<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Service Area</a>
-</nav>
-<div class="flex items-center gap-4">
-<div class="hidden lg:flex flex-col items-end">
-<span class="font-label-caps text-label-caps text-on-surface-variant">24/7 SUPPORT</span>
-<span class="font-headline-md text-headline-md text-primary">732-521-1666</span>
-</div>
-<button class="bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps hover:bg-primary-container transition-all active:scale-95">
-                    Emergency Service
-                </button>
-</div>
-</div>
+            <button class="bg-primary text-on-primary px-5 py-2.5 font-label-caps text-label-caps hover:bg-primary-container transition-all active:scale-95 whitespace-nowrap">
+                Emergency Service
+            </button>
+        </div>
+
+    </div>
 </header>
+
+<script>
+    (function() {
+        var header = document.getElementById('site-header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 60) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    })();
+</script>
+
 <main>
-<!-- Hero Section -->
-<section class="hero-gradient relative min-h-[700px] flex items-center" data-alt="A large-scale industrial facility with complex fire sprinkler piping painted bright red, set against a background of high-fidelity engineering blueprints. The lighting is dramatic and clear, emphasizing the precision of the installation. The color palette is dominated by professional charcoal and vibrant primary red, reflecting a sense of safety and technical mastery. Professional, high-contrast photography style.">
-<div class="max-w-7xl mx-auto px-margin-desktop w-full py-20">
-<div class="max-w-3xl">
-<span class="inline-block bg-primary px-3 py-1 text-on-primary font-label-caps text-label-caps mb-6">ESTABLISHED 1977</span>
-<h1 class="font-display-lg text-display-lg text-white mb-6">
-                        Fire Sprinkler System Engineering, Installation, Inspection, Maintenance, and Repair
-                    </h1>
-<p class="font-body-lg text-body-lg text-white/90 mb-10 max-w-2xl">
-                        Providing life safety solutions through technical precision, code compliance, and unwavering reliability for over four decades. Licensed and fully insured in New Jersey.
-                    </p>
-<div class="flex flex-wrap gap-4">
-<button class="bg-primary text-on-primary px-8 py-4 font-headline-md text-headline-md hover:bg-primary-container transition-all">
-                            Request Inspection
-                        </button>
-<button class="bg-transparent border-2 border-white text-white px-8 py-4 font-headline-md text-headline-md hover:bg-white hover:text-on-surface transition-all">
-                            Our Capabilities
-                        </button>
-</div>
-</div>
-</div>
-<!-- Trust Bar -->
-<div class="absolute bottom-0 left-0 w-full bg-surface-gray py-8 border-t border-subtle">
-<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span class="font-label-caps text-label-caps">CODE COMPLIANCE</span>
-</div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary" data-icon="engineering" data-weight="fill" style="font-variation-settings: 'FILL' 1;">engineering</span>
-<span class="font-label-caps text-label-caps">EXPERT ENGINEERING</span>
-</div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary" data-icon="support_agent" data-weight="fill" style="font-variation-settings: 'FILL' 1;">support_agent</span>
-<span class="font-label-caps text-label-caps">24/7 EMERGENCY</span>
-</div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary" data-icon="policy" data-weight="fill" style="font-variation-settings: 'FILL' 1;">policy</span>
-<span class="font-label-caps text-label-caps">FULLY INSURED</span>
-</div>
-</div>
-</div>
+<!-- ============ HERO SECTION ============ -->
+<section class="hero-video-wrapper">
+    <video autoplay muted loop playsinline>
+        <source src="hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+
+    <div class="hero-content">
+        <!-- Eyebrow -->
+        <span class="inline-block bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 mb-6 tracking-widest">
+            ESTABLISHED 1977 · LICENSED &amp; INSURED IN NJ
+        </span>
+
+        <!-- Company name as hero headline -->
+        <h1 class="text-white font-extrabold tracking-tighter leading-none" style="font-size: clamp(48px, 7vw, 96px); letter-spacing: -0.03em;">
+            Alert Sprinkler Co., Inc.
+        </h1>
+
+        <div class="hero-divider"></div>
+
+        <!-- Tagline -->
+        <p class="text-white/80 font-body-lg text-body-lg max-w-2xl mb-10">
+            Fire Sprinkler Engineering, Installation, Inspection,<br class="hidden md:block"> Maintenance &amp; Repair — New Jersey &amp; Pennsylvania
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4 justify-center">
+            <button class="bg-primary text-on-primary px-8 py-4 font-headline-md text-headline-md hover:bg-primary-container transition-all">
+                Request Inspection
+            </button>
+            <button class="bg-transparent border-2 border-white text-white px-8 py-4 font-headline-md text-headline-md hover:bg-white hover:text-on-surface transition-all">
+                Our Capabilities
+            </button>
+        </div>
+    </div>
+
+    <!-- Trust Bar pinned to bottom of hero -->
+    <div class="relative z-10 w-full bg-black/50 backdrop-blur-sm border-t border-white/15">
+        <div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter py-6">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+                <span class="font-label-caps text-label-caps text-white/80">CODE COMPLIANCE</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">engineering</span>
+                <span class="font-label-caps text-label-caps text-white/80">EXPERT ENGINEERING</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+                <span class="font-label-caps text-label-caps text-white/80">24/7 EMERGENCY</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">policy</span>
+                <span class="font-label-caps text-label-caps text-white/80">FULLY INSURED</span>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Solutions Bento Grid -->
 <section class="py-section-gap bg-surface">

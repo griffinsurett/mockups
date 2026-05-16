@@ -1,0 +1,307 @@
+---
+import "../../styles/global.css";
+import "../../styles/alert-sprinkler.css";
+
+interface Props {
+  title?: string;
+}
+const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="overflow-x-hidden" style="font-family: 'Hanken Grotesk', sans-serif; background: #fff8f7; color: #291715;">
+
+    <!-- ============ HEADER ============ -->
+    <header id="as-header" data-as-header class="fixed inset-x-0 top-0 z-50">
+
+      <!-- Backdrop: gradient → solid on scroll -->
+      <div class="pointer-events-none absolute inset-x-0 top-0 transition-all duration-500" data-as-backdrop></div>
+
+      <!-- Desktop layout -->
+      <div class="hidden md:flex items-center justify-between w-[95%] mx-auto relative overflow-visible" data-as-inner>
+
+        <!-- Left: Nav -->
+        <nav class="flex gap-8 items-center flex-1" data-as-nav>
+          <a href="/alert-sprinkler" class="as-nav-link active">Home</a>
+          <a href="#" class="as-nav-link">Solutions</a>
+          <a href="#" class="as-nav-link">Inspection</a>
+          <a href="#" class="as-nav-link">Capabilities</a>
+        </nav>
+
+        <!-- Logo A: absolute, large, visible at top, fades out on scroll -->
+        <a href="/alert-sprinkler" class="as-logo-absolute" aria-hidden="false">
+          <img
+            src="/alert-sprinkler/alert-logo.png"
+            alt="Alert Sprinkler Co., Inc."
+            class="as-logo-img-large object-contain drop-shadow-xl"
+            loading="eager"
+          />
+        </a>
+
+        <!-- Logo B: relative in flow, small, hidden at top, fades in on scroll -->
+        <a href="/alert-sprinkler" class="as-logo-inline" aria-hidden="true" tabindex="-1">
+          <img
+            src="/alert-sprinkler/alert-logo.png"
+            alt=""
+            class="as-logo-img-small object-contain"
+          />
+        </a>
+
+        <!-- Right: Phone + CTA -->
+        <div class="flex items-center gap-5 flex-1 justify-end">
+          <div class="flex flex-col items-end leading-tight">
+            <span class="as-label-caps as-phone-label">24/7 SUPPORT</span>
+            <a href="tel:7325211666" class="as-phone-num font-extrabold text-[18px] tracking-tight">732-521-1666</a>
+          </div>
+          <a href="/alert-sprinkler/contact" class="as-btn-primary whitespace-nowrap">
+            Emergency Service
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Mobile layout -->
+      <div class="flex md:hidden items-center justify-between w-full px-5 h-16 relative" data-as-inner>
+
+        <!-- Hamburger -->
+        <button class="flex flex-col gap-1.5 p-2 shrink-0" aria-label="Open menu" id="as-mobile-menu-btn">
+          <span class="as-hamburger-bar block w-6 rounded" style="height:2px;"></span>
+          <span class="as-hamburger-bar block w-6 rounded" style="height:2px;"></span>
+          <span class="as-hamburger-bar block w-6 rounded" style="height:2px;"></span>
+        </button>
+
+        <!-- Logo centered -->
+        <a href="/alert-sprinkler" class="as-logo-link absolute left-1/2 flex items-start">
+          <img
+            src="/alert-sprinkler/alert-logo.png"
+            alt="Alert Sprinkler Co., Inc."
+            class="as-logo-img object-contain"
+            loading="eager"
+          />
+        </a>
+
+        <!-- Phone CTA -->
+        <a href="tel:7325211666" class="as-btn-primary text-[11px] px-3 py-2 shrink-0">
+          732-521-1666
+        </a>
+
+      </div>
+
+    </header>
+
+    <slot />
+
+  </body>
+
+  <style>
+    /* ── Backdrop ── */
+    [data-as-backdrop] {
+      height: 6rem;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, transparent 100%);
+      transition: background 300ms ease, box-shadow 300ms ease, height 300ms ease;
+    }
+    [data-as-header][data-scrolled="true"] [data-as-backdrop] {
+      height: 100%;
+      background: rgba(255, 248, 247, 0.97);
+      box-shadow: 0 1px 16px rgba(41,23,21,0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    /* ── Header must not clip the overflowing logo ── */
+    [data-as-header] {
+      overflow: visible !important;
+    }
+
+    /* ── Inner row: always 5rem, logo A overflows freely ── */
+    [data-as-header] [data-as-inner] {
+      height: 5rem;
+      overflow: visible;
+      padding: 0;
+    }
+
+    /* ── Logo A: absolute, hangs from top, visible at top ── */
+    [data-as-header] .as-logo-absolute {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      opacity: 1;
+      pointer-events: auto;
+      transition: opacity 420ms ease;
+    }
+    [data-as-header] .as-logo-img-large {
+      display: block;
+      width: clamp(14rem, 28vw, 24rem);
+      height: auto;
+      transition: width 420ms ease;
+    }
+
+    /* ── Logo B: in flow, centered, hidden at top ── */
+    [data-as-header] .as-logo-inline {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 320ms ease;
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      margin: 0 auto;
+    }
+    [data-as-header] .as-logo-img-small {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+
+    /* ── On compact: Logo A shrinks and fades out ── */
+    [data-as-header][data-compact="true"] .as-logo-absolute {
+      opacity: 0;
+      pointer-events: none;
+    }
+    [data-as-header][data-compact="true"] .as-logo-img-large {
+      width: 4rem;
+    }
+    [data-as-header][data-compact="true"] .as-logo-inline {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ── Nav: vertically centred in the bar ── */
+    [data-as-header] [data-as-nav] {
+      align-self: center;
+    }
+
+    /* ── Nav link colors ── */
+    [data-as-header] .as-nav-link {
+      color: rgba(255,255,255,0.85);
+    }
+    [data-as-header] .as-nav-link:hover,
+    [data-as-header] .as-nav-link.active {
+      color: #fff;
+    }
+    [data-as-header][data-scrolled="true"] .as-nav-link {
+      color: #5d3f3b;
+    }
+    [data-as-header][data-scrolled="true"] .as-nav-link:hover,
+    [data-as-header][data-scrolled="true"] .as-nav-link.active {
+      color: #760202;
+    }
+    [data-as-header] .as-nav-link.active {
+      border-bottom: 2px solid currentColor;
+      padding-bottom: 2px;
+    }
+
+    /* ── Phone ── */
+    [data-as-header] .as-phone-label { color: rgba(255,255,255,0.65); }
+    [data-as-header] .as-phone-num   { color: #fff; }
+    [data-as-header][data-scrolled="true"] .as-phone-label { color: #5d3f3b; }
+    [data-as-header][data-scrolled="true"] .as-phone-num   { color: #760202; }
+
+    /* ── Hamburger bars ── */
+    [data-as-header] .as-hamburger-bar { background: rgba(255,255,255,0.9); }
+    [data-as-header][data-scrolled="true"] .as-hamburger-bar { background: #291715; }
+
+    /* ── Mobile ── */
+    @media (max-width: 767px) {
+      [data-as-header] .as-logo-img {
+        width: clamp(9rem, 36vw, 14rem);
+      }
+      [data-as-header][data-compact="true"] .as-logo-img {
+        width: clamp(2.8rem, 10vw, 4rem);
+      }
+      [data-as-header] .as-logo-link {
+        padding-top: 0;
+      }
+      [data-as-header][data-compact="true"] .as-logo-link {
+        padding-top: 0;
+      }
+      [data-as-header][data-scrolled="true"] {
+        background: rgba(255, 248, 247, 0.97);
+        box-shadow: 0 1px 16px rgba(41,23,21,0.1);
+      }
+      [data-as-backdrop] { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      [data-as-header] *,
+      [data-as-header] *::before,
+      [data-as-header] *::after {
+        transition: none !important;
+      }
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+
+  <script>
+    (function initAsHeader() {
+      if (typeof window === "undefined") return;
+
+      const header = document.getElementById("as-header");
+      if (!header) return;
+
+      const backdrop = header.querySelector("[data-as-backdrop]") as HTMLElement | null;
+      const inner    = header.querySelector("[data-as-inner]")    as HTMLElement | null;
+
+      const setBackdropHeight = () => {
+        if (backdrop && inner) {
+          backdrop.style.height = `${inner.offsetHeight}px`;
+        }
+      };
+
+      let ticking = false;
+      let bgLocked = false;
+
+      const update = () => {
+        const y = window.scrollY;
+
+        // Logo compact: triggers immediately on any scroll
+        if (y > 44) {
+          header.setAttribute("data-compact", "true");
+          bgLocked = true;
+        } else {
+          header.removeAttribute("data-compact");
+        }
+
+        // Backdrop/bg: locks on scroll down, releases only at 280px on way back up
+        if (bgLocked) {
+          header.setAttribute("data-scrolled", "true");
+          if (y < 280) {
+            bgLocked = false;
+            header.removeAttribute("data-scrolled");
+          }
+        }
+
+        setBackdropHeight();
+        ticking = false;
+      };
+
+      const onScroll = () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(update);
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", setBackdropHeight, { passive: true });
+      requestAnimationFrame(update);
+      setBackdropHeight();
+    })();
+  </script>
+
+</html>

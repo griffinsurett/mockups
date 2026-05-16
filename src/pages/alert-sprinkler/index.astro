@@ -1,18 +1,18 @@
 ---
+import BaseLayout from "../../layouts/alert-sprinkler/BaseLayout.astro";
+import Hero from "../../components/alert-sprinkler/Hero.astro";
+import SolutionsSection from "../../components/alert-sprinkler/SolutionsSection.astro";
+import InspectionSection from "../../components/alert-sprinkler/InspectionSection.astro";
+import EmergencySection from "../../components/alert-sprinkler/EmergencySection.astro";
+import CredentialsSection from "../../components/alert-sprinkler/CredentialsSection.astro";
+import Footer from "../../components/alert-sprinkler/Footer.astro";
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alert Sprinkler Co. — Mockup</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body, html { height: 100%; overflow-x: hidden; }
-      iframe { display: block; width: 100%; height: 100vh; border: none; }
-    </style>
-  </head>
-  <body>
-    <iframe src="/mockup-alert-sprinkler/index.html" title="Alert Sprinkler Co. Mockup"></iframe>
-  </body>
-</html>
+
+<BaseLayout title="Alert Sprinkler Co., Inc. — Fire Protection NJ & PA">
+  <Hero />
+  <SolutionsSection />
+  <InspectionSection />
+  <EmergencySection />
+  <CredentialsSection />
+  <Footer />
+</BaseLayout>

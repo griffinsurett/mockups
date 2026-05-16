@@ -1,0 +1,102 @@
+---
+import BackgroundMedia from "./BackgroundMedia.astro";
+---
+
+<section class="relative w-full overflow-hidden flex flex-col" style="min-height: 100dvh;">
+  <!-- Video background -->
+  <BackgroundMedia
+    backgroundMedia={{
+      video: {
+        src: "/alert-sprinkler/hero-video.mp4",
+        autoPlay: true,
+        muted: true,
+        loop: true,
+        playsInline: true,
+        preload: "auto",
+      },
+    }}
+  />
+
+  <!-- Dark gradient overlay -->
+  <div
+    class="absolute inset-0 z-0"
+    style="background: linear-gradient(to bottom, rgba(20,8,7,0.55) 0%, rgba(20,8,7,0.65) 60%, rgba(20,8,7,0.85) 100%);"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Spacer: logo height minus header (5rem) = distance logo hangs below header bar -->
+  <div class="relative z-10 w-full shrink-0 hidden md:block" style="height: calc(clamp(14rem, 28vw, 24rem) - 1rem);"></div>
+  <div class="relative z-10 w-full shrink-0 block md:hidden" style="height: calc(clamp(9rem, 36vw, 14rem) - 2rem);"></div>
+
+  <!-- Hero content -->
+  <div class="relative z-10 flex flex-col items-center justify-center text-center flex-1 px-6 md:px-16 pb-32">
+    <!-- Eyebrow -->
+    <span class="as-label-caps text-white/60 mb-4 block">Established 1977</span>
+
+    <!-- Company name as hero headline -->
+    <h1
+      class="text-white font-extrabold tracking-tighter leading-none mb-6"
+      style="font-size: clamp(21px, 3.5vw, 48px); letter-spacing: -0.03em;"
+    >
+      Alert Sprinkler Co., Inc.
+    </h1>
+
+    <!-- Tagline -->
+    <p class="text-white/80 text-base md:text-lg max-w-2xl mb-10 leading-relaxed">
+      Fire Sprinkler Engineering, Installation, Inspection,<br class="hidden md:block" />
+      Maintenance &amp; Repair — New Jersey &amp; Pennsylvania
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="/alert-sprinkler/contact" class="as-btn-primary text-base px-8 py-4">
+        Request Inspection
+      </a>
+      <a href="#solutions" class="as-btn-outline text-base px-8 py-4">
+        Our Capabilities
+      </a>
+    </div>
+
+    <!-- Social proof row -->
+    <div class="mt-6 flex items-center gap-2">
+      <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="shrink-0">
+        <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 20-7.8 20-21 0-1.4-.2-2.7-.5-4z"/>
+        <path fill="#34A853" d="M6.3 14.7l7 5.1C15 16.1 19.2 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3c-7.7 0-14.3 4.4-17.7 11.7z"/>
+        <path fill="#FBBC05" d="M24 45c5.5 0 10.5-1.9 14.4-5.1l-6.7-5.5C29.6 36 26.9 37 24 37c-6 0-11.1-4-12.9-9.5l-7 5.4C7.6 40.5 15.2 45 24 45z"/>
+        <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-1 3-3.3 5.4-6.3 7l6.7 5.5C40.3 37.6 45 31.5 45 24c0-1.4-.2-2.7-.5-4z"/>
+      </svg>
+      <span style="color: #FBBC05; font-size: 0.9rem; letter-spacing: 0.04em;">★★★★★</span>
+      <span class="text-white/90 text-sm font-bold">5.0</span>
+      <span class="text-white/30 text-sm">·</span>
+      <span class="text-white/70 text-sm font-semibold">178+ Reviews</span>
+    </div>
+  </div>
+
+  <!-- Trust bar pinned to bottom of hero -->
+  <div class="relative z-10 w-full border-t border-white/15" style="background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
+    <div class="max-w-7xl mx-auto px-6 md:px-16 grid grid-cols-2 md:grid-cols-4 gap-6 py-5">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-as-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+        <span class="as-label-caps text-white/80">CODE COMPLIANCE</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-as-primary" style="font-variation-settings: 'FILL' 1;">engineering</span>
+        <span class="as-label-caps text-white/80">EXPERT ENGINEERING</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-as-primary" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+        <span class="as-label-caps text-white/80">24/7 EMERGENCY</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-as-primary" style="font-variation-settings: 'FILL' 1;">policy</span>
+        <span class="as-label-caps text-white/80">FULLY INSURED</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+</style>
