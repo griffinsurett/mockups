@@ -86,7 +86,7 @@
     transition: color 0.2s;
     border-bottom: 3px solid transparent;
   }
-  .aswc-nav-link:hover { color: #dc2626; }
+  .aswc-nav-link:hover { color: #974ff5; }
   .aswc-nav-link.active {
     border-bottom-color: #111;
     margin-bottom: -2px;
