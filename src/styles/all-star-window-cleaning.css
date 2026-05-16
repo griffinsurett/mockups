@@ -13,6 +13,7 @@
   100% { transform: translateX(-25%); }
 }
 
+
 @utility star-gradient {
   background: linear-gradient(180deg, var(--color-aswc-star-light) 0%, var(--color-aswc-star-dark) 100%);
   -webkit-background-clip: text;
@@ -21,6 +22,13 @@
 }
 
 @layer components {
+  .aswc-btn-purple {
+    transition: transform 0.2s ease;
+  }
+  .aswc-btn-purple:hover {
+    transform: scale(1.05);
+  }
+
   .aswc-btn-gold {
     position: relative;
     display: inline-flex;
@@ -47,6 +55,12 @@
     text-transform: uppercase;
     color: #f9ebc2;
     transition: background 0.2s;
+  }
+  .aswc-btn-gold {
+    transition: transform 0.2s ease;
+  }
+  .aswc-btn-gold:hover {
+    transform: scale(1.05);
   }
   .aswc-btn-gold:hover > span {
     background: #111;
