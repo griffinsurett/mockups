@@ -2,7 +2,7 @@
 import BackgroundMedia from "./BackgroundMedia.astro";
 ---
 
-<section class="relative w-full overflow-hidden flex flex-col" style="min-height: 100dvh;">
+<section class="relative w-full overflow-hidden flex flex-col" style="height: 100dvh;">
   <!-- Video background -->
   <BackgroundMedia
     backgroundMedia={{
@@ -24,12 +24,18 @@ import BackgroundMedia from "./BackgroundMedia.astro";
     aria-hidden="true"
   ></div>
 
-  <!-- Spacer: logo height minus header (5rem) = distance logo hangs below header bar -->
-  <div class="relative z-10 w-full shrink-0 hidden md:block" style="height: calc(clamp(14rem, 28vw, 24rem) - 1rem);"></div>
-  <div class="relative z-10 w-full shrink-0 block md:hidden" style="height: calc(clamp(9rem, 36vw, 14rem) - 2rem);"></div>
-
   <!-- Hero content -->
-  <div class="relative z-10 flex flex-col items-center justify-center text-center flex-1 px-6 md:px-16 pb-32">
+  <div class="relative z-10 flex flex-col items-center justify-center text-center flex-1 px-6 md:px-16">
+    <!-- Large logo in-flow at top of hero -->
+    <a href="/alert-sprinkler" class="mb-6 shrink-0">
+      <img
+        src="/alert-sprinkler/alert-logo.png"
+        alt="Alert Sprinkler Co., Inc."
+        class="object-contain drop-shadow-xl"
+        style="width: clamp(12rem, 24vw, 20rem);"
+        loading="eager"
+      />
+    </a>
     <!-- Eyebrow -->
     <span class="as-label-caps text-white/60 mb-4 block">Established 1977</span>
 
@@ -72,25 +78,43 @@ import BackgroundMedia from "./BackgroundMedia.astro";
     </div>
   </div>
 
-  <!-- Trust bar pinned to bottom of hero -->
-  <div class="relative z-10 w-full border-t border-white/15" style="background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
-    <div class="max-w-7xl mx-auto px-6 md:px-16 grid grid-cols-2 md:grid-cols-4 gap-6 py-5">
-      <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-as-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
-        <span class="as-label-caps text-white/80">CODE COMPLIANCE</span>
-      </div>
-      <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-as-primary" style="font-variation-settings: 'FILL' 1;">engineering</span>
-        <span class="as-label-caps text-white/80">EXPERT ENGINEERING</span>
-      </div>
-      <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-as-primary" style="font-variation-settings: 'FILL' 1;">support_agent</span>
-        <span class="as-label-caps text-white/80">24/7 EMERGENCY</span>
-      </div>
-      <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-as-primary" style="font-variation-settings: 'FILL' 1;">policy</span>
-        <span class="as-label-caps text-white/80">FULLY INSURED</span>
-      </div>
+  <!-- Trust bar marquee pinned to bottom of hero -->
+  <div class="relative z-10 w-full overflow-hidden" style="background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
+    <div class="as-marquee-track flex items-center py-5 gap-12" aria-hidden="true">
+      <!-- Set 1 -->
+      <span class="as-marquee-item shrink-0">CODE COMPLIANCE</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">EXPERT ENGINEERING</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">24/7 EMERGENCY</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">FULLY INSURED</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">LICENSED &amp; INSURED</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">FIRE PROTECTION SPECIALISTS</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">ESTABLISHED 1977</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">NJ &amp; PA SERVICE AREA</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <!-- Set 2 (duplicate for seamless loop) -->
+      <span class="as-marquee-item shrink-0">CODE COMPLIANCE</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">EXPERT ENGINEERING</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">24/7 EMERGENCY</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">FULLY INSURED</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">LICENSED &amp; INSURED</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">FIRE PROTECTION SPECIALISTS</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">ESTABLISHED 1977</span>
+      <span class="as-marquee-dot shrink-0">·</span>
+      <span class="as-marquee-item shrink-0">NJ &amp; PA SERVICE AREA</span>
+      <span class="as-marquee-dot shrink-0">·</span>
     </div>
   </div>
 </section>
@@ -98,5 +122,33 @@ import BackgroundMedia from "./BackgroundMedia.astro";
 <style>
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  .as-marquee-item {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    white-space: nowrap;
+  }
+
+  .as-marquee-dot {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.25);
+  }
+
+  .as-marquee-track {
+    width: max-content;
+    animation: as-marquee 30s linear infinite;
+  }
+
+  @keyframes as-marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .as-marquee-track { animation: none; }
   }
 </style>

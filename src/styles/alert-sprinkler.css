@@ -49,6 +49,28 @@
     transform: scale(1.03);
   }
 
+  .as-btn-ghost {
+    background: transparent;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.5rem;
+    outline: 2px solid rgba(255,255,255,0.7);
+    outline-offset: 3px;
+    border: 2px solid rgba(255,255,255,0.7);
+    transition: outline-color 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .as-btn-ghost:hover {
+    outline-color: #fff;
+    border-color: #fff;
+    transform: scale(1.03);
+  }
+  .as-btn-ghost:active {
+    transform: scale(0.97);
+  }
+
   .as-label-caps {
     font-size: 12px;
     font-weight: 700;

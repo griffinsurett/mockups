@@ -42,21 +42,11 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
           <a href="#" class="as-nav-link">Capabilities</a>
         </nav>
 
-        <!-- Logo A: absolute, large, visible at top, fades out on scroll -->
-        <a href="/alert-sprinkler" class="as-logo-absolute" aria-hidden="false">
+        <!-- Logo: in flow, small, always visible -->
+        <a href="/alert-sprinkler" class="as-logo-inline" aria-hidden="false">
           <img
             src="/alert-sprinkler/alert-logo.png"
             alt="Alert Sprinkler Co., Inc."
-            class="as-logo-img-large object-contain drop-shadow-xl"
-            loading="eager"
-          />
-        </a>
-
-        <!-- Logo B: relative in flow, small, hidden at top, fades in on scroll -->
-        <a href="/alert-sprinkler" class="as-logo-inline" aria-hidden="true" tabindex="-1">
-          <img
-            src="/alert-sprinkler/alert-logo.png"
-            alt=""
             class="as-logo-img-small object-contain"
           />
         </a>
@@ -85,7 +75,7 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
         </button>
 
         <!-- Logo centered -->
-        <a href="/alert-sprinkler" class="as-logo-link absolute left-1/2 flex items-start">
+        <a href="/alert-sprinkler" class="as-logo-link absolute left-1/2 -translate-x-1/2 flex items-start" style="top: 0;">
           <img
             src="/alert-sprinkler/alert-logo.png"
             alt="Alert Sprinkler Co., Inc."
@@ -94,9 +84,9 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
           />
         </a>
 
-        <!-- Phone CTA -->
-        <a href="tel:7325211666" class="as-btn-primary text-[11px] px-3 py-2 shrink-0">
-          732-521-1666
+        <!-- CTA -->
+        <a href="/alert-sprinkler/contact" class="as-btn-primary text-[11px] px-3 py-2 shrink-0">
+          Get a Quote
         </a>
 
       </div>
@@ -121,36 +111,13 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
       backdrop-filter: blur(10px);
     }
 
-    /* ── Header must not clip the overflowing logo ── */
-    [data-as-header] {
-      overflow: visible !important;
-    }
-
-    /* ── Inner row: always 5rem, logo A overflows freely ── */
+    /* ── Inner row: always 5rem ── */
     [data-as-header] [data-as-inner] {
       height: 5rem;
-      overflow: visible;
       padding: 0;
     }
 
-    /* ── Logo A: absolute, hangs from top, visible at top ── */
-    [data-as-header] .as-logo-absolute {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      opacity: 1;
-      pointer-events: auto;
-      transition: opacity 420ms ease;
-    }
-    [data-as-header] .as-logo-img-large {
-      display: block;
-      width: clamp(14rem, 28vw, 24rem);
-      height: auto;
-      transition: width 420ms ease;
-    }
-
-    /* ── Logo B: in flow, centered, hidden at top ── */
+    /* ── Logo: hidden at top, fades in on scroll ── */
     [data-as-header] .as-logo-inline {
       opacity: 0;
       pointer-events: none;
@@ -160,23 +127,14 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
       align-self: stretch;
       margin: 0 auto;
     }
+    [data-as-header][data-scrolled="true"] .as-logo-inline {
+      opacity: 1;
+      pointer-events: auto;
+    }
     [data-as-header] .as-logo-img-small {
       display: block;
       height: 100%;
       width: auto;
-    }
-
-    /* ── On compact: Logo A shrinks and fades out ── */
-    [data-as-header][data-compact="true"] .as-logo-absolute {
-      opacity: 0;
-      pointer-events: none;
-    }
-    [data-as-header][data-compact="true"] .as-logo-img-large {
-      width: 4rem;
-    }
-    [data-as-header][data-compact="true"] .as-logo-inline {
-      opacity: 1;
-      pointer-events: auto;
     }
 
     /* ── Nav: vertically centred in the bar ── */
