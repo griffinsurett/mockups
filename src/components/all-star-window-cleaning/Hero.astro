@@ -1,0 +1,31 @@
+---
+import BackgroundMedia from "./BackgroundMedia.astro";
+import heroImg from "../../assets/all-star-window-cleaning/hero-img.webp";
+---
+
+<section class="relative w-full h-[80vh] overflow-hidden flex items-center justify-center">
+  <BackgroundMedia
+    backgroundMedia={{
+      image: {
+        src: heroImg,
+        aboveTheFold: true,
+      },
+      overlayClass: "bg-black/55",
+    }}
+  />
+
+  <div class="relative z-10 flex flex-col items-center text-center px-6 gap-6">
+    <p class="text-sm md:text-base font-semibold uppercase tracking-[0.2em]" style="color:#dcfb19">
+      Based in Sayreville, NJ &amp; Serving All of Central NJ
+    </p>
+    <h1 class="text-white font-black uppercase leading-none text-5xl md:text-8xl drop-shadow-lg">
+      All Star Window Cleaning
+    </h1>
+    <a
+      href="#contact"
+      class="mt-2 bg-[#974ff5] hover:bg-[#7d38d4] text-white font-bold text-lg px-10 py-4 rounded transition-colors duration-200 tracking-wide"
+    >
+      Get a Free Quote
+    </a>
+  </div>
+</section>

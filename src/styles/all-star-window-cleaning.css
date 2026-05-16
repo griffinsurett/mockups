@@ -1,0 +1,35 @@
+@theme {
+  --color-aswc-accent:       #974ff5;
+  --color-aswc-accent-hover: #7d38d4;
+  --color-aswc-lime:         #dcfb19;
+  --color-aswc-star-light:   #f9ebc2;
+  --color-aswc-star-dark:    #cba14b;
+}
+
+@layer components {
+  .aswc-rating-stars {
+    letter-spacing: 4px;
+    background: linear-gradient(180deg, var(--color-aswc-star-light) 0%, var(--color-aswc-star-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .aswc-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 20px;
+    font-size: 0.96rem;
+    font-weight: 600;
+    color: #222;
+    white-space: nowrap;
+    transition: color 0.2s;
+    border-bottom: 3px solid transparent;
+  }
+  .aswc-nav-link:hover { color: #dc2626; }
+  .aswc-nav-link.active {
+    border-bottom-color: #111;
+    margin-bottom: -2px;
+  }
+}
