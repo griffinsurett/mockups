@@ -253,7 +253,7 @@ function ChatBot() {
             style={{ background: "#000" }}
           />
           <div className="flex-1 min-w-0">
-            <p className="text-[.9rem] font-bold text-white m-0 leading-tight truncate">All Star Assistant</p>
+            <p className="text-[.9rem] font-bold text-white m-0 leading-tight truncate">All Star Assistant <span className="font-normal text-white/60">· $999</span></p>
             <p className="text-[.7rem] text-white/70 m-0 flex items-center gap-1.5 mt-0.5">
               <span className="w-[.42rem] h-[.42rem] rounded-full bg-white/60 shrink-0" />
               24×7 Support
