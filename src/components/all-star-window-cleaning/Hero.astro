@@ -4,16 +4,18 @@ import Star from "./Star.astro";
 import heroImg from "../../assets/all-star-window-cleaning/hero-img.webp";
 ---
 
-<section class="relative w-full h-[80vh] overflow-hidden flex items-center justify-center">
+<section class="relative w-full h-screen overflow-hidden flex items-center justify-center">
   <BackgroundMedia
     backgroundMedia={{
       image: {
         src: heroImg,
         aboveTheFold: true,
       },
-      overlayClass: "bg-black/55",
+      overlayClass: "bg-black/40",
     }}
   />
+  <!-- Bottom fade to black -->
+  <div class="absolute inset-0 z-0" style="background: linear-gradient(to bottom, transparent 40%, #000 100%);"></div>
 
   <div class="relative z-10 flex flex-col items-center text-center gap-8 w-full px-6">
     <!-- Contained content -->
