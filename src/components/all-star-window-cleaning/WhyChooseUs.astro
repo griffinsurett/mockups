@@ -1,0 +1,74 @@
+---
+import BackgroundMedia from "./BackgroundMedia.astro";
+import Star from "./Star.astro";
+
+const reasons = [
+  {
+    icon: "★",
+    title: "5-Star Rated on Google",
+    body: "Our customers consistently rate us 5 stars. We take pride in every job and won't leave until you're satisfied.",
+  },
+  {
+    icon: "⚡",
+    title: "Same-Day Service Available",
+    body: "Need it done fast? We offer same-day and next-day appointments across Central NJ.",
+  },
+  {
+    icon: "🏠",
+    title: "Residential & Commercial",
+    body: "From single-family homes to storefronts and office buildings — no job is too big or too small.",
+  },
+  {
+    icon: "✓",
+    title: "Satisfaction Guaranteed",
+    body: "Not happy? We come back and make it right. Every time, no questions asked.",
+  },
+  {
+    icon: "💧",
+    title: "Streak-Free Results",
+    body: "Professional-grade equipment and technique means crystal-clear, streak-free windows on every visit.",
+  },
+];
+
+const imgSrc = "/all-star-window-cleaning/commercial.webp";
+---
+
+<section class="w-full bg-white text-black flex flex-col md:flex-row min-h-[600px]">
+
+  <!-- Left: image -->
+  <div class="relative w-full md:w-1/2 min-h-90 md:min-h-0">
+    <BackgroundMedia
+      backgroundMedia={{
+        image: { src: imgSrc },
+        overlayClass: "bg-black/10",
+      }}
+    />
+  </div>
+
+  <!-- Right: content -->
+  <div class="w-full md:w-1/2 py-20 px-8 lg:px-16 flex flex-col justify-center bg-white">
+    <p class="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] mb-3" style="color:#dcfb19; -webkit-text-fill-color:#cba14b;">
+      <Star class="text-base" />
+      Why Choose Us
+      <Star class="text-base" />
+    </p>
+    <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight text-black mb-10">
+      The All Star Difference
+    </h2>
+
+    <ul class="flex flex-col gap-7">
+      {reasons.map((r) => (
+        <li class="flex items-start gap-4">
+          <span class="shrink-0 w-10 h-10 rounded-full grid place-items-center text-[#0a0a0a] text-lg leading-none" style="background: linear-gradient(180deg, #f9ebc2 0%, #cba14b 100%);">
+            {r.icon}
+          </span>
+          <div>
+            <p class="font-black text-[15px] uppercase tracking-wide text-black mb-1">{r.title}</p>
+            <p class="text-[13px] text-[#555] leading-relaxed">{r.body}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+</section>

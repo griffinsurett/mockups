@@ -1,8 +1,4 @@
 ---
-import BackgroundMedia from "./BackgroundMedia.astro";
-
-const commercialImg = "/all-star-window-cleaning/commercial.webp";
-
 const faqs = [
   {
     q: "Do you serve both residential and commercial customers?",
@@ -27,11 +23,10 @@ const faqs = [
 ];
 ---
 
-<section class="w-full bg-[#0a0a0a] text-white flex flex-col md:flex-row min-h-150">
+<section class="w-full py-24 bg-[#0a0a0a] text-white">
+  <div class="max-w-[1100px] mx-auto px-6">
 
-  <!-- Left: FAQ -->
-  <div class="w-full md:w-1/2 py-20 px-8 lg:px-16 flex flex-col justify-center">
-    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white mb-10">
+    <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight text-white text-center mb-14">
       Frequently Asked Questions
     </h2>
 
@@ -44,29 +39,16 @@ const faqs = [
             data-faq={i}
           >
             <span class="aswc-faq-icon shrink-0 w-8 h-8 rounded-full grid place-items-center text-[#0a0a0a] font-black text-xl leading-none" style="background: linear-gradient(180deg, #f9ebc2 0%, #cba14b 100%);">+</span>
-            <span class="font-bold text-[14px] md:text-[15px] text-white">{faq.q}</span>
+            <span class="font-bold text-[15px] md:text-[16px] text-white">{faq.q}</span>
           </button>
-          <div class="aswc-faq-body hidden px-6 pb-5 pl-18 text-white/60 text-[13px] leading-relaxed">
+          <div class="aswc-faq-body hidden px-6 pb-5 pl-18 text-white/60 text-[14px] leading-relaxed">
             {faq.a}
           </div>
         </div>
       ))}
     </div>
-  </div>
 
-  <!-- Right: image -->
-  <div class="relative w-full md:w-1/2 min-h-90 md:min-h-0">
-    <BackgroundMedia
-      backgroundMedia={{
-        image: {
-          src: commercialImg,
-          aboveTheFold: false,
-        },
-        overlayClass: "bg-black/30",
-      }}
-    />
   </div>
-
 </section>
 
 <script>
