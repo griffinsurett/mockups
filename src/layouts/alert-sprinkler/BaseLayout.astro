@@ -185,8 +185,15 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
 
     /* ── Mobile ── */
     @media (max-width: 767px) {
+      [data-as-header] .as-logo-mobile {
+        height: 100%;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+      }
       [data-as-header] .as-logo-img {
-        width: clamp(2.8rem, 10vw, 4rem);
+        height: 100%;
+        width: auto;
       }
       [data-as-header][data-scrolled="true"] {
         background: rgba(255, 248, 247, 0.97);
