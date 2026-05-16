@@ -1,0 +1,76 @@
+---
+import Star from "./Star.astro";
+
+const secondary = [
+  {
+    img: "/all-star-window-cleaning/wash-equipment_files/unnamed(11).webp",
+    title: "Power Washing",
+    body: "Driveways, siding, decks, and fences blasted clean with professional-grade equipment.",
+  },
+  {
+    img: "/all-star-window-cleaning/wash-equipment_files/unnamed(12).webp",
+    title: "Gutter Cleaning",
+    body: "We clear out debris and buildup so your gutters flow freely and protect your property.",
+  },
+  {
+    img: "/all-star-window-cleaning/window_files/unnamed(3).jpg",
+    title: "Junk Removal",
+    body: "Fast, affordable junk removal for homes and businesses — we haul it, you forget it.",
+  },
+];
+---
+
+<section class="w-full bg-[#0a0a0a] py-24 px-6">
+  <div class="max-w-[1200px] mx-auto">
+
+    <!-- Header -->
+    <div class="flex flex-col items-center text-center mb-14">
+      <p class="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] mb-3" style="color:#dcfb19">
+        <Star class="text-base" />
+        What We Do
+        <Star class="text-base" />
+      </p>
+      <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight text-white">Our Services</h2>
+    </div>
+
+    <!-- Grid: 1 large left + 3 stacked right -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+      <!-- Featured: Window Cleaning -->
+      <a href="/all-star-window-cleaning/contact" class="group relative overflow-hidden rounded-2xl min-h-[480px] flex flex-col justify-end md:row-span-3">
+        <img
+          src="/all-star-window-cleaning/commercial.webp"
+          alt="Window Cleaning"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.3) 100%);"></div>
+        <div class="relative z-10 p-8">
+          <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-3">Window Cleaning</h3>
+          <p class="text-white/70 text-[14px] leading-relaxed max-w-sm">
+            Interior and exterior window cleaning for homes and businesses across Central NJ. Streak-free results, every time. Free estimates guaranteed.
+          </p>
+          <span class="inline-flex items-center gap-2 mt-6 text-[13px] font-bold uppercase tracking-widest group-hover:gap-4 transition-all duration-300" style="color:#dcfb19;">
+            Get a Free Estimate →
+          </span>
+        </div>
+      </a>
+
+      <!-- 3 smaller cards -->
+      {secondary.map((s) => (
+        <a href="/all-star-window-cleaning/contact" class="group relative overflow-hidden rounded-2xl min-h-[148px] flex flex-col justify-end">
+          <img
+            src={s.img}
+            alt={s.title}
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.45) 100%);"></div>
+          <div class="relative z-10 p-6">
+            <h3 class="text-xl font-black uppercase tracking-tight text-white mb-1">{s.title}</h3>
+            <p class="text-white/60 text-[13px] leading-snug">{s.body}</p>
+          </div>
+        </a>
+      ))}
+
+    </div>
+  </div>
+</section>

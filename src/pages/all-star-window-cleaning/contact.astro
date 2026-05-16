@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../../layouts/all-star-window-cleaning/BaseLayout.astro";
+import GoogleRating from "../../components/all-star-window-cleaning/GoogleRating.astro";
+---
+
+<BaseLayout title="Contact — All Star Window Cleaning">
+
+  <section class="w-full bg-[#0a0a0a] text-white min-h-screen flex flex-col md:flex-row">
+
+    <!-- Left: info panel -->
+    <div class="w-full md:w-1/2 flex flex-col justify-center px-8 lg:px-16 py-20 bg-[#0a0a0a]">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] mb-3" style="color:#dcfb19">Get In Touch</p>
+      <h1 class="text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-6">
+        Request a Free Estimate
+      </h1>
+      <p class="text-white/60 text-[14px] leading-relaxed mb-10 max-w-sm">
+        Fill out the form and we'll get back to you as soon as possible. We serve all of Central NJ with same-day availability.
+      </p>
+
+      <div class="flex flex-col gap-6">
+        <div>
+          <p class="text-[0.7rem] uppercase tracking-[0.08em] text-white/40 mb-1">Call Us</p>
+          <a href="tel:7325550192" class="text-2xl font-extrabold text-white tracking-tight hover:text-[#974ff5] transition-colors">(732) 555-0192</a>
+        </div>
+        <div>
+          <p class="text-[0.7rem] uppercase tracking-[0.08em] text-white/40 mb-1">Location</p>
+          <p class="text-white font-semibold">Sayreville, NJ — Serving All of Central NJ</p>
+        </div>
+        <div>
+          <p class="text-[0.7rem] uppercase tracking-[0.08em] text-white/40 mb-1">Hours</p>
+          <p class="text-white font-semibold">Mon–Sat: 7am – 7pm</p>
+        </div>
+        <GoogleRating textColor="rgba(255,255,255,0.7)" />
+      </div>
+    </div>
+
+    <!-- Right: form -->
+    <div class="w-full md:w-1/2 flex flex-col justify-center px-8 lg:px-16 py-20 bg-[#111]">
+      <form class="flex flex-col gap-5" name="contact" netlify>
+        <div class="flex flex-col gap-1">
+          <label class="text-[0.7rem] uppercase tracking-[0.08em] text-white/50">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="John Smith"
+            required
+            class="bg-[#1a1a1a] border border-white/10 text-white placeholder-white/30 px-4 py-3 rounded text-[14px] focus:outline-none focus:border-[#974ff5] transition-colors"
+          />
+        </div>
+        <div class="flex flex-col gap-1">
+          <label class="text-[0.7rem] uppercase tracking-[0.08em] text-white/50">Phone Number</label>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="(732) 000-0000"
+            required
+            class="bg-[#1a1a1a] border border-white/10 text-white placeholder-white/30 px-4 py-3 rounded text-[14px] focus:outline-none focus:border-[#974ff5] transition-colors"
+          />
+        </div>
+        <div class="flex flex-col gap-1">
+          <label class="text-[0.7rem] uppercase tracking-[0.08em] text-white/50">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="john@email.com"
+            class="bg-[#1a1a1a] border border-white/10 text-white placeholder-white/30 px-4 py-3 rounded text-[14px] focus:outline-none focus:border-[#974ff5] transition-colors"
+          />
+        </div>
+        <div class="flex flex-col gap-1">
+          <label class="text-[0.7rem] uppercase tracking-[0.08em] text-white/50">Service Needed</label>
+          <select
+            name="service"
+            required
+            class="bg-[#1a1a1a] border border-white/10 text-white px-4 py-3 rounded text-[14px] focus:outline-none focus:border-[#974ff5] transition-colors appearance-none"
+          >
+            <option value="" disabled selected>Select a service...</option>
+            <option>Window Cleaning</option>
+            <option>Power Washing</option>
+            <option>Gutter Cleaning</option>
+            <option>Junk Removal</option>
+            <option>Multiple Services</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label class="text-[0.7rem] uppercase tracking-[0.08em] text-white/50">Message</label>
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="Tell us about your property and what you need..."
+            class="bg-[#1a1a1a] border border-white/10 text-white placeholder-white/30 px-4 py-3 rounded text-[14px] focus:outline-none focus:border-[#974ff5] transition-colors resize-none"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-aswc-accent hover:bg-aswc-accent-hover text-white font-bold text-[13px] uppercase tracking-widest py-4 rounded transition-colors duration-200"
+        >
+          Send Request
+        </button>
+      </form>
+    </div>
+
+  </section>
+
+</BaseLayout>
