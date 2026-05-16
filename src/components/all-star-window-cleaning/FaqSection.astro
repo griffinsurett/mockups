@@ -1,0 +1,98 @@
+---
+import BackgroundMedia from "./BackgroundMedia.astro";
+
+const commercialImg = "/all-star-window-cleaning/commercial.webp";
+
+const faqs = [
+  {
+    q: "Do you serve both residential and commercial customers?",
+    a: "Yes! We clean windows for homeowners and businesses across Central NJ. Whether it's a single-family home or a multi-story commercial building, we've got you covered.",
+  },
+  {
+    q: "How often should I have my windows cleaned?",
+    a: "For most homes we recommend 2–4 times per year. Commercial properties with high foot traffic or storefront windows benefit from monthly or bi-monthly service.",
+  },
+  {
+    q: "Do you offer same-day or next-day service?",
+    a: "We do our best to accommodate same-day requests. Call us and we'll let you know our earliest availability — fast turnaround is one of our specialties.",
+  },
+  {
+    q: "What areas do you serve?",
+    a: "We're based in Sayreville, NJ and serve all of Central NJ including Middlesex, Monmouth, and Somerset counties.",
+  },
+  {
+    q: "Are your services guaranteed?",
+    a: "Absolutely. If you're not satisfied with the results, let us know and we'll come back to make it right — no questions asked.",
+  },
+];
+---
+
+<section class="w-full bg-[#0a0a0a] text-white flex flex-col md:flex-row min-h-150">
+
+  <!-- Left: FAQ -->
+  <div class="w-full md:w-1/2 py-20 px-8 lg:px-16 flex flex-col justify-center">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white mb-10">
+      Frequently Asked Questions
+    </h2>
+
+    <div class="flex flex-col gap-4">
+      {faqs.map((faq, i) => (
+        <div class="aswc-faq-item rounded-lg bg-[#1a1a1a] border border-white/5 overflow-hidden">
+          <button
+            class="aswc-faq-trigger w-full flex items-center gap-4 px-6 py-5 text-left"
+            aria-expanded="false"
+            data-faq={i}
+          >
+            <span class="aswc-faq-icon shrink-0 w-8 h-8 rounded-full grid place-items-center text-[#0a0a0a] font-black text-xl leading-none" style="background: linear-gradient(180deg, #f9ebc2 0%, #cba14b 100%);">+</span>
+            <span class="font-bold text-[14px] md:text-[15px] text-white">{faq.q}</span>
+          </button>
+          <div class="aswc-faq-body hidden px-6 pb-5 pl-18 text-white/60 text-[13px] leading-relaxed">
+            {faq.a}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Right: image -->
+  <div class="relative w-full md:w-1/2 min-h-90 md:min-h-0">
+    <BackgroundMedia
+      backgroundMedia={{
+        image: {
+          src: commercialImg,
+          aboveTheFold: false,
+        },
+        overlayClass: "bg-black/30",
+      }}
+    />
+  </div>
+
+</section>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>(".aswc-faq-trigger").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const item = btn.closest(".aswc-faq-item") as HTMLElement;
+      const body = item.querySelector<HTMLElement>(".aswc-faq-body")!;
+      const icon = btn.querySelector<HTMLElement>(".aswc-faq-icon")!;
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+
+      document.querySelectorAll<HTMLButtonElement>(".aswc-faq-trigger").forEach((other) => {
+        if (other === btn) return;
+        other.setAttribute("aria-expanded", "false");
+        (other.closest(".aswc-faq-item")!.querySelector(".aswc-faq-body") as HTMLElement).classList.add("hidden");
+        (other.querySelector(".aswc-faq-icon") as HTMLElement).textContent = "+";
+      });
+
+      if (isOpen) {
+        btn.setAttribute("aria-expanded", "false");
+        body.classList.add("hidden");
+        icon.textContent = "+";
+      } else {
+        btn.setAttribute("aria-expanded", "true");
+        body.classList.remove("hidden");
+        icon.textContent = "−";
+      }
+    });
+  });
+</script>
