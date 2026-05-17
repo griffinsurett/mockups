@@ -4,13 +4,15 @@ import TopBar from "../../components/car-detailing-cen-fl/TopBar.astro";
 import Header from "../../components/car-detailing-cen-fl/Header.astro";
 import Footer from "../../components/car-detailing-cen-fl/Footer.astro";
 import Logo from "../../components/car-detailing-cen-fl/Logo.astro";
+import PageHero from "../../components/car-detailing-cen-fl/PageHero.astro";
 ---
 
 <Layout title="Contact — Central FLA. Auto Detail LLC">
   <TopBar />
   <Header />
+  <PageHero title="Book Your Detail" subtitle="We Come To You — Anywhere In Central Florida" breadcrumb="Contact Us" />
 
-  <main class="w-full bg-black text-white min-h-screen flex flex-col lg:flex-row pt-[72px]">
+  <main class="w-full bg-black text-white min-h-screen flex flex-col lg:flex-row">
 
     <!-- Left: info panel -->
     <div class="w-full lg:w-1/2 flex flex-col justify-center px-8 lg:px-16 xl:px-24 py-20 bg-[#050811] border-b lg:border-b-0 lg:border-r border-gray-900">
@@ -51,7 +53,7 @@ import Logo from "../../components/car-detailing-cen-fl/Logo.astro";
     <div class="w-full lg:w-1/2 flex flex-col justify-center px-8 lg:px-16 xl:px-24 py-20 bg-black">
       <h2 class="text-2xl font-bold text-white uppercase mb-8" style="font-family: 'Playfair Display', serif;">Request a Quote</h2>
 
-      <form class="flex flex-col gap-5" name="contact" netlify>
+      <form class="flex flex-col gap-5" name="contact" data-netlify="true">
         <!-- Name + Phone -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div class="flex flex-col gap-1">

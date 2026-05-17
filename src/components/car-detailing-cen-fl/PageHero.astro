@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  breadcrumb?: string;
+}
+const { title, subtitle, breadcrumb } = Astro.props;
+---
+
+<section class="relative w-full h-64 md:h-80 flex items-center justify-center text-center overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img src="/car-detailing-cen-fl/assets/images/hero.png" alt="" class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/75"></div>
+    <div class="absolute inset-0 bg-linear-to-b from-black/40 via-transparent to-black/60"></div>
+  </div>
+
+  <div class="relative z-10 flex flex-col items-center px-4 pt-36">
+    {breadcrumb && (
+      <p class="text-xs font-bold tracking-[0.3em] uppercase mb-4 bg-linear-to-r from-[#d39a4d] to-[#fdd78c] bg-clip-text text-transparent" style="font-family: 'Inter', sans-serif;">
+        {breadcrumb}
+      </p>
+    )}
+    <h1 class="text-3xl md:text-5xl text-white font-bold leading-tight drop-shadow-xl uppercase" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7); font-family: 'Playfair Display', serif;">
+      {title}
+    </h1>
+    {subtitle && (
+      <p class="text-white/70 text-sm md:text-base font-bold tracking-[0.15em] uppercase mt-4 drop-shadow-md" style="font-family: 'Inter', sans-serif;">
+        {subtitle}
+      </p>
+    )}
+    <div class="w-10 h-0.5 mt-6" style="background: linear-gradient(to right, #d39a4d, #fdd78c);"></div>
+  </div>
+</section>

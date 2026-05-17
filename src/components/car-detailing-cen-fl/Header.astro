@@ -1,7 +1,7 @@
 ---
 import Logo from './Logo.astro';
 ---
-<header id="cd-header" class="w-full sticky top-0 left-0 py-4 px-8 md:px-16 flex justify-between items-center z-50 transition-colors duration-300 bg-transparent">
+<header id="cd-header" class="w-full fixed top-11 left-0 py-4 px-8 md:px-16 flex justify-between items-center z-50 transition-colors duration-300 bg-transparent">
   <div class="flex items-center text-white">
     <a href="/car-detailing-cen-fl"><Logo class="w-40 md:w-56" /></a>
   </div>
@@ -9,9 +9,7 @@ import Logo from './Logo.astro';
   <nav class="hidden md:flex items-center text-white text-sm font-bold tracking-wider space-x-6">
     <a href="#" class="border-b-2 border-white pb-1">HOME</a>
     <span class="text-gray-500">|</span>
-    <a href="#" class="hover:text-gray-300 pb-1">OUR PACKAGES</a>
-    <span class="text-gray-500">|</span>
-    <a href="#pricing" class="hover:text-gray-300 pb-1">PRICING</a>
+    <a href="/car-detailing-cen-fl/pricing" class="hover:text-gray-300 pb-1">PRICING</a>
     <span class="text-gray-500">|</span>
     <a href="#" class="hover:text-gray-300 pb-1">GALLERY</a>
     <span class="text-gray-500">|</span>
@@ -30,8 +28,7 @@ import Logo from './Logo.astro';
 
   <div id="cd-mobile-menu" class="hidden absolute top-full left-0 w-full bg-black border-t border-gray-900 py-6 px-8 flex flex-col space-y-6 z-40 shadow-2xl">
     <a href="#" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">HOME</a>
-    <a href="#" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">OUR PACKAGES</a>
-    <a href="#pricing" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">PRICING</a>
+    <a href="/car-detailing-cen-fl/pricing" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">PRICING</a>
     <a href="#" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">GALLERY</a>
     <a href="/car-detailing-cen-fl/contact" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">CONTACT US</a>
     <a href="#" class="bg-gradient-to-r from-[#d39a4d] to-[#fdd78c] text-black font-bold text-center py-3 rounded text-sm tracking-wider hover:bg-[#fdd78c] hover:text-black transition-colors uppercase block">
@@ -45,15 +42,17 @@ import Logo from './Logo.astro';
   const menuBtn = document.getElementById('cd-menu-btn');
   const mobileMenu = document.getElementById('cd-mobile-menu');
   const menuIcon = document.getElementById('cd-menu-icon');
+  const topbar = document.getElementById('cd-topbar');
 
-  if (header) {
-    document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
-  }
+  const topbarH = topbar ? topbar.offsetHeight : 44;
 
-  // Transparent → black on scroll
   if (header) {
     const onScroll = () => {
-      if (window.scrollY > 10) {
+      const scrolled = window.scrollY;
+      // Slide header up as topbar scrolls away
+      const newTop = Math.max(0, topbarH - scrolled);
+      header.style.top = newTop + 'px';
+      if (scrolled > topbarH) {
         header.classList.add('bg-black');
         header.classList.remove('bg-transparent');
       } else {
