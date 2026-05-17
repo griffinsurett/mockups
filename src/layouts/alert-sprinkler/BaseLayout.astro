@@ -26,7 +26,17 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
   <body class="overflow-x-hidden" style="font-family: 'Hanken Grotesk', sans-serif; background: #fff8f7; color: #291715;">
 
     <!-- ============ HEADER ============ -->
-    <header id="as-header" data-as-header class="fixed inset-x-0 top-0 z-50">
+    <!-- Top bar + header wrapper: stacked flush on mobile -->
+    <div class="fixed inset-x-0 top-0 z-50 flex flex-col">
+
+      <!-- Top bar: mobile only -->
+      <div class="md:hidden flex items-center justify-center px-4 py-2" style="background: #760202;">
+        <a href="/alert-sprinkler/contact" class="as-label-caps text-white/90 hover:text-white transition-colors">
+          Request A Call Back →
+        </a>
+      </div>
+
+    <header id="as-header" data-as-header class="w-full">
 
       <!-- Backdrop: gradient → solid on scroll -->
       <div class="pointer-events-none absolute inset-x-0 top-0 transition-all duration-500" data-as-backdrop></div>
@@ -58,7 +68,7 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
             <a href="tel:7325211666" class="as-phone-num font-extrabold text-[18px] tracking-tight">732-521-1666</a>
           </div>
           <a href="/alert-sprinkler/contact" class="as-btn-primary whitespace-nowrap">
-            Emergency Service
+            Request A Call Back
           </a>
         </div>
 
@@ -75,7 +85,7 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
         </button>
 
         <!-- Logo centered: hidden at top, fades in on scroll -->
-        <a href="/alert-sprinkler" class="as-logo-mobile absolute left-1/2 -translate-x-1/2 flex items-center" style="top: 50%; transform: translate(-50%, -50%);">
+        <a href="/alert-sprinkler" class="as-logo-mobile" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center;">
           <img
             src="/alert-sprinkler/alert-logo.png"
             alt="Alert Sprinkler Co., Inc."
@@ -84,14 +94,15 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
           />
         </a>
 
-        <!-- CTA -->
-        <a href="/alert-sprinkler/contact" class="as-btn-primary text-[11px] px-3 py-2 shrink-0">
-          Get a Quote
+        <!-- Phone icon -->
+        <a href="tel:7325211666" class="shrink-0 p-2 as-phone-icon" aria-label="Call us">
+          <span class="material-symbols-outlined" style="font-size: 1.5rem; font-variation-settings: 'FILL' 1;">call</span>
         </a>
 
       </div>
 
     </header>
+    </div><!-- end fixed wrapper -->
 
     <slot />
 
@@ -171,6 +182,10 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
     /* ── Hamburger bars ── */
     [data-as-header] .as-hamburger-bar { background: rgba(255,255,255,0.9); }
     [data-as-header][data-scrolled="true"] .as-hamburger-bar { background: #291715; }
+
+    /* ── Mobile phone icon ── */
+    [data-as-header] .as-phone-icon { color: rgba(255,255,255,0.9); }
+    [data-as-header][data-scrolled="true"] .as-phone-icon { color: #760202; }
 
     /* ── Mobile header logo: hidden at top, fades in on scroll ── */
     [data-as-header] .as-logo-mobile {

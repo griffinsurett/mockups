@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../layouts/alert-sprinkler/BaseLayout.astro";
+
+const current = [
+  { client: "Morris Companies", jobs: ["1,200,000 sf warehouse — Woodbridge, NJ", "900,000 sf warehouse — Newark, NJ"] },
+  { client: "Hello Fresh",      jobs: ["200,000 sf warehouse — Newark, NJ", "100,000 sf warehouse — Swedesboro, NJ"] },
+  { client: "Gourmet Nut",      jobs: ["70,000 sf warehouse — Perth Amboy, NJ"] },
+  { client: "Herrod Construction", jobs: ["58,000 sf warehouse — Lyndhurst, NJ"] },
+];
+
+const completed = [
+  { client: "Matrix Construction", jobs: ["800,000 sf warehouse — Washington Twp, NJ"] },
+  { client: "Frank Greek Co.",     jobs: ["600,000 sf warehouse — Woodbridge, NJ (tenants: Parlux, Syntex, Nedlloyd)"] },
+  { client: "Matrix Construction", jobs: ["600,000 sf warehouse — Hamilton, NJ"] },
+];
+---
+
+<BaseLayout title="Our Work — Alert Sprinkler Co., Inc.">
+  <main style="padding-top: 6rem;" class="max-w-4xl mx-auto px-6 py-24">
+
+    <h1 class="text-4xl font-extrabold tracking-tight mb-4" style="color: #291715;">Job Experience</h1>
+    <p class="text-base leading-relaxed mb-16" style="color: #5d3f3b;">
+      Over 45 years of large-scale fire protection installations across New Jersey and southeastern Pennsylvania.
+    </p>
+
+    <!-- Current Contracts -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-8" style="color: #291715;">Current Contracts</h2>
+      <div class="flex flex-col gap-8">
+        {current.map((c) => (
+          <div>
+            <h3 class="font-bold text-lg mb-2" style="color: #760202;">{c.client}</h3>
+            <ul class="flex flex-col gap-1 text-base" style="color: #5d3f3b;">
+              {c.jobs.map((j) => <li>— {j}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Completed Contracts -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-8" style="color: #291715;">Completed Contracts</h2>
+      <div class="flex flex-col gap-8">
+        {completed.map((c) => (
+          <div>
+            <h3 class="font-bold text-lg mb-2" style="color: #760202;">{c.client}</h3>
+            <ul class="flex flex-col gap-1 text-base" style="color: #5d3f3b;">
+              {c.jobs.map((j) => <li>— {j}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Past Clients -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6" style="color: #291715;">Past Clients</h2>
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-3 text-base" style="color: #5d3f3b;">
+        <li>Frank Greek &amp; Son</li>
+        <li>Herrod Construction</li>
+        <li>Cushman &amp; Wakefield</li>
+        <li>The Morris Companies</li>
+        <li>Federal Business Center</li>
+        <li>L'Oréal</li>
+        <li>Seagis</li>
+        <li>Hermès</li>
+        <li>Macy's</li>
+        <li>Canon</li>
+      </ul>
+    </section>
+
+  </main>
+</BaseLayout>

@@ -1,0 +1,48 @@
+---
+const vendors = [
+  { logo: "/alert-sprinkler/vendors/cushman.png",         name: "Cushman & Wakefield" },
+  { logo: "/alert-sprinkler/vendors/macys-logo-white.png",name: "Macy's" },
+  { logo: "/alert-sprinkler/vendors/Canon.png",           name: "Canon" },
+  { logo: "/alert-sprinkler/vendors/morris.png",          name: "Morris" },
+  { logo: "/alert-sprinkler/vendors/seagas.png",          name: "Seagas" },
+  { logo: "/alert-sprinkler/vendors/loreal.png",          name: "L'Oréal" },
+  { logo: "/alert-sprinkler/vendors/hermes.png",          name: "Hermès" },
+  { logo: "/alert-sprinkler/vendors/federal.png",         name: "Federal" },
+];
+---
+
+<section class="w-full py-16 overflow-hidden" style="background: #760202;">
+  <div class="text-center mb-10 px-6">
+    <span class="as-label-caps" style="color: rgba(255,255,255,0.6);">OUR TRUSTED VENDORS</span>
+  </div>
+
+  <div class="relative w-full overflow-hidden">
+    <!-- Fade edges -->
+    <div class="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style="background: linear-gradient(to right, #760202, transparent);"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style="background: linear-gradient(to left, #760202, transparent);"></div>
+
+    <div class="as-vendors-track flex items-center gap-16">
+      {[...vendors, ...vendors].map((v, i) => (
+        <div class="shrink-0 flex items-center justify-center" style="width: 140px; height: 80px;">
+          <img src={v.logo} alt={v.name} class="max-w-full max-h-full object-contain" style="filter: brightness(0) invert(1); opacity: 0.7;" />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .as-vendors-track {
+    width: max-content;
+    animation: as-vendors-scroll 20s linear infinite;
+  }
+
+  @keyframes as-vendors-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .as-vendors-track { animation: none; }
+  }
+</style>
