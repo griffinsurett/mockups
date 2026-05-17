@@ -1,0 +1,15 @@
+@layer base {
+  .cd-root {
+    --color-brand-primary: #d39a4d;
+    --color-brand-secondary: #f59e0b;
+    --color-accent-gold: #df9c2c;
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-script: 'Great Vibes', cursive;
+  }
+
+  .cd-root body,
+  .cd-root {
+    font-family: var(--font-sans);
+  }
+}

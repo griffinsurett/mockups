@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/playfair-display/700.css';
+import '@fontsource/great-vibes/400.css';
+import '@phosphor-icons/web/regular/style.css';
+import '@phosphor-icons/web/light/style.css';
+import '@phosphor-icons/web/thin/style.css';
+import '@phosphor-icons/web/fill/style.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title = "Car Detailing Service", description = "Premium car detailing services." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

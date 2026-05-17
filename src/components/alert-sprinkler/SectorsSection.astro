@@ -1,0 +1,58 @@
+---
+const sectors = [
+  {
+    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBtVsyOlCJk3k4-NczC6Pbm-4_7Fbu5R4RSjFjYl0NcNKLEv6cL6OBoyn6DJ7C1KxjarE-sgAWzbU47jcA6AxtX_dBR_rdY5Z_GR6eHUCK9ToOGynv_XkWmRibYdP63pMZqdL4bY8V_eMsw5CsrnTrHwHuTRbX0Mr3O3ZSO0vLLMPXgH2TyDCZrjm3CQdEDDzpny2KUBtYCG4jZJjt3KtkZAY4jUoCBG7E0qsgjwEVamF46mvbsVC3b62HcDbF9hVUjbV5KPBxRIOM",
+    title: "Commercial",
+    body: "High-rises, retail centers, and professional offices — fully code-compliant systems.",
+  },
+  {
+    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAvHM3RTVyeq5o4x7hCtXOW2Qd21YYy9ckx_KtZ6qgtCVyUNu8ahxLkvWAbWn_j7J7xoKwxcvwQeNjqu74i52DvQpaKhEz2Kh2bQ3bXNRgRMCWfYxCN5dIXEi7m2XYELdMM75GYy3pVVgewdNwQoGKjr6Lmj9KLjO1ufVp6GxZjEW7Alzjbjusi1p6Tpn443uO8WqbxghO68nhRyotXtwn1LTXgwGQhjXf83BZfxH0qYgLfrFTe8dnQw0mZ6BSP-XuK9TMrdWJXotgc",
+    title: "Industrial",
+    body: "Warehouses, manufacturing, and high-piled storage — specialized hazard protection at scale.",
+  },
+  {
+    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAFTX0cXlnrmEyisjDamWzXIew50WtE-jvYXqIUTTU_UwrzBMxywMjFkZKyNfDZD4O43avqhQBYVm9tD3etd7SpY5_qj3tYwsyr9ShJmvztbhXV4t2ahySKD8FHR0CX8rYmLT4T3ntvEDsOHM7OF4ugJwI7shBozQoQnEKkyGzne8L0jTnMVXLqzhvpezlpEZMUq5GyHIQdPY1hL3Po4865hqa3Z_jDoAEc5w4hOShG76L6wEEeVb-sHdiqDZGzevv2E1xeqC2LZLE",
+    title: "Institutional",
+    body: "Hospitals, schools, and government buildings — life safety systems built to the highest standards.",
+  },
+  {
+    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCjoQL1GazQFZL3TR9IZ8OL3VnJlNuWMLbxm9aYARE1PuEbHmAaT96LV7X2m-kQhBVxUvf0ZihnsiG65shfn6sWoOSuK2QRndTtJncD-HgplBGzT9YydsdkAUgZXjrDV7Qnpvcc-59CdIgeSiVQilwqTSiZnw3ngqoxtOms0kC9LscPA610Ix9gCmHbJ6SYddns_gxAucrOT9Mp6FxYZJ8DRYui7Fw1HnLlrUorl1lApfZTe0wYxWPf-hXkiOKhDFuTKd3mCS0tuI0",
+    title: "Residential",
+    body: "Multi-family and high-end residential protection — where safety meets interior aesthetics.",
+  },
+];
+---
+
+<section class="w-full py-24 px-6 md:px-16" style="background: #F8FAFC;">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="flex flex-col items-center text-center mb-14">
+      <span class="as-label-caps text-as-primary mb-2">WHO WE SERVE</span>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight" style="color: #291715;">
+        Sectors We Protect
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {sectors.map((s) => (
+        <a
+          href="/alert-sprinkler/contact"
+          class="group relative overflow-hidden flex flex-col justify-end border border-as-border"
+          style="min-height: 320px; border-radius: 0.25rem;"
+        >
+          <img
+            src={s.img}
+            alt={s.title}
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(20,3,2,0.92) 0%, rgba(20,3,2,0.4) 60%, rgba(20,3,2,0.1) 100%);"></div>
+          <div class="relative z-10 p-6">
+            <h3 class="text-xl font-extrabold tracking-tight text-white mb-2">{s.title}</h3>
+            <p class="text-white/65 text-xs leading-snug">{s.body}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+
+  </div>
+</section>

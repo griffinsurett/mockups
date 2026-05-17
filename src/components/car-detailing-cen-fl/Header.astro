@@ -1,0 +1,83 @@
+---
+import Logo from './Logo.astro';
+---
+<header id="cd-header" class="w-full sticky top-0 left-0 py-4 px-8 md:px-16 flex justify-between items-center z-50 transition-colors duration-300 bg-transparent">
+  <div class="flex items-center text-white">
+    <a href="/car-detailing-cen-fl"><Logo class="w-40 md:w-56" /></a>
+  </div>
+
+  <nav class="hidden md:flex items-center text-white text-sm font-bold tracking-wider space-x-6">
+    <a href="#" class="border-b-2 border-white pb-1">HOME</a>
+    <span class="text-gray-500">|</span>
+    <a href="#" class="hover:text-gray-300 pb-1">OUR PACKAGES</a>
+    <span class="text-gray-500">|</span>
+    <a href="#pricing" class="hover:text-gray-300 pb-1">PRICING</a>
+    <span class="text-gray-500">|</span>
+    <a href="#" class="hover:text-gray-300 pb-1">GALLERY</a>
+    <span class="text-gray-500">|</span>
+    <a href="/car-detailing-cen-fl/contact" class="hover:text-gray-300 pb-1">CONTACT US</a>
+  </nav>
+
+  <div class="hidden md:block">
+    <a href="#" class="bg-gradient-to-r from-[#d39a4d] to-[#fdd78c] text-black font-bold py-3 px-6 rounded text-sm tracking-wider hover:bg-[#fdd78c] hover:text-black transition-colors uppercase">
+      BOOK NOW
+    </a>
+  </div>
+
+  <button id="cd-menu-btn" class="block md:hidden text-white focus:outline-none p-1 z-50" aria-label="Toggle Menu">
+    <i class="ph ph-list text-3xl transition-transform duration-300" id="cd-menu-icon"></i>
+  </button>
+
+  <div id="cd-mobile-menu" class="hidden absolute top-full left-0 w-full bg-black border-t border-gray-900 py-6 px-8 flex flex-col space-y-6 z-40 shadow-2xl">
+    <a href="#" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">HOME</a>
+    <a href="#" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">OUR PACKAGES</a>
+    <a href="#pricing" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">PRICING</a>
+    <a href="#" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">GALLERY</a>
+    <a href="/car-detailing-cen-fl/contact" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">CONTACT US</a>
+    <a href="#" class="bg-gradient-to-r from-[#d39a4d] to-[#fdd78c] text-black font-bold text-center py-3 rounded text-sm tracking-wider hover:bg-[#fdd78c] hover:text-black transition-colors uppercase block">
+      BOOK NOW
+    </a>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('cd-header');
+  const menuBtn = document.getElementById('cd-menu-btn');
+  const mobileMenu = document.getElementById('cd-mobile-menu');
+  const menuIcon = document.getElementById('cd-menu-icon');
+
+  if (header) {
+    document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+  }
+
+  // Transparent → black on scroll
+  if (header) {
+    const onScroll = () => {
+      if (window.scrollY > 10) {
+        header.classList.add('bg-black');
+        header.classList.remove('bg-transparent');
+      } else {
+        header.classList.remove('bg-black');
+        header.classList.add('bg-transparent');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  if (menuBtn && mobileMenu && menuIcon) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.className = mobileMenu.classList.contains('hidden')
+        ? 'ph ph-list text-3xl'
+        : 'ph ph-x text-3xl';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.className = 'ph ph-list text-3xl';
+      });
+    });
+  }
+</script>

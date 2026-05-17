@@ -1,0 +1,28 @@
+---
+const { class: className = "w-full h-auto" } = Astro.props;
+---
+<svg viewBox="0 0 500 150" class={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Solid, Elegant Car Silhouette Graphic (Nested parallel curves, zero intersection) -->
+  <g transform="translate(0, 8)">
+    <!-- 1. Front Gold Hood Sweep (Bold, sleek lower body line) -->
+    <path d="M 50,85 C 100,55 170,58 220,70 C 250,78 270,80 280,82 C 230,75 170,70 130,70 C 90,70 70,80 50,85 Z" fill="#df9c2c"/>
+    
+    <!-- 2. Top White Roof Sweep (Windshield rises directly out of hood at 140,68 and stays completely above) -->
+    <path d="M 140,68 C 175,25 215,20 245,28 C 275,36 305,32 320,15 C 295,40 275,45 255,45 C 275,52 295,52 305,55 C 280,62 250,58 225,44 C 190,26 165,42 140,68 Z" fill="#ffffff"/>
+    
+    <!-- 3. Rear Gold Bumper Sweep (Sits perfectly nested parallel under the white bottom tail) -->
+    <path d="M 235,46 C 260,54 285,65 290,82 C 275,72 260,60 245,50 Z" fill="#df9c2c"/>
+  </g>
+
+  <!-- Main Typography: Crisp, solid, premium serif with zero stroke distortion -->
+  <text x="240" y="125" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" text-anchor="middle" letter-spacing="0.2">
+    <tspan fill="#ffffff">Central FLA.</tspan>
+    <tspan fill="#df9c2c"> Auto Detail</tspan>
+  </text>
+
+  <!-- Heavy Gold Underline (Perfect height and thickness) -->
+  <line x1="55" y1="138" x2="435" y2="138" stroke="#df9c2c" stroke-width="4.5" />
+
+  <!-- Bold, Clean LLC Text (Aligend perfectly on the baseline next to the line) -->
+  <text x="445" y="141" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="900" fill="#ffffff">LLC</text>
+</svg>

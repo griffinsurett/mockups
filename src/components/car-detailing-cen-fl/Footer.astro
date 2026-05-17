@@ -1,0 +1,42 @@
+---
+import Logo from './Logo.astro';
+---
+<footer class="w-full bg-black text-white pt-20 pb-8 px-8 md:px-16">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+
+    <div class="flex flex-col items-center md:items-start w-full md:w-1/4">
+      <Logo class="w-64 md:w-80" />
+    </div>
+
+    <div class="flex flex-col w-full md:w-1/4 text-center md:text-left">
+      <h4 class="text-base font-bold mb-4 tracking-widest uppercase" style="font-family: 'Playfair Display', serif;">CONTACT US</h4>
+      <p class="text-gray-300 text-sm mb-1" style="font-family: 'Inter', sans-serif;">(386) 307-3785</p>
+      <p class="text-gray-300 text-sm hover:text-white transition-colors cursor-pointer" style="font-family: 'Inter', sans-serif;">Kevin Burtt - Owner/Operator</p>
+    </div>
+
+    <div class="flex flex-col w-full md:w-1/4 text-center md:text-left">
+      <h4 class="text-base font-bold mb-4 tracking-widest uppercase" style="font-family: 'Playfair Display', serif;">LOCATION</h4>
+      <p class="text-sm mb-1 font-bold text-white" style="font-family: 'Inter', sans-serif;">Serving Central Florida</p>
+      <p class="text-gray-400 text-xs mt-2 leading-relaxed" style="font-family: 'Inter', sans-serif;">Daytona Beach &bull; Ocala &bull; The Villages &bull; Clermont &bull; Winter Garden<br/>Orlando &bull; Oviedo &bull; Altamonte Springs &bull; Apopka &bull; Winter Park &bull; Deland &bull; Orange City</p>
+    </div>
+
+    <div class="flex flex-col w-full md:w-1/4 items-center md:items-start">
+      <h4 class="text-base font-bold mb-4 tracking-widest uppercase" style="font-family: 'Playfair Display', serif;">FOLLOW US</h4>
+      <div class="flex space-x-4">
+        <a href="#" class="text-white hover:text-[#d39a4d] transition-colors">
+          <i class="ph ph-facebook-logo text-2xl"></i>
+        </a>
+        <a href="#" class="text-white hover:text-[#d39a4d] transition-colors">
+          <i class="ph ph-instagram-logo text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto text-center pt-8">
+    <p class="text-[11px] text-gray-400 leading-relaxed" style="font-family: 'Inter', sans-serif;">
+      © {new Date().getFullYear()} Central FLA. Auto Detail LLC. All rights reserved. The content on this website is owned by us and our licensors. Do not copy any content (including images) without our consent.<br/>
+      <a href="#" class="underline hover:text-white transition-colors">Privacy</a> | <a href="#" class="underline hover:text-white transition-colors">Terms of Use</a>
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #1C75BC;
+  --color-brand-secondary: #f59e0b;
+  --color-text-base: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-bg-surface: #ffffff;
+  --color-bg-subtle: #f3f4f6;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-script: 'Great Vibes', cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-bg-surface);
+    color: var(--color-text-base);
+    font-family: var(--font-sans);
+  }
+}

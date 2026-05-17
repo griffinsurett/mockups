@@ -1,0 +1,169 @@
+---
+import Layout from "../../layouts/car-detailing-cen-fl/Layout.astro";
+import TopBar from "../../components/car-detailing-cen-fl/TopBar.astro";
+import Header from "../../components/car-detailing-cen-fl/Header.astro";
+import Footer from "../../components/car-detailing-cen-fl/Footer.astro";
+import Logo from "../../components/car-detailing-cen-fl/Logo.astro";
+---
+
+<Layout title="Contact — Central FLA. Auto Detail LLC">
+  <TopBar />
+  <Header />
+
+  <main class="w-full bg-black text-white min-h-screen flex flex-col lg:flex-row pt-[72px]">
+
+    <!-- Left: info panel -->
+    <div class="w-full lg:w-1/2 flex flex-col justify-center px-8 lg:px-16 xl:px-24 py-20 bg-[#050811] border-b lg:border-b-0 lg:border-r border-gray-900">
+
+      <Logo class="w-48 mb-10" />
+
+      <span class="text-xs font-black tracking-[0.3em] text-[#d39a4d] uppercase mb-3 block" style="font-family: 'Inter', sans-serif;">GET IN TOUCH</span>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight text-white mb-4 uppercase" style="font-family: 'Playfair Display', serif;">
+        Book Your Detail
+      </h1>
+      <div class="w-12 h-1 bg-gradient-to-r from-[#d39a4d] to-[#fdd78c] mb-8"></div>
+      <p class="text-white/60 text-sm leading-relaxed mb-12 max-w-sm" style="font-family: 'Inter', sans-serif;">
+        Fill out the form and we'll get back to you as soon as possible. We come to you — home, office, or anywhere in Central Florida.
+      </p>
+
+      <div class="flex flex-col gap-7">
+        <div>
+          <p class="text-[0.7rem] uppercase tracking-[0.08em] text-white/40 mb-1" style="font-family: 'Inter', sans-serif;">Call or Text</p>
+          <a href="tel:3863073785" class="text-2xl font-extrabold text-white tracking-tight hover:text-[#d39a4d] transition-colors" style="font-family: 'Inter', sans-serif;">(386) 307-3785</a>
+        </div>
+        <div>
+          <p class="text-[0.7rem] uppercase tracking-[0.08em] text-white/40 mb-1" style="font-family: 'Inter', sans-serif;">Owner / Operator</p>
+          <p class="text-white font-semibold" style="font-family: 'Inter', sans-serif;">Kevin Burtt</p>
+        </div>
+        <div>
+          <p class="text-[0.7rem] uppercase tracking-[0.08em] text-white/40 mb-1" style="font-family: 'Inter', sans-serif;">Service Area</p>
+          <p class="text-white font-semibold" style="font-family: 'Inter', sans-serif;">Central Florida — Mobile Service</p>
+          <p class="text-white/40 text-xs mt-1 leading-relaxed" style="font-family: 'Inter', sans-serif;">Daytona Beach &bull; Ocala &bull; The Villages &bull; Orlando &bull; Winter Park &bull; Oviedo &bull; Apopka &bull; Clermont &bull; and more</p>
+        </div>
+        <div>
+          <p class="text-[0.7rem] uppercase tracking-[0.08em] text-white/40 mb-1" style="font-family: 'Inter', sans-serif;">Hours</p>
+          <p class="text-white font-semibold" style="font-family: 'Inter', sans-serif;">Mon – Sat: 8am – 6pm</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: form -->
+    <div class="w-full lg:w-1/2 flex flex-col justify-center px-8 lg:px-16 xl:px-24 py-20 bg-black">
+      <h2 class="text-2xl font-bold text-white uppercase mb-8" style="font-family: 'Playfair Display', serif;">Request a Quote</h2>
+
+      <form class="flex flex-col gap-5" name="contact" netlify>
+        <!-- Name + Phone -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="flex flex-col gap-1">
+            <label class="text-[0.7rem] uppercase tracking-[0.08em] text-white/50" style="font-family: 'Inter', sans-serif;">Full Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="John Smith"
+              required
+              class="bg-[#0d0d0d] border border-white/10 text-white placeholder-white/25 px-4 py-3 text-sm focus:outline-none focus:border-[#d39a4d] transition-colors"
+              style="font-family: 'Inter', sans-serif;"
+            />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="text-[0.7rem] uppercase tracking-[0.08em] text-white/50" style="font-family: 'Inter', sans-serif;">Phone Number</label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="(386) 000-0000"
+              required
+              class="bg-[#0d0d0d] border border-white/10 text-white placeholder-white/25 px-4 py-3 text-sm focus:outline-none focus:border-[#d39a4d] transition-colors"
+              style="font-family: 'Inter', sans-serif;"
+            />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[0.7rem] uppercase tracking-[0.08em] text-white/50" style="font-family: 'Inter', sans-serif;">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="john@email.com"
+            class="bg-[#0d0d0d] border border-white/10 text-white placeholder-white/25 px-4 py-3 text-sm focus:outline-none focus:border-[#d39a4d] transition-colors"
+            style="font-family: 'Inter', sans-serif;"
+          />
+        </div>
+
+        <!-- Vehicle Type -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[0.7rem] uppercase tracking-[0.08em] text-white/50" style="font-family: 'Inter', sans-serif;">Vehicle Type</label>
+          <select
+            name="vehicle_type"
+            required
+            class="bg-[#0d0d0d] border border-white/10 text-white px-4 py-3 text-sm focus:outline-none focus:border-[#d39a4d] transition-colors appearance-none"
+            style="font-family: 'Inter', sans-serif;"
+          >
+            <option value="" disabled selected>Select your vehicle...</option>
+            <option>Sedan / Coupe</option>
+            <option>SUV / Crossover</option>
+            <option>Truck</option>
+            <option>Van / Minivan</option>
+            <option>Luxury / Exotic</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <!-- Service -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[0.7rem] uppercase tracking-[0.08em] text-white/50" style="font-family: 'Inter', sans-serif;">Service Needed</label>
+          <select
+            name="service"
+            required
+            class="bg-[#0d0d0d] border border-white/10 text-white px-4 py-3 text-sm focus:outline-none focus:border-[#d39a4d] transition-colors appearance-none"
+            style="font-family: 'Inter', sans-serif;"
+          >
+            <option value="" disabled selected>Select a service...</option>
+            <option>Full Detail (Interior + Exterior)</option>
+            <option>Interior Detail Only</option>
+            <option>Exterior Detail Only</option>
+            <option>Ceramic Coating</option>
+            <option>Fleet Cleaning</option>
+            <option>Add-On Only</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+
+        <!-- Location -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[0.7rem] uppercase tracking-[0.08em] text-white/50" style="font-family: 'Inter', sans-serif;">Service Location (City)</label>
+          <input
+            type="text"
+            name="location"
+            placeholder="e.g. Orlando, Daytona Beach..."
+            class="bg-[#0d0d0d] border border-white/10 text-white placeholder-white/25 px-4 py-3 text-sm focus:outline-none focus:border-[#d39a4d] transition-colors"
+            style="font-family: 'Inter', sans-serif;"
+          />
+        </div>
+
+        <!-- Message -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[0.7rem] uppercase tracking-[0.08em] text-white/50" style="font-family: 'Inter', sans-serif;">Additional Notes</label>
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="Tell us about your vehicle's condition, any add-ons you're interested in, or preferred date..."
+            class="bg-[#0d0d0d] border border-white/10 text-white placeholder-white/25 px-4 py-3 text-sm focus:outline-none focus:border-[#d39a4d] transition-colors resize-none"
+            style="font-family: 'Inter', sans-serif;"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-gradient-to-r from-[#d39a4d] to-[#fdd78c] text-black font-extrabold text-xs uppercase tracking-widest py-4 hover:opacity-90 transition-opacity shadow-lg shadow-[#d39a4d]/20 mt-2"
+          style="font-family: 'Inter', sans-serif;"
+        >
+          Send Request
+        </button>
+      </form>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>

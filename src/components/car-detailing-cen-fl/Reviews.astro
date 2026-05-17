@@ -1,0 +1,179 @@
+---
+const reviews = [
+  {
+    platform: "google",
+    name: "Marcus T.",
+    location: "Orlando, FL",
+    rating: 5,
+    text: "Absolutely blown away. My Camaro looked better than the day I drove it off the lot. The attention to detail on the interior was next-level — not a single spec of dust left behind.",
+    date: "2 weeks ago",
+  },
+  {
+    platform: "facebook",
+    name: "Danielle R.",
+    location: "Oviedo, FL",
+    rating: 5,
+    text: "I was skeptical about mobile detailing but these guys showed up on time, worked fast, and the results were incredible. My SUV hasn't looked this clean in years. Highly recommend!",
+    date: "1 month ago",
+  },
+  {
+    platform: "google",
+    name: "James W.",
+    location: "Daytona Beach, FL",
+    rating: 5,
+    text: "Used them for a full detail before selling my car and got $2,000 more than I expected at trade-in. Worth every penny. Professional, thorough, and zero complaints.",
+    date: "3 weeks ago",
+  },
+  {
+    platform: "facebook",
+    name: "Sofia M.",
+    location: "Winter Park, FL",
+    rating: 5,
+    text: "My car smelled like new again after their interior detail package. They came right to my house — I didn't have to go anywhere. Easy to book, great communication, perfect results.",
+    date: "1 week ago",
+  },
+  {
+    platform: "google",
+    name: "Derek H.",
+    location: "Sanford, FL",
+    rating: 5,
+    text: "These guys are the real deal. Paint correction on my truck came out flawless. The swirl marks I've had for two years are completely gone. I'll never go anywhere else.",
+    date: "5 days ago",
+  },
+  {
+    platform: "facebook",
+    name: "Amber L.",
+    location: "Clermont, FL",
+    rating: 5,
+    text: "Got the full ceramic coating package and my car shines like a mirror. The team explained everything before they started and finished ahead of schedule. 10/10 experience.",
+    date: "2 months ago",
+  },
+];
+---
+
+<section class="w-full bg-black py-20 px-6 overflow-hidden">
+
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Header -->
+    <div class="text-center mb-14">
+      <p class="text-xs font-bold tracking-[0.3em] uppercase mb-3 bg-linear-to-r from-[#d39a4d] to-[#fdd78c] bg-clip-text text-transparent" style="font-family: 'Inter', sans-serif;">
+        WHAT OUR CLIENTS SAY
+      </p>
+      <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight" style="font-family: 'Playfair Display', serif;">
+        Real Results. Real Reviews.
+      </h2>
+      <div class="w-12 h-[2px] bg-linear-to-r from-[#d39a4d] to-[#fdd78c] mx-auto mt-6" style="background: linear-gradient(to right, #d39a4d, #fdd78c);"></div>
+    </div>
+
+    <!-- Carousel track -->
+    <div class="relative">
+      <div id="cd-reviews-track" class="flex gap-6 transition-transform duration-500 ease-in-out">
+        {reviews.map((r) => (
+          <div class="cd-review-card flex-none w-[90vw] sm:w-[420px] bg-white/5 border border-white/10 rounded-sm p-8 flex flex-col gap-5">
+
+            <!-- Platform badge + stars -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                {r.platform === "google" ? (
+                  <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                  </svg>
+                ) : (
+                  <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" rx="4" fill="#1877F2"/>
+                    <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" fill="white"/>
+                  </svg>
+                )}
+                <span class="text-[11px] font-bold tracking-widest uppercase text-white/40" style="font-family: 'Inter', sans-serif;">
+                  {r.platform === "google" ? "Google Review" : "Facebook Review"}
+                </span>
+              </div>
+
+              <!-- Stars -->
+              <div class="flex gap-0.5">
+                {Array.from({ length: r.rating }).map(() => (
+                  <svg class="w-4 h-4" viewBox="0 0 20 20" fill="#d39a4d"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                ))}
+              </div>
+            </div>
+
+            <!-- Quote -->
+            <p class="text-white/75 text-sm leading-relaxed flex-1" style="font-family: 'Inter', sans-serif;">
+              "{r.text}"
+            </p>
+
+            <!-- Author -->
+            <div class="flex items-center justify-between pt-4 border-t border-white/10">
+              <div>
+                <p class="text-white font-bold text-sm" style="font-family: 'Inter', sans-serif;">{r.name}</p>
+                <p class="text-white/40 text-xs mt-0.5">{r.location}</p>
+              </div>
+              <span class="text-white/30 text-xs">{r.date}</span>
+            </div>
+
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="flex items-center justify-center gap-6 mt-10">
+      <button id="cd-reviews-prev" aria-label="Previous" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-[#d39a4d] hover:text-[#d39a4d] transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+
+      <div id="cd-reviews-dots" class="flex gap-2">
+        {reviews.map((_, i) => (
+          <button class="cd-dot w-2 h-2 rounded-full bg-white/20 transition-colors" data-index={i} aria-label={`Go to review ${i + 1}`}></button>
+        ))}
+      </div>
+
+      <button id="cd-reviews-next" aria-label="Next" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-[#d39a4d] hover:text-[#d39a4d] transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const track = document.getElementById('cd-reviews-track');
+  const dots = document.querySelectorAll('.cd-dot');
+  const cards = document.querySelectorAll('.cd-review-card');
+  const prevBtn = document.getElementById('cd-reviews-prev');
+  const nextBtn = document.getElementById('cd-reviews-next');
+
+  let current = 0;
+
+  function getVisible() {
+    return window.innerWidth >= 640 ? 2 : 1;
+  }
+
+  function maxIndex() {
+    return Math.max(0, cards.length - getVisible());
+  }
+
+  function goTo(idx: number) {
+    current = Math.max(0, Math.min(idx, maxIndex()));
+    const cardWidth = (cards[0] as HTMLElement).offsetWidth + 24; // gap-6 = 24px
+    (track as HTMLElement).style.transform = `translateX(-${current * cardWidth}px)`;
+    dots.forEach((d, i) => {
+      d.classList.toggle('bg-[#d39a4d]', i === current);
+      d.classList.toggle('bg-white/20', i !== current);
+    });
+  }
+
+  prevBtn?.addEventListener('click', () => goTo(current - 1));
+  nextBtn?.addEventListener('click', () => goTo(current + 1));
+  dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+  window.addEventListener('resize', () => goTo(current));
+
+  goTo(0);
+
+  // Auto-advance every 5s
+  setInterval(() => goTo(current >= maxIndex() ? 0 : current + 1), 5000);
+</script>

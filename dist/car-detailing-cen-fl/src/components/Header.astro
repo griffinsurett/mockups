@@ -1,0 +1,68 @@
+---
+import Logo from './Logo.astro';
+---
+<header class="w-full bg-black py-4 px-8 md:px-16 flex justify-between items-center relative z-50">
+  <div class="flex items-center text-white">
+    <a href="/"><Logo class="w-40 md:w-56" /></a>
+  </div>
+
+  <!-- Desktop Navigation -->
+  <nav class="hidden md:flex items-center text-white text-sm font-bold tracking-wider space-x-6">
+    <a href="#" class="border-b-2 border-white pb-1">HOME</a>
+    <span class="text-gray-500">|</span>
+    <a href="#" class="hover:text-gray-300 pb-1">OUR PACKAGES</a>
+    <span class="text-gray-500">|</span>
+    <a href="#" class="hover:text-gray-300 pb-1">GALLERY</a>
+    <span class="text-gray-500">|</span>
+    <a href="#" class="hover:text-gray-300 pb-1">CONTACT US</a>
+  </nav>
+
+  <!-- Desktop Book Now CTA -->
+  <div class="hidden md:block">
+    <a href="#" class="bg-[var(--color-brand-primary)] text-white font-bold py-3 px-6 rounded text-sm tracking-wider hover:bg-blue-600 transition-colors uppercase">
+      BOOK NOW
+    </a>
+  </div>
+
+  <!-- Mobile Hamburger Menu Button -->
+  <button id="menu-btn" class="block md:hidden text-white focus:outline-none p-1 z-50" aria-label="Toggle Menu">
+    <i class="ph ph-list text-3xl transition-transform duration-300" id="menu-icon"></i>
+  </button>
+
+  <!-- Mobile Dropdown Menu Overlay -->
+  <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-black border-t border-gray-900 py-6 px-8 flex flex-col space-y-6 z-40 shadow-2xl">
+    <a href="#" class="text-white hover:text-[var(--color-brand-primary)] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">HOME</a>
+    <a href="#" class="text-white hover:text-[var(--color-brand-primary)] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">OUR PACKAGES</a>
+    <a href="#" class="text-white hover:text-[var(--color-brand-primary)] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">GALLERY</a>
+    <a href="#" class="text-white hover:text-[var(--color-brand-primary)] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">CONTACT US</a>
+    <a href="#" class="bg-[var(--color-brand-primary)] text-white font-bold text-center py-3 rounded text-sm tracking-wider hover:bg-blue-600 transition-colors uppercase block">
+      BOOK NOW
+    </a>
+  </div>
+</header>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+
+  if (menuBtn && mobileMenu && menuIcon) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        menuIcon.className = 'ph ph-list text-3xl';
+      } else {
+        menuIcon.className = 'ph ph-x text-3xl';
+      }
+    });
+
+    // Close menu when clicking a link
+    const links = mobileMenu.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.className = 'ph ph-list text-3xl';
+      });
+    });
+  }
+</script>

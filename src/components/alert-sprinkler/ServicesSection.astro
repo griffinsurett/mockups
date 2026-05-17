@@ -1,0 +1,100 @@
+---
+const services = [
+  {
+    number: "01",
+    title: "Design & Engineering",
+    description: "Every system starts with precision planning. We engineer code-compliant fire sprinkler solutions tailored to your facility's specific layout, occupancy, and hazard classification.",
+    bullets: [
+      "Fire sprinkler system engineering",
+      "System design & blueprints",
+      "Code-compliant planning",
+    ],
+  },
+  {
+    number: "02",
+    title: "Installation",
+    description: "Our union-trained fitters bring decades of field experience to every job — from new ground-up construction to retrofitting existing structures.",
+    bullets: [
+      "New system installation",
+      "Retrofits & upgrades",
+      "Large-scale warehouse & commercial builds",
+    ],
+  },
+  {
+    number: "03",
+    title: "Inspection & Testing",
+    description: "Stay compliant and audit-ready with our comprehensive inspection and testing programs, fully aligned with NFPA 25 standards.",
+    bullets: [
+      "Annual & quarterly inspections",
+      "NFPA 25 testing",
+      "Compliance documentation for fire marshals & insurers",
+    ],
+  },
+  {
+    number: "04",
+    title: "Maintenance",
+    description: "Proactive care keeps your system performing at peak reliability. We provide scheduled maintenance programs to prevent failures before they happen.",
+    bullets: [
+      "Ongoing service contracts",
+      "Preventative maintenance",
+      "System upkeep & component checks",
+    ],
+  },
+  {
+    number: "05",
+    title: "Repair",
+    description: "When deficiencies are found during inspection or a system component fails, our technicians respond quickly to restore full protection.",
+    bullets: [
+      "Deficiency corrections",
+      "Component repair & replacement",
+      "Post-inspection remediation",
+    ],
+  },
+  {
+    number: "06",
+    title: "Emergency Service",
+    description: "A leak or system failure can't wait. Our rapid-response teams are on standby 24 hours a day, 365 days a year.",
+    bullets: [
+      "24/7 emergency response",
+      "Rapid leak & failure repair",
+      "System restoration",
+    ],
+  },
+];
+---
+
+<section id="services" class="w-full py-24 px-6 md:px-16" style="background: #fff8f7;">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Header -->
+    <div class="flex flex-col items-center text-center mb-16">
+      <span class="as-label-caps text-as-primary mb-2">WHAT WE DO</span>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight" style="color: #291715;">
+        Our Services
+      </h2>
+      <p class="mt-4 text-base max-w-2xl" style="color: #5d3f3b;">
+        From initial design through emergency response — we cover the full lifecycle of fire sprinkler protection.
+      </p>
+    </div>
+
+    <!-- 6-card grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((s) => (
+        <div class="flex flex-col p-8 border border-as-border bg-white" style="border-radius: 0.25rem;">
+          <span class="as-label-caps text-as-primary mb-4">{s.number}</span>
+          <h3 class="text-xl font-extrabold tracking-tight mb-3" style="color: #291715;">{s.title}</h3>
+          <p class="text-sm leading-relaxed mb-6" style="color: #5d3f3b;">{s.description}</p>
+          <ul class="flex flex-col gap-2 mt-auto">
+            {s.bullets.map((b) => (
+              <li class="flex items-start gap-2 text-sm" style="color: #5d3f3b;">
+                <span class="text-as-primary mt-0.5 shrink-0">—</span>
+                {b}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
