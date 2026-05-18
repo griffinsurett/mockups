@@ -55,7 +55,7 @@ export default function PricingSelector() {
         {/* Step 1 — Vehicle type */}
         <div>
           <p className="text-[10px] font-black tracking-[0.25em] text-white/40 uppercase mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>SELECT YOUR VEHICLE</p>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {vehicles.map((v) => (
               <button
                 key={v.id}
