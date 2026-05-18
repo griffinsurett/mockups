@@ -1,53 +1,47 @@
 ---
-const checks = [
-  {
-    title: "Annual & Quarterly Inspections",
-    body: "Comprehensive checks of valves, pipes, and sprinkler heads per NFPA 25 schedules.",
-  },
-  {
-    title: "Main Drain & Water Flow Tests",
-    body: "Verification of adequate water supply and alarm functionality.",
-  },
-  {
-    title: "Deficiency Corrections",
-    body: "Rapid repair of any items found during the inspection process.",
-  },
+const credentials = [
+  { label: "NJ License", value: "#P01629" },
+  { label: "NJ Fire Safety Certification", value: "#195457" },
 ];
 ---
 
-<section class="w-full py-24 px-6 md:px-16" style="background: #F8FAFC;">
+<section class="w-full py-24 px-6 md:px-16" style="background: #fff8f7;">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
     <!-- Left: content -->
     <div>
-      <span class="as-label-caps text-as-primary mb-2 block">VIGILANCE &amp; COMPLIANCE</span>
+      <span class="as-label-caps text-as-primary mb-2 block">ABOUT US</span>
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6" style="color: #291715;">
-        NFPA 25 Inspection &amp; Testing
+        Protecting New Jersey &amp; Pennsylvania Since 1977
       </h2>
-      <p class="text-base md:text-lg leading-relaxed mb-8" style="color: #5d3f3b;">
-        Stay compliant and protected with our rigorous inspection protocols. We ensure your system meets
-        all local fire codes and NFPA standards, providing detailed documentation for fire marshals and
-        insurance providers.
+      <p class="text-base md:text-lg leading-relaxed mb-6" style="color: #5d3f3b;">
+        Alert Sprinkler was established in 1977 and incorporated in 1978. For over 45 years we have been
+        the trusted name in fire sprinkler protection across New Jersey and southeastern Pennsylvania.
+      </p>
+      <p class="text-base leading-relaxed mb-10" style="color: #5d3f3b;">
+        Our scope covers the full lifecycle — engineering, design, installation, and reinforcement of
+        fire sprinkler systems, as well as inspections, testing, repairs, and ongoing maintenance.
+        We are fully insured and licensed by the State of New Jersey.
       </p>
 
-      <ul class="flex flex-col gap-6 mb-10">
-        {checks.map((c) => (
-          <li class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-as-primary mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 0;">task_alt</span>
-            <div>
-              <span class="font-bold text-sm block" style="color: #291715;">{c.title}</span>
-              <span class="text-sm leading-snug" style="color: #5d3f3b;">{c.body}</span>
-            </div>
+      <!-- License / certification pills -->
+      <ul class="flex flex-col gap-3 mb-10">
+        {credentials.map((c) => (
+          <li class="flex items-center gap-3">
+            <span class="text-as-primary shrink-0">—</span>
+            <span class="text-sm" style="color: #291715;">
+              <span class="font-bold">{c.label}:</span> {c.value}
+            </span>
           </li>
         ))}
       </ul>
 
-      <a href="/alert-sprinkler/contact" class="as-btn-primary inline-block text-base px-8 py-4">
-        Schedule an Inspection
+      <a href="/alert-sprinkler/about" class="as-btn-primary inline-block text-base px-8 py-4">
+        Learn More About Us
       </a>
     </div>
 
-    <!-- Right: image + stat callout -->
+    <!-- Right: 2×2 image grid + stat callout -->
     <div class="relative">
       <!-- Logo overlay top-right -->
       <img
@@ -57,17 +51,44 @@ const checks = [
         class="hidden lg:block absolute -top-16 -right-12 z-10 w-44 pointer-events-none"
       />
 
-      <div class="aspect-square overflow-hidden border border-as-border" style="border-radius: 0.25rem;">
-        <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaBsZ8KP8agvAtmGrY0n20wVEZ77rC_1jL6iY3FgIesxT97sirkIgflr420yT8DWbSIadTcUniCqhyu0YUq8RlgFfKLP3DBlR5iDQUvGgiMoyQ5Oe1LXJtEmNF5duKhN2Wdd48EU8UMPGewrwtMsbOeeo4MgpO-kxYNY_M3WR_sSEFfVaBJhxJG6D9nyVsD3c5_nSzwmABwLccO05NvPOs0ibqmy3zkIXMgX1hHEaHe5se87BglB4-8D7C1i4EwyR2GUSPGgoTNpM"
-          alt="Fire protection engineer inspecting system"
-          class="w-full h-full object-cover"
-          loading="lazy"
-        />
+      <div class="grid grid-cols-2 gap-2">
+        <div class="overflow-hidden border border-as-border" style="border-radius: 0.25rem; aspect-ratio: 1;">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaBsZ8KP8agvAtmGrY0n20wVEZ77rC_1jL6iY3FgIesxT97sirkIgflr420yT8DWbSIadTcUniCqhyu0YUq8RlgFfKLP3DBlR5iDQUvGgiMoyQ5Oe1LXJtEmNF5duKhN2Wdd48EU8UMPGewrwtMsbOeeo4MgpO-kxYNY_M3WR_sSEFfVaBJhxJG6D9nyVsD3c5_nSzwmABwLccO05NvPOs0ibqmy3zkIXMgX1hHEaHe5se87BglB4-8D7C1i4EwyR2GUSPGgoTNpM"
+            alt="Fire protection engineer inspecting system"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div class="overflow-hidden border border-as-border" style="border-radius: 0.25rem; aspect-ratio: 1;">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvHM3RTVyeq5o4x7hCtXOW2Qd21YYy9ckx_KtZ6qgtCVyUNu8ahxLkvWAbWn_j7J7xoKwxcvwQeNjqu74i52DvQpaKhEz2Kh2bQ3bXNRgRMCWfYxCN5dIXEi7m2XYELdMM75GYy3pVVgewdNwQoGKjr6Lmj9KLjO1ufVp6GxZjEW7Alzjbjusi1p6Tpn443uO8WqbxghO68nhRyotXtwn1LTXgwGQhjXf83BZfxH0qYgLfrFTe8dnQw0mZ6BSP-XuK9TMrdWJXotgc"
+            alt="Industrial sprinkler system"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div class="overflow-hidden border border-as-border" style="border-radius: 0.25rem; aspect-ratio: 1;">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFTX0cXlnrmEyisjDamWzXIew50WtE-jvYXqIUTTU_UwrzBMxywMjFkZKyNfDZD4O43avqhQBYVm9tD3etd7SpY5_qj3tYwsyr9ShJmvztbhXV4t2ahySKD8FHR0CX8rYmLT4T3ntvEDsOHM7OF4ugJwI7shBozQoQnEKkyGzne8L0jTnMVXLqzhvpezlpEZMUq5GyHIQdPY1hL3Po4865hqa3Z_jDoAEc5w4hOShG76L6wEEeVb-sHdiqDZGzevv2E1xeqC2LZLE"
+            alt="Institutional fire protection"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div class="overflow-hidden border border-as-border" style="border-radius: 0.25rem; aspect-ratio: 1;">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjoQL1GazQFZL3TR9IZ8OL3VnJlNuWMLbxm9aYARE1PuEbHmAaT96LV7X2m-kQhBVxUvf0ZihnsiG65shfn6sWoOSuK2QRndTtJncD-HgplBGzT9YydsdkAUgZXjrDV7Qnpvcc-59CdIgeSiVQilwqTSiZnw3ngqoxtOms0kC9LscPA610Ix9gCmHbJ6SYddns_gxAucrOT9Mp6FxYZJ8DRYui7Fw1HnLlrUorl1lApfZTe0wYxWPf-hXkiOKhDFuTKd3mCS0tuI0"
+            alt="Residential fire sprinkler system"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
       </div>
+
       <!-- Floating stat card -->
       <div
-        class="absolute -bottom-8 -left-8 bg-white p-8 border border-as-border shadow-sm max-w-[240px]"
+        class="absolute -bottom-8 -left-8 bg-white p-8 border border-as-border shadow-sm max-w-60"
         style="border-radius: 0.25rem;"
       >
         <span class="font-extrabold block mb-1 text-as-primary" style="font-size: 56px; line-height: 1; letter-spacing: -0.02em;">45+</span>
@@ -77,9 +98,3 @@ const checks = [
 
   </div>
 </section>
-
-<style>
-  .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-  }
-</style>

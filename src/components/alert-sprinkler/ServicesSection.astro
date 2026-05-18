@@ -9,6 +9,7 @@ const services = [
       "System design & blueprints",
       "Code-compliant planning",
     ],
+    cta: "Request a Design Consultation",
   },
   {
     number: "02",
@@ -19,6 +20,7 @@ const services = [
       "Retrofits & upgrades",
       "Large-scale warehouse & commercial builds",
     ],
+    cta: "Get an Installation Quote",
   },
   {
     number: "03",
@@ -29,6 +31,7 @@ const services = [
       "NFPA 25 testing",
       "Compliance documentation for fire marshals & insurers",
     ],
+    cta: "Schedule an Inspection",
   },
   {
     number: "04",
@@ -39,6 +42,7 @@ const services = [
       "Preventative maintenance",
       "System upkeep & component checks",
     ],
+    cta: "Set Up a Service Contract",
   },
   {
     number: "05",
@@ -49,6 +53,7 @@ const services = [
       "Component repair & replacement",
       "Post-inspection remediation",
     ],
+    cta: "Request a Repair",
   },
   {
     number: "06",
@@ -59,11 +64,12 @@ const services = [
       "Rapid leak & failure repair",
       "System restoration",
     ],
+    cta: "Dispatch a Technician Now",
   },
 ];
 ---
 
-<section id="services" class="w-full py-24 px-6 md:px-16" style="background: #fff8f7;">
+<section id="services" class="w-full py-24 px-6 md:px-16" style="background: #F8FAFC;">
   <div class="max-w-7xl mx-auto">
 
     <!-- Header -->
@@ -84,7 +90,7 @@ const services = [
           <span class="as-label-caps text-as-primary mb-4">{s.number}</span>
           <h3 class="text-xl font-extrabold tracking-tight mb-3" style="color: #291715;">{s.title}</h3>
           <p class="text-sm leading-relaxed mb-6" style="color: #5d3f3b;">{s.description}</p>
-          <ul class="flex flex-col gap-2 mt-auto">
+          <ul class="flex flex-col gap-2">
             {s.bullets.map((b) => (
               <li class="flex items-start gap-2 text-sm" style="color: #5d3f3b;">
                 <span class="text-as-primary mt-0.5 shrink-0">—</span>
@@ -92,6 +98,9 @@ const services = [
               </li>
             ))}
           </ul>
+          <a href="/alert-sprinkler/contact" class="as-btn-primary mt-8 inline-block text-sm px-6 py-3 text-center">
+            {s.cta}
+          </a>
         </div>
       ))}
     </div>

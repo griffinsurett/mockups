@@ -79,25 +79,30 @@ const year = new Date().getFullYear();
 
       </div>
 
-      <div class="mt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-white/40">
-        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+      <!-- Row 1 + 2: legal links & licenses on same divider -->
+      <div class="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 pb-4 border-b border-white/10">
+        <div class="flex flex-wrap gap-4 text-sm text-white/40">
           <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
           <span class="text-white/20">·</span>
           <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
           <span class="text-white/20">·</span>
           <a href="#" class="hover:text-white transition-colors">Accessibility</a>
         </div>
-        <div class="flex flex-wrap gap-x-4 gap-y-1 justify-center md:justify-end text-xs text-white/35">
+        <div class="flex flex-wrap gap-x-6 gap-y-1 text-xs text-white/35">
           <span>NJ License #P01629</span>
           <span class="text-white/20">·</span>
           <span>NJ Fire Safety Certification #195457</span>
         </div>
-        <div class="flex flex-col md:flex-row items-center gap-2">
-          <span>&copy;{year} Alert Sprinkler Co., Inc. Licensed &amp; Fully Insured.</span>
-          <a href="https://griffinswebservices.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
-            Built By Griffin's Web Services
-          </a>
-        </div>
+      </div>
+
+      <div class="my-4"></div>
+
+      <!-- Row 3: copyright + attribution -->
+      <div class="flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-white/35">
+        <span>&copy;{year} Alert Sprinkler Co., Inc. Licensed &amp; Fully Insured.</span>
+        <a href="https://griffinswebservices.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+          Built By Griffin's Web Services
+        </a>
       </div>
 
     </div>
