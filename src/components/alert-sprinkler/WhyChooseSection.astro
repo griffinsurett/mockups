@@ -1,8 +1,8 @@
 ---
+import DiamondFrame from "./DiamondFrame.astro";
 ---
 
-<section class="w-full py-24 px-6 md:px-16 relative overflow-hidden" style="background: #760202;">
-
+<section class="w-full py-24 px-6 md:px-16 relative" style="background: #760202;">
 
   <div class="max-w-7xl mx-auto relative z-10">
 
@@ -31,30 +31,14 @@
         </div>
       </div>
 
-      <!-- Center image -->
-      <div class="shrink-0 relative" style="width: clamp(220px, 28vw, 340px); height: clamp(220px, 28vw, 340px);">
-        <!-- Diamond frame -->
-        <div class="absolute pointer-events-none" style="width: 210%; height: 210%; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg); border: 2px solid rgba(255,255,255,0.2);"></div>
-        <div class="absolute pointer-events-none" style="width: 193%; height: 193%; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg); border: 1px solid rgba(255,255,255,0.1);"></div>
-        <!-- Thick white ring frame -->
-        <div class="absolute inset-0 rounded-full" style="border: 14px solid #fff; box-shadow: 0 0 0 3px rgba(255,255,255,0.2);"></div>
-        <!-- Image -->
-        <div class="absolute rounded-full overflow-hidden" style="inset: 14px;">
-          <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaBsZ8KP8agvAtmGrY0n20wVEZ77rC_1jL6iY3FgIesxT97sirkIgflr420yT8DWbSIadTcUniCqhyu0YUq8RlgFfKLP3DBlR5iDQUvGgiMoyQ5Oe1LXJtEmNF5duKhN2Wdd48EU8UMPGewrwtMsbOeeo4MgpO-kxYNY_M3WR_sSEFfVaBJhxJG6D9nyVsD3c5_nSzwmABwLccO05NvPOs0ibqmy3zkIXMgX1hHEaHe5se87BglB4-8D7C1i4EwyR2GUSPGgoTNpM"
-            alt="Alert Sprinkler crew at work"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-        <!-- Learn more link below circle -->
-        <a
-          href="/alert-sprinkler/about"
-          class="absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap text-sm font-bold text-white/70 hover:text-white transition-colors flex items-center gap-1"
-        >
-          Learn More <span style="font-size: 1rem;">›</span>
-        </a>
-      </div>
+      <!-- Center: diamond + circle image -->
+      <DiamondFrame
+        imgSrc="https://lh3.googleusercontent.com/aida-public/AB6AXuAaBsZ8KP8agvAtmGrY0n20wVEZ77rC_1jL6iY3FgIesxT97sirkIgflr420yT8DWbSIadTcUniCqhyu0YUq8RlgFfKLP3DBlR5iDQUvGgiMoyQ5Oe1LXJtEmNF5duKhN2Wdd48EU8UMPGewrwtMsbOeeo4MgpO-kxYNY_M3WR_sSEFfVaBJhxJG6D9nyVsD3c5_nSzwmABwLccO05NvPOs0ibqmy3zkIXMgX1hHEaHe5se87BglB4-8D7C1i4EwyR2GUSPGgoTNpM"
+        diamondImgSrc="https://lh3.googleusercontent.com/aida-public/AB6AXuAvHM3RTVyeq5o4x7hCtXOW2Qd21YYy9ckx_KtZ6qgtCVyUNu8ahxLkvWAbWn_j7J7xoKwxcvwQeNjqu74i52DvQpaKhEz2Kh2bQ3bXNRgRMCWfYxCN5dIXEi7m2XYELdMM75GYy3pVVgewdNwQoGKjr6Lmj9KLjO1ufVp6GxZjEW7Alzjbjusi1p6Tpn443uO8WqbxghO68nhRyotXtwn1LTXgwGQhjXf83BZfxH0qYgLfrFTe8dnQw0mZ6BSP-XuK9TMrdWJXotgc"
+        imgAlt="Alert Sprinkler crew at work"
+        href="/alert-sprinkler/about"
+        linkLabel="Learn More"
+      />
 
       <!-- Right stats -->
       <div class="flex flex-col gap-12 lg:items-start lg:text-left lg:flex-1 lg:pl-12">

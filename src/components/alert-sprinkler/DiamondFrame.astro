@@ -1,0 +1,91 @@
+---
+interface Props {
+  imgSrc: string;
+  imgAlt?: string;
+  diamondImgSrc?: string;
+  href?: string;
+  linkLabel?: string;
+}
+const { imgSrc, imgAlt = "", diamondImgSrc, href, linkLabel = "Learn More" } = Astro.props;
+---
+
+<div class="as-diamond-frame shrink-0 relative">
+
+  <!-- Diamond image, clipped to diamond shape -->
+  {diamondImgSrc && (
+    <div class="as-diamond-img">
+      <img src={diamondImgSrc} alt="" aria-hidden="true" class="w-full h-full object-cover" loading="lazy" />
+    </div>
+  )}
+
+  <!-- Single diamond border outline -->
+  <div class="as-diamond-border"></div>
+
+  <!-- Horizontal lines through the midpoint -->
+  <div class="as-diamond-line"></div>
+
+  <!-- Circle image on top -->
+  <div class="absolute inset-0 rounded-full overflow-hidden z-10">
+    <img src={imgSrc} alt={imgAlt} class="w-full h-full object-cover" loading="lazy" />
+  </div>
+
+  <!-- White ring frame around circle -->
+  <div class="absolute inset-0 rounded-full z-20" style="border: 10px solid #fff; box-shadow: 0 0 0 2px rgba(255,255,255,0.2); pointer-events:none;"></div>
+
+  {href && (
+    <a
+      href={href}
+      class="absolute z-20 whitespace-nowrap text-sm font-bold text-white/70 hover:text-white transition-colors flex items-center gap-1"
+      style="bottom: -2.5rem; left: 50%; transform: translateX(-50%);"
+    >
+      {linkLabel} <span style="font-size: 1rem;">›</span>
+    </a>
+  )}
+
+</div>
+
+<style>
+  .as-diamond-frame {
+    width: clamp(220px, 28vw, 340px);
+    height: clamp(220px, 28vw, 340px);
+    position: relative;
+  }
+
+  /* Image clipped to a diamond — 170% so it extends beyond the circle */
+  .as-diamond-img {
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    z-index: 1;
+  }
+
+  /* One border that traces the diamond edge */
+  .as-diamond-border {
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  /* Single horizontal line through the midpoint */
+  .as-diamond-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200vw;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+  }
+</style>
