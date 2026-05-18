@@ -5,27 +5,18 @@ const credentials = [
 ];
 ---
 
-<section class="w-full py-24 px-6 md:px-16" style="background: #fff8f7;">
+<section id="about" class="w-full py-24 px-6 md:px-16" style="background: #fff8f7;">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
     <!-- Left: content -->
     <div>
       <span class="as-label-caps text-as-primary mb-2 block">ABOUT US</span>
-      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6" style="color: #291715;">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4" style="color: #291715;">
         Protecting New Jersey &amp; Pennsylvania Since 1977
       </h2>
-      <p class="text-base md:text-lg leading-relaxed mb-6" style="color: #5d3f3b;">
-        Alert Sprinkler was established in 1977 and incorporated in 1978. For over 45 years we have been
-        the trusted name in fire sprinkler protection across New Jersey and southeastern Pennsylvania.
-      </p>
-      <p class="text-base leading-relaxed mb-10" style="color: #5d3f3b;">
-        Our scope covers the full lifecycle — engineering, design, installation, and reinforcement of
-        fire sprinkler systems, as well as inspections, testing, repairs, and ongoing maintenance.
-        We are fully insured and licensed by the State of New Jersey.
-      </p>
 
       <!-- License / certification pills -->
-      <ul class="flex flex-col gap-3 mb-10">
+      <ul class="flex flex-col gap-2 mb-6">
         {credentials.map((c) => (
           <li class="flex items-center gap-3">
             <span class="text-as-primary shrink-0">—</span>
@@ -36,9 +27,46 @@ const credentials = [
         ))}
       </ul>
 
-      <a href="/alert-sprinkler/about" class="as-btn-primary inline-block text-base px-8 py-4">
-        Learn More About Us
-      </a>
+      <p class="text-base md:text-lg leading-relaxed mb-6" style="color: #5d3f3b;">
+        Alert Sprinkler was established in 1977 and incorporated in 1978. For over 45 years we have been
+        the trusted name in fire sprinkler protection across New Jersey and southeastern Pennsylvania —
+        covering the full lifecycle from engineering and design through installation, inspection, repair, and maintenance.
+      </p>
+      <p class="text-base leading-relaxed mb-8" style="color: #5d3f3b;">
+        We are a union company. Every one of our fitters has completed a rigorous 5-year apprenticeship program,
+        and we've been fortunate to retain the same core crew for over 25 years. We place a high value on
+        employee loyalty — because we believe it's what allows us to deliver the best possible service to our customers.
+      </p>
+
+      <!-- Sectors served -->
+      <div class="mb-10">
+        <span class="as-label-caps text-as-primary mb-3 block">SECTORS WE SERVE</span>
+        <ul class="grid grid-cols-2 gap-x-6 gap-y-2">
+          {["Commercial", "Industrial", "Institutional", "Residential"].map((s) => (
+            <li class="flex items-center gap-2 text-sm font-semibold" style="color: #291715;">
+              <span class="text-as-primary shrink-0">—</span>{s}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6">
+        <a href="/alert-sprinkler/about" class="as-btn-primary inline-block text-base px-8 py-4">
+          Learn More About Us
+        </a>
+        <div class="flex items-center gap-2">
+          <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="shrink-0">
+            <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 20-7.8 20-21 0-1.4-.2-2.7-.5-4z"/>
+            <path fill="#34A853" d="M6.3 14.7l7 5.1C15 16.1 19.2 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3c-7.7 0-14.3 4.4-17.7 11.7z"/>
+            <path fill="#FBBC05" d="M24 45c5.5 0 10.5-1.9 14.4-5.1l-6.7-5.5C29.6 36 26.9 37 24 37c-6 0-11.1-4-12.9-9.5l-7 5.4C7.6 40.5 15.2 45 24 45z"/>
+            <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-1 3-3.3 5.4-6.3 7l6.7 5.5C40.3 37.6 45 31.5 45 24c0-1.4-.2-2.7-.5-4z"/>
+          </svg>
+          <span style="color: #FBBC05; font-size: 0.9rem;">★★★★★</span>
+          <span class="font-bold text-sm" style="color: #291715;">5.0</span>
+          <span style="color: #5d3f3b;" class="text-sm">·</span>
+          <span class="text-sm font-semibold" style="color: #5d3f3b;">178+ Reviews</span>
+        </div>
+      </div>
     </div>
 
     <!-- Right: 2×2 image grid + stat callout -->

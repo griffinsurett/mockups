@@ -86,7 +86,7 @@ const services = [
     <!-- 6-card grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {services.map((s) => (
-        <div class="flex flex-col p-8 border border-as-border bg-white" style="border-radius: 0.25rem;">
+        <div class="flex flex-col p-8 border border-as-border bg-white transition-colors duration-200 hover:border-as-primary" style="border-radius: 0.25rem;">
           <span class="as-label-caps text-as-primary mb-4">{s.number}</span>
           <h3 class="text-xl font-extrabold tracking-tight mb-3" style="color: #291715;">{s.title}</h3>
           <p class="text-sm leading-relaxed mb-6" style="color: #5d3f3b;">{s.description}</p>
@@ -104,6 +104,11 @@ const services = [
         </div>
       ))}
     </div>
+
+    <!-- Sectors note below cards -->
+    <p class="mt-10 text-sm text-center max-w-2xl mx-auto" style="color: #5d3f3b;">
+      Serving <span style="color: #291715; font-weight: 600;">Commercial, Industrial, Institutional,</span> and <span style="color: #291715; font-weight: 600;">Residential</span> facilities across New Jersey and southeastern Pennsylvania.
+    </p>
 
   </div>
 </section>

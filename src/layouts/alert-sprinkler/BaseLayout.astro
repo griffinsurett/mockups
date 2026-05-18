@@ -26,30 +26,29 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
   <body class="overflow-x-hidden" style="font-family: 'Hanken Grotesk', sans-serif; background: #fff8f7; color: #291715;">
 
     <!-- ============ HEADER ============ -->
-    <!-- Top bar + header wrapper: stacked flush on mobile -->
-    <div class="fixed inset-x-0 top-0 z-50 flex flex-col">
 
-      <!-- Top bar: mobile only -->
-      <div class="md:hidden flex items-center justify-center px-4 py-2" style="background: #760202;">
-        <a href="/alert-sprinkler/contact" class="as-label-caps text-white/90 hover:text-white transition-colors">
-          Request A Call Back →
-        </a>
-      </div>
+    <!-- Emergency top bar: visible at top, slides away on scroll -->
+    <div id="as-topbar" class="fixed inset-x-0 top-0 z-60 flex items-center justify-center gap-3 px-4 py-2 transition-transform duration-300" style="background: #760202;">
+      <span class="as-label-caps text-white/80">Fire sprinkler emergency? We respond 24/7 —</span>
+      <a href="tel:7325211666" class="as-label-caps text-white font-extrabold hover:text-white/80 transition-colors">Call 732-521-1666</a>
+    </div>
+
+    <!-- Top bar + header wrapper: stacked flush -->
+    <div id="as-header-wrap" class="fixed inset-x-0 z-50 flex flex-col transition-all duration-300" style="top: 2.25rem;">
+
 
     <header id="as-header" data-as-header class="w-full">
 
-      <!-- Backdrop: gradient → solid on scroll -->
-      <div class="pointer-events-none absolute inset-x-0 top-0 transition-all duration-500" data-as-backdrop></div>
 
       <!-- Desktop layout -->
-      <div class="hidden md:flex items-center justify-between w-[95%] mx-auto relative overflow-visible" data-as-inner>
+      <div class="hidden md:flex items-center justify-between w-[95%] mx-auto relative overflow-visible z-10" data-as-inner>
 
         <!-- Left: Nav -->
         <nav class="flex gap-8 items-center flex-1" data-as-nav>
           <a href="/alert-sprinkler" class="as-nav-link active">Home</a>
-          <a href="#services" class="as-nav-link">Services</a>
-          <a href="/alert-sprinkler/work" class="as-nav-link">Our Work</a>
-          <a href="/alert-sprinkler/about" class="as-nav-link">About</a>
+          <a href="/alert-sprinkler#services" class="as-nav-link">Services</a>
+          <a href="/alert-sprinkler#about" class="as-nav-link">About</a>
+          <a href="/alert-sprinkler/contact" class="as-nav-link">Contact</a>
         </nav>
 
         <!-- Logo: in flow, small, always visible -->
@@ -64,7 +63,7 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
         <!-- Right: Phone + CTA -->
         <div class="flex items-center gap-5 flex-1 justify-end">
           <div class="flex flex-col items-end leading-tight">
-            <span class="as-label-caps as-phone-label">24/7 SUPPORT</span>
+            <span class="as-label-caps as-phone-label">CALL US</span>
             <a href="tel:7325211666" class="as-phone-num font-extrabold text-[18px] tracking-tight">732-521-1666</a>
           </div>
           <a href="/alert-sprinkler/contact" class="as-btn-primary whitespace-nowrap">
@@ -102,21 +101,18 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
       </div>
 
     </header>
-    </div><!-- end fixed wrapper -->
+    </div><!-- end header wrap -->
 
     <slot />
 
   </body>
 
   <style>
-    /* ── Backdrop ── */
-    [data-as-backdrop] {
-      height: 6rem;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, transparent 100%);
-      transition: background 300ms ease, box-shadow 300ms ease, height 300ms ease;
+    /* ── Header bg: transparent at top, solid white on scroll ── */
+    [data-as-header] {
+      transition: background 300ms ease, box-shadow 300ms ease;
     }
-    [data-as-header][data-scrolled="true"] [data-as-backdrop] {
-      height: 100%;
+    [data-as-header][data-scrolled="true"] {
       background: rgba(255, 248, 247, 0.97);
       box-shadow: 0 1px 16px rgba(41,23,21,0.1);
       backdrop-filter: blur(10px);
@@ -234,8 +230,12 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
     (function initAsHeader() {
       if (typeof window === "undefined") return;
 
-      const header = document.getElementById("as-header");
+      const topbar     = document.getElementById("as-topbar");
+      const headerWrap = document.getElementById("as-header-wrap");
+      const header     = document.getElementById("as-header");
       if (!header) return;
+
+      const topbarH = topbar ? topbar.offsetHeight : 36;
 
       const backdrop = header.querySelector("[data-as-backdrop]") as HTMLElement | null;
       const inner    = header.querySelector("[data-as-inner]")    as HTMLElement | null;
@@ -252,7 +252,18 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
       const update = () => {
         const y = window.scrollY;
 
-        // Logo compact: triggers immediately on any scroll
+        // Slide topbar out on scroll, back in at top
+        if (topbar && headerWrap) {
+          if (y > 10) {
+            topbar.style.transform = "translateY(-100%)";
+            headerWrap.style.top = "0px";
+          } else {
+            topbar.style.transform = "translateY(0)";
+            headerWrap.style.top = `${topbarH}px`;
+          }
+        }
+
+        // Logo compact
         if (y > 44) {
           header.setAttribute("data-compact", "true");
           bgLocked = true;
@@ -260,7 +271,7 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
           header.removeAttribute("data-compact");
         }
 
-        // Backdrop/bg: locks on scroll down, releases only at 280px on way back up
+        // Backdrop/bg
         if (bgLocked) {
           header.setAttribute("data-scrolled", "true");
           if (y < 280) {
@@ -280,7 +291,7 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
       };
 
       window.addEventListener("scroll", onScroll, { passive: true });
-      window.addEventListener("resize", setBackdropHeight, { passive: true });
+      window.addEventListener("resize", () => { setBackdropHeight(); }, { passive: true });
       requestAnimationFrame(update);
       setBackdropHeight();
     })();

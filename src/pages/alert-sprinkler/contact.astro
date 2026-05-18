@@ -3,77 +3,126 @@ import BaseLayout from "../../layouts/alert-sprinkler/BaseLayout.astro";
 ---
 
 <BaseLayout title="Contact — Alert Sprinkler Co., Inc.">
-  <main style="padding-top: 6rem;" class="max-w-4xl mx-auto px-6 py-24">
 
-    <h1 class="text-4xl font-extrabold tracking-tight mb-4" style="color: #291715;">Contact Us</h1>
-    <p class="text-base leading-relaxed mb-16" style="color: #5d3f3b;">
+  <!-- Page hero -->
+  <div class="w-full pt-32 pb-16 px-6 md:px-16 text-center" style="background: #291715;">
+    <span class="as-label-caps mb-3 block" style="color: rgba(255,255,255,0.5);">GET IN TOUCH</span>
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-white mb-4">Contact Us</h1>
+    <p class="text-base max-w-xl mx-auto" style="color: rgba(255,255,255,0.65);">
       For new installations, inspections, emergency repairs, or general inquiries — reach out to our team directly.
     </p>
+  </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+  <main class="w-full px-6 md:px-16 py-20" style="background: #fff8f7;">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
 
-      <!-- Contact Info -->
-      <div class="flex flex-col gap-8">
+      <!-- Left: Contact info -->
+      <div class="flex flex-col gap-10">
+
+        <!-- Office -->
         <div>
-          <h2 class="text-lg font-bold mb-3" style="color: #291715;">Office</h2>
-          <p class="text-base" style="color: #5d3f3b;">
+          <span class="as-label-caps text-as-primary mb-3 block">OFFICE</span>
+          <p class="text-base leading-relaxed" style="color: #5d3f3b;">
             1085 Cranbury South River Rd., Suite 1<br />
             Jamesburg, NJ 08831
           </p>
-          <p class="mt-3 text-base" style="color: #5d3f3b;">
-            <strong>Phone:</strong> <a href="tel:7325211666" class="text-as-primary hover:underline">732-521-1666</a><br />
-            <strong>Fax:</strong> 732-521-2618
-          </p>
+          <div class="mt-4 flex flex-col gap-2 text-base" style="color: #5d3f3b;">
+            <a href="tel:7325211666" class="flex items-center gap-2 hover:text-as-primary transition-colors">
+              <span class="material-symbols-outlined text-as-primary" style="font-size:1.1rem; font-variation-settings:'FILL' 1;">call</span>
+              732-521-1666
+            </a>
+            <span class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-as-primary" style="font-size:1.1rem; font-variation-settings:'FILL' 1;">fax</span>
+              732-521-2618 (Fax)
+            </span>
+          </div>
         </div>
 
+        <!-- Licenses -->
         <div>
-          <h2 class="text-lg font-bold mb-3" style="color: #291715;">Management</h2>
-          <ul class="flex flex-col gap-4 text-base" style="color: #5d3f3b;">
-            <li>
-              <strong style="color: #291715;">Chad Blum</strong> — President<br />
-              <a href="mailto:chad@alertsprinkler.com" class="text-as-primary hover:underline">chad@alertsprinkler.com</a>
-            </li>
-            <li>
-              <strong style="color: #291715;">Steve Toth</strong> — Vice President<br />
-              <a href="mailto:steve@alertsprinkler.com" class="text-as-primary hover:underline">steve@alertsprinkler.com</a>
-            </li>
-            <li>
-              <strong style="color: #291715;">Taran Fedor</strong> — Office Manager<br />
-              <a href="mailto:taran@alertsprinkler.com" class="text-as-primary hover:underline">taran@alertsprinkler.com</a>
-            </li>
+          <span class="as-label-caps text-as-primary mb-3 block">LICENSES</span>
+          <ul class="flex flex-col gap-2 text-sm" style="color: #5d3f3b;">
+            <li class="flex items-center gap-2"><span class="text-as-primary shrink-0">—</span> NJ License #P01629</li>
+            <li class="flex items-center gap-2"><span class="text-as-primary shrink-0">—</span> NJ Fire Safety Certification #195457</li>
           </ul>
         </div>
+
+        <!-- Management -->
+        <div>
+          <span class="as-label-caps text-as-primary mb-3 block">MANAGEMENT</span>
+          <ul class="flex flex-col gap-5">
+            {[
+              { name: "Chad Blum", title: "President", email: "chad@alertsprinkler.com" },
+              { name: "Steve Toth", title: "Vice President", email: "steve@alertsprinkler.com" },
+              { name: "Taran Fedor", title: "Office Manager", email: "taran@alertsprinkler.com" },
+            ].map((p) => (
+              <li class="flex flex-col">
+                <span class="font-bold text-sm" style="color: #291715;">{p.name}</span>
+                <span class="text-xs mb-1" style="color: #5d3f3b;">{p.title}</span>
+                <a href={`mailto:${p.email}`} class="text-sm text-as-primary hover:underline">{p.email}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Emergency callout -->
+        <div class="p-6 border border-as-border" style="background: #291715; border-radius: 0.25rem;">
+          <span class="as-label-caps mb-2 block" style="color: rgba(255,255,255,0.5);">24/7 EMERGENCY</span>
+          <a href="tel:7325211666" class="font-extrabold text-white hover:text-as-primary transition-colors" style="font-size: clamp(24px, 3vw, 36px); letter-spacing: -0.02em; line-height: 1;">
+            732-521-1666
+          </a>
+          <p class="text-sm mt-2" style="color: rgba(255,255,255,0.6);">Available around the clock for system failures and emergency repairs.</p>
+        </div>
+
       </div>
 
-      <!-- Request a Call Back form placeholder -->
-      <div>
-        <h2 class="text-lg font-bold mb-6" style="color: #291715;">Request A Call Back</h2>
-        <form class="flex flex-col gap-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            class="border border-as-border px-4 py-3 text-sm w-full"
-            style="color: #291715; background: #fff8f7;"
-          />
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            class="border border-as-border px-4 py-3 text-sm w-full"
-            style="color: #291715; background: #fff8f7;"
-          />
-          <input
-            type="email"
-            placeholder="Email Address"
-            class="border border-as-border px-4 py-3 text-sm w-full"
-            style="color: #291715; background: #fff8f7;"
-          />
-          <textarea
-            placeholder="Tell us about your project or inquiry"
-            rows="4"
-            class="border border-as-border px-4 py-3 text-sm w-full resize-none"
-            style="color: #291715; background: #fff8f7;"
-          ></textarea>
-          <button type="submit" class="as-btn-primary px-8 py-4 text-base w-full">
+      <!-- Right: Form -->
+      <div class="bg-white border border-as-border p-10" style="border-radius: 0.25rem;">
+        <span class="as-label-caps text-as-primary mb-2 block">SEND A MESSAGE</span>
+        <h2 class="text-2xl font-extrabold tracking-tight mb-8" style="color: #291715;">Request A Call Back</h2>
+
+        <form class="flex flex-col gap-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="flex flex-col gap-1.5">
+              <label class="as-label-caps text-xs" style="color: #5d3f3b;">First Name</label>
+              <input type="text" placeholder="John" class="border border-as-border px-4 py-3 text-sm w-full focus:outline-none focus:border-as-primary transition-colors" style="background: #fff8f7; color: #291715; border-radius: 0.25rem;" />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label class="as-label-caps text-xs" style="color: #5d3f3b;">Last Name</label>
+              <input type="text" placeholder="Smith" class="border border-as-border px-4 py-3 text-sm w-full focus:outline-none focus:border-as-primary transition-colors" style="background: #fff8f7; color: #291715; border-radius: 0.25rem;" />
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="as-label-caps text-xs" style="color: #5d3f3b;">Phone Number</label>
+            <input type="tel" placeholder="(732) 000-0000" class="border border-as-border px-4 py-3 text-sm w-full focus:outline-none focus:border-as-primary transition-colors" style="background: #fff8f7; color: #291715; border-radius: 0.25rem;" />
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="as-label-caps text-xs" style="color: #5d3f3b;">Email Address</label>
+            <input type="email" placeholder="john@company.com" class="border border-as-border px-4 py-3 text-sm w-full focus:outline-none focus:border-as-primary transition-colors" style="background: #fff8f7; color: #291715; border-radius: 0.25rem;" />
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="as-label-caps text-xs" style="color: #5d3f3b;">Service Needed</label>
+            <select class="border border-as-border px-4 py-3 text-sm w-full focus:outline-none focus:border-as-primary transition-colors" style="background: #fff8f7; color: #291715; border-radius: 0.25rem;">
+              <option value="" disabled selected>Select a service…</option>
+              <option>Design & Engineering</option>
+              <option>Installation</option>
+              <option>Inspection & Testing</option>
+              <option>Maintenance</option>
+              <option>Repair</option>
+              <option>Emergency Service</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="as-label-caps text-xs" style="color: #5d3f3b;">Message</label>
+            <textarea placeholder="Tell us about your facility or project…" rows="4" class="border border-as-border px-4 py-3 text-sm w-full resize-none focus:outline-none focus:border-as-primary transition-colors" style="background: #fff8f7; color: #291715; border-radius: 0.25rem;"></textarea>
+          </div>
+
+          <button type="submit" class="as-btn-primary px-8 py-4 text-base w-full mt-2">
             Request A Call Back
           </button>
         </form>
@@ -81,4 +130,11 @@ import BaseLayout from "../../layouts/alert-sprinkler/BaseLayout.astro";
 
     </div>
   </main>
+
 </BaseLayout>
+
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+</style>
