@@ -34,7 +34,7 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
     </div>
 
     <!-- Top bar + header wrapper: stacked flush -->
-    <div id="as-header-wrap" class="fixed inset-x-0 z-50 flex flex-col transition-all duration-300" style="top: 2.25rem;">
+    <div id="as-header-wrap" class="fixed inset-x-0 z-50 flex flex-col transition-all duration-300">
 
 
     <header id="as-header" data-as-header class="w-full">
@@ -235,7 +235,7 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
       const header     = document.getElementById("as-header");
       if (!header) return;
 
-      const topbarH = topbar ? topbar.offsetHeight : 36;
+      const getTopbarH = () => topbar ? topbar.offsetHeight : 0;
 
       const backdrop = header.querySelector("[data-as-backdrop]") as HTMLElement | null;
       const inner    = header.querySelector("[data-as-inner]")    as HTMLElement | null;
@@ -259,7 +259,7 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
             headerWrap.style.top = "0px";
           } else {
             topbar.style.transform = "translateY(0)";
-            headerWrap.style.top = `${topbarH}px`;
+            headerWrap.style.top = `${getTopbarH()}px`;
           }
         }
 
@@ -291,7 +291,7 @@ const { title = "Alert Sprinkler Co., Inc." } = Astro.props;
       };
 
       window.addEventListener("scroll", onScroll, { passive: true });
-      window.addEventListener("resize", () => { setBackdropHeight(); }, { passive: true });
+      window.addEventListener("resize", () => { setBackdropHeight(); requestAnimationFrame(update); }, { passive: true });
       requestAnimationFrame(update);
       setBackdropHeight();
     })();
