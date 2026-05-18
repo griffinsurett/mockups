@@ -1,0 +1,16 @@
+---
+import GalleryCarousel from "./GalleryCarousel";
+
+const images = [
+  { src: "/car-detailing-cen-fl/assets/images/gallery/gallery-1.jpg", alt: "Car detailing result" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/gallery-2.jpg", alt: "Luxury vehicle detail" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/gallery-3.jpg", alt: "Exterior detailing" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/gallery-4.jpg", alt: "Fleet detailing" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/gallery-5.jpg", alt: "Detail packages" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/gallery-6.jpg", alt: "Membership detailing" },
+];
+---
+
+<section class="w-full border-b-[6px] border-[#d39a4d]">
+  <GalleryCarousel items={images} client:visible />
+</section>

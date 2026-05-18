@@ -2,14 +2,18 @@
 import Logo from './Logo.astro';
 ---
 <section class="relative w-full h-180 flex items-center justify-center text-center">
-  <div class="absolute inset-0 z-0">
-    <img src="/car-detailing-cen-fl/assets/images/hero.png" alt="Car interior detailing" class="w-full h-full object-cover object-center" />
-    <div class="absolute inset-0 bg-black/60"></div>
+  <div
+    class="absolute inset-0 z-0 bg-cover bg-center lg:bg-fixed"
+    style="background-image: url('/car-detailing-cen-fl/assets/images/hero.png')"
+    role="img"
+    aria-label="Car interior detailing"
+  >
+    <div class="absolute inset-0 bg-black/80"></div>
   </div>
 
   <div class="relative z-10 flex flex-col items-center px-4 pt-36">
     <div class="hidden md:block">
-      <Logo class="w-80 md:w-[420px] mb-6" />
+      <Logo class="w-80 md:w-105 mb-6" />
     </div>
 
     <h1 class="text-3xl md:text-5xl text-white font-bold max-w-4xl leading-tight mb-6 drop-shadow-xl" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-family: 'Playfair Display', serif;">

@@ -1,11 +1,15 @@
 ---
 import Logo from './Logo.astro';
+import SocialIcons from './SocialIcons';
 ---
 <footer class="w-full bg-black text-white pt-20 pb-8 px-8 md:px-16">
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
 
-    <div class="flex flex-col items-center md:items-start w-full md:w-1/4">
+    <div class="flex flex-col items-center md:items-start w-full md:w-1/4 gap-4">
       <Logo class="w-64 md:w-80" />
+      <p class="text-gray-400 text-xs leading-relaxed text-center md:text-left max-w-[220px]" style="font-family: 'Inter', sans-serif;">
+        Mobile car detailing done right — we come to you, anywhere in Central Florida.
+      </p>
     </div>
 
     <div class="flex flex-col w-full md:w-1/4 text-center md:text-left">
@@ -22,14 +26,7 @@ import Logo from './Logo.astro';
 
     <div class="flex flex-col w-full md:w-1/4 items-center md:items-start">
       <h4 class="text-base font-bold mb-4 tracking-widest uppercase" style="font-family: 'Playfair Display', serif;">FOLLOW US</h4>
-      <div class="flex space-x-4">
-        <a href="#" class="text-white hover:text-[#d39a4d] transition-colors">
-          <i class="ph ph-facebook-logo text-2xl"></i>
-        </a>
-        <a href="#" class="text-white hover:text-[#d39a4d] transition-colors">
-          <i class="ph ph-instagram-logo text-2xl"></i>
-        </a>
-      </div>
+      <SocialIcons client:load />
     </div>
   </div>
 

@@ -7,11 +7,11 @@ import Logo from './Logo.astro';
   </div>
 
   <nav class="hidden md:flex items-center text-white text-sm font-bold tracking-wider space-x-6">
-    <a href="#" class="border-b-2 border-white pb-1">HOME</a>
+    <a href="#" class="border-b-2 border-[#d39a4d] pb-1">HOME</a>
     <span class="text-gray-500">|</span>
     <a href="/car-detailing-cen-fl/pricing" class="hover:text-gray-300 pb-1">PRICING</a>
     <span class="text-gray-500">|</span>
-    <a href="#" class="hover:text-gray-300 pb-1">GALLERY</a>
+    <a href="/car-detailing-cen-fl/gallery" class="hover:text-gray-300 pb-1">GALLERY</a>
     <span class="text-gray-500">|</span>
     <a href="/car-detailing-cen-fl/contact" class="hover:text-gray-300 pb-1">CONTACT US</a>
   </nav>
@@ -29,7 +29,7 @@ import Logo from './Logo.astro';
   <div id="cd-mobile-menu" class="hidden absolute top-full left-0 w-full bg-black border-t border-gray-900 py-6 px-8 flex flex-col space-y-6 z-40 shadow-2xl">
     <a href="#" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">HOME</a>
     <a href="/car-detailing-cen-fl/pricing" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">PRICING</a>
-    <a href="#" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">GALLERY</a>
+    <a href="/car-detailing-cen-fl/gallery" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">GALLERY</a>
     <a href="/car-detailing-cen-fl/contact" class="text-white hover:text-[#d39a4d] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">CONTACT US</a>
     <a href="#" class="bg-gradient-to-r from-[#d39a4d] to-[#fdd78c] text-black font-bold text-center py-3 rounded text-sm tracking-wider hover:bg-[#fdd78c] hover:text-black transition-colors uppercase block">
       BOOK NOW
@@ -49,13 +49,17 @@ import Logo from './Logo.astro';
   if (header) {
     const onScroll = () => {
       const scrolled = window.scrollY;
-      // Slide header up as topbar scrolls away
-      const newTop = Math.max(0, topbarH - scrolled);
-      header.style.top = newTop + 'px';
-      if (scrolled > topbarH) {
+      if (scrolled > 10) {
+        // Slide topbar up out of view
+        if (topbar) topbar.style.transform = `translateY(-100%)`;
+        // Move header to top
+        header.style.top = '0px';
         header.classList.add('bg-black');
         header.classList.remove('bg-transparent');
       } else {
+        // Restore topbar
+        if (topbar) topbar.style.transform = 'translateY(0)';
+        header.style.top = topbarH + 'px';
         header.classList.remove('bg-black');
         header.classList.add('bg-transparent');
       }
