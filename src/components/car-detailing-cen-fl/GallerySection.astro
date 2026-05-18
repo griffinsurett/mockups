@@ -2,15 +2,20 @@
 import GalleryCarousel from "./GalleryCarousel";
 
 const images = [
-  { src: "/car-detailing-cen-fl/assets/images/gallery/gallery-1.jpg", alt: "Car detailing result" },
-  { src: "/car-detailing-cen-fl/assets/images/gallery/gallery-2.jpg", alt: "Luxury vehicle detail" },
-  { src: "/car-detailing-cen-fl/assets/images/gallery/gallery-3.jpg", alt: "Exterior detailing" },
-  { src: "/car-detailing-cen-fl/assets/images/gallery/gallery-4.jpg", alt: "Fleet detailing" },
-  { src: "/car-detailing-cen-fl/assets/images/gallery/gallery-5.jpg", alt: "Detail packages" },
-  { src: "/car-detailing-cen-fl/assets/images/gallery/gallery-6.jpg", alt: "Membership detailing" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/black-car.jpeg",   alt: "Black car detail" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/blue-car.jpeg",    alt: "Blue car detail" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/chevy-bck.jpeg",   alt: "Chevy rear detail" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/chevy-frnt.jpeg",  alt: "Chevy front detail" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/gray-car.jpeg",    alt: "Gray car detail" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/gray-car2.jpeg",   alt: "Gray car exterior" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/radio.jpeg",       alt: "Interior radio detail" },
+  { src: "/car-detailing-cen-fl/assets/images/gallery/red-car.jpeg",     alt: "Red car detail" },
+  { src: "/car-detailing-cen-fl/assets/images/before-and-after/frnt-of-car1/aftr-front-ofcar.jpeg", alt: "Front of car after detail" },
+  { src: "/car-detailing-cen-fl/assets/images/before-and-after/bck-of-car1/after-bck-of-car.jpeg",  alt: "Back of car after detail" },
+  { src: "/car-detailing-cen-fl/assets/images/before-and-after/pink-wheel/pink-whel-aftr.jpeg",      alt: "Pink wheel after detail" },
 ];
 ---
 
-<section class="w-full border-b-[6px] border-[#d39a4d]">
+<section id="gallery" class="w-full border-b-[6px] border-[#d39a4d]">
   <GalleryCarousel items={images} client:visible />
 </section>
