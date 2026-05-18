@@ -5,7 +5,7 @@ const vehicles = [
     id: "sedan",
     eyebrow: "CARS & COUPES",
     label: "SEDAN & COUPE",
-    icon: "ph-car",
+    image: "/car-detailing-cen-fl/assets/images/luxury-car.png",
     interior: 140,
     exterior: 70,
     full: 200,
@@ -14,7 +14,7 @@ const vehicles = [
     id: "suv",
     eyebrow: "TRUCKS & LARGE VEHICLES",
     label: "SUV & TRUCK",
-    icon: "ph-jeep",
+    image: "/car-detailing-cen-fl/assets/images/suv-and-truck.png",
     interior: 165,
     exterior: 75,
     full: 225,
@@ -61,15 +61,17 @@ export default function PricingSelector() {
                 key={v.id}
                 type="button"
                 onClick={() => setActiveVehicle(v.id)}
-                className={`flex items-center gap-4 p-5 border-2 transition-all duration-200 text-left ${
+                className={`relative overflow-hidden border-2 transition-all duration-200 text-left h-44 ${
                   activeVehicle === v.id
-                    ? "border-[#d39a4d] bg-[#d39a4d]/5"
+                    ? "border-[#d39a4d]"
                     : "border-white/10 hover:border-white/30"
                 }`}
               >
-                <i className={`ph-light ${v.icon} text-3xl ${activeVehicle === v.id ? "text-[#d39a4d]" : "text-white/50"}`} />
-                <div>
-                  <div className={`text-[9px] font-black tracking-[0.2em] uppercase mb-0.5 ${activeVehicle === v.id ? "text-[#d39a4d]" : "text-white/30"}`} style={{ fontFamily: "'Inter', sans-serif" }}>{v.eyebrow}</div>
+                <img src={v.image} alt={v.label} className="absolute inset-0 w-full h-full object-cover object-center" />
+                <div className="absolute inset-0 bg-black/55" />
+                {activeVehicle === v.id && <div className="absolute inset-0 bg-[#d39a4d]/10" />}
+                <div className="relative z-10 p-4 flex flex-col justify-end h-full">
+                  <div className={`text-[9px] font-black tracking-[0.2em] uppercase mb-0.5 ${activeVehicle === v.id ? "text-[#d39a4d]" : "text-white/50"}`} style={{ fontFamily: "'Inter', sans-serif" }}>{v.eyebrow}</div>
                   <div className="text-sm font-black tracking-widest uppercase text-white" style={{ fontFamily: "'Inter', sans-serif" }}>{v.label}</div>
                 </div>
               </button>
