@@ -2,23 +2,21 @@
 import DiamondFrame from "./DiamondFrame.astro";
 ---
 
-<section class="w-full py-24 px-6 md:px-16 relative" style="background: #760202;">
+<section style="background: #760202; height: 100vh; display: flex; align-items: center; justify-content: center; padding: 0 4rem;">
 
-  <div class="max-w-7xl mx-auto relative z-10">
+  <div style="max-width: 1280px; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 3rem;">
 
     <!-- Heading -->
-    <div class="flex flex-col items-center text-center mb-16">
-      <span class="as-label-caps mb-2" style="color: rgba(255,255,255,0.45);">WHY ALERT</span>
-      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white">
-        The Alert Difference
-      </h2>
+    <div style="text-align: center;">
+      <span class="as-label-caps" style="color: rgba(255,255,255,0.45); display: block; margin-bottom: 0.5rem;">WHY ALERT</span>
+      <h2 style="font-size: clamp(28px, 3vw, 40px); font-weight: 700; color: white; margin: 0;">The Alert Difference</h2>
     </div>
 
     <!-- Layout: stats left | center image | stats right -->
-    <div class="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-0">
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-0 w-full">
 
       <!-- Left stats -->
-      <div class="flex flex-col gap-12 lg:items-end lg:text-right lg:flex-1 lg:pr-12">
+      <div class="flex flex-col justify-between lg:items-end lg:text-right lg:flex-1 lg:pr-12" style="align-self: stretch;">
         <div>
           <div class="font-extrabold text-white" style="font-size: clamp(36px, 4vw, 52px); line-height: 1; letter-spacing: -0.02em;">45+</div>
           <div class="as-label-caps text-white mt-1">Years in Business</div>
@@ -31,17 +29,14 @@ import DiamondFrame from "./DiamondFrame.astro";
         </div>
       </div>
 
-      <!-- Center: diamond + circle image -->
+      <!-- Center: circle image only (original) -->
       <DiamondFrame
         imgSrc="https://lh3.googleusercontent.com/aida-public/AB6AXuAaBsZ8KP8agvAtmGrY0n20wVEZ77rC_1jL6iY3FgIesxT97sirkIgflr420yT8DWbSIadTcUniCqhyu0YUq8RlgFfKLP3DBlR5iDQUvGgiMoyQ5Oe1LXJtEmNF5duKhN2Wdd48EU8UMPGewrwtMsbOeeo4MgpO-kxYNY_M3WR_sSEFfVaBJhxJG6D9nyVsD3c5_nSzwmABwLccO05NvPOs0ibqmy3zkIXMgX1hHEaHe5se87BglB4-8D7C1i4EwyR2GUSPGgoTNpM"
-        diamondImgSrc="https://lh3.googleusercontent.com/aida-public/AB6AXuAvHM3RTVyeq5o4x7hCtXOW2Qd21YYy9ckx_KtZ6qgtCVyUNu8ahxLkvWAbWn_j7J7xoKwxcvwQeNjqu74i52DvQpaKhEz2Kh2bQ3bXNRgRMCWfYxCN5dIXEi7m2XYELdMM75GYy3pVVgewdNwQoGKjr6Lmj9KLjO1ufVp6GxZjEW7Alzjbjusi1p6Tpn443uO8WqbxghO68nhRyotXtwn1LTXgwGQhjXf83BZfxH0qYgLfrFTe8dnQw0mZ6BSP-XuK9TMrdWJXotgc"
         imgAlt="Alert Sprinkler crew at work"
-        href="/alert-sprinkler/about"
-        linkLabel="Learn More"
       />
 
       <!-- Right stats -->
-      <div class="flex flex-col gap-12 lg:items-start lg:text-left lg:flex-1 lg:pl-12">
+      <div class="flex flex-col justify-between lg:items-start lg:text-left lg:flex-1 lg:pl-12" style="align-self: stretch;">
         <div>
           <div class="font-extrabold text-white" style="font-size: clamp(36px, 4vw, 52px); line-height: 1; letter-spacing: -0.02em;">25+</div>
           <div class="as-label-caps text-white mt-1">Years, Same Core Crew</div>
