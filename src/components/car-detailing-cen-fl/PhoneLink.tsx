@@ -1,4 +1,4 @@
-import { FiPhone } from "react-icons/fi";
+import { PiPhoneFill } from "react-icons/pi";
 
 export default function PhoneLink() {
   return (
@@ -7,7 +7,7 @@ export default function PhoneLink() {
       className="flex items-center gap-2 text-white font-bold text-sm tracking-widest uppercase hover:text-[#d39a4d] transition-colors duration-300"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
-      <FiPhone size={18} className="text-white" />
+      <PiPhoneFill size={18} className="text-white" />
       (386) 307-3785
     </a>
   );

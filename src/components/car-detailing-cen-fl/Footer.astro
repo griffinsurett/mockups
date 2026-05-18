@@ -1,41 +1,36 @@
 ---
 import Logo from './Logo.astro';
 import SocialIcons from './SocialIcons';
-import navItems from '../../data/car-detailing-cen-fl/nav.json';
 ---
-<footer class="w-full bg-black text-white pt-20 pb-8 px-8 md:px-16">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+<footer class="w-full bg-black text-white pt-16 pb-8 px-8 md:px-16">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 items-start">
 
-    <!-- Logo + description + socials -->
-    <div class="flex flex-col items-center md:items-start w-full md:w-1/4 gap-4">
-      <Logo class="w-64 md:w-80" />
-      <p class="text-gray-400 text-xs leading-relaxed text-center md:text-left max-w-[220px]" style="font-family: 'Inter', sans-serif;">
-        Mobile car detailing done right — we come to you, anywhere in Central Florida.
-      </p>
-      <SocialIcons client:load />
-    </div>
-
-    <!-- Nav links -->
-    <div class="flex flex-col w-full md:w-1/4 text-center md:text-left">
-      <nav class="flex flex-col gap-3">
-        {navItems.map((item) => (
-          <a href={item.href} class="text-gray-400 text-sm hover:text-[#d39a4d] transition-colors font-bold tracking-wider uppercase" style="font-family: 'Inter', sans-serif;">{item.label}</a>
-        ))}
-      </nav>
+    <!-- Logo -->
+    <div class="flex flex-col items-center md:items-start">
+      <Logo class="w-96 md:w-96" />
     </div>
 
     <!-- Contact -->
-    <div class="flex flex-col w-full md:w-1/4 text-center md:text-left">
+    <div class="flex flex-col text-center md:text-left">
       <h4 class="text-base font-bold mb-4 tracking-widest uppercase" style="font-family: 'Playfair Display', serif;">CONTACT US</h4>
-      <a href="tel:3863073785" class="text-gray-300 text-sm mb-1 hover:text-[#d39a4d] transition-colors" style="font-family: 'Inter', sans-serif;">(386) 307-3785</a>
-      <p class="text-gray-300 text-sm" style="font-family: 'Inter', sans-serif;">Kevin Burtt - Owner/Operator</p>
+      <a href="tel:3863073785" class="flex items-center gap-2 text-gray-300 text-sm mb-2 hover:text-[#d39a4d] transition-colors" style="font-family: 'Inter', sans-serif;">
+        <i class="ph-fill ph-phone text-[#d39a4d] text-base"></i>
+        (386) 307-3785
+      </a>
+      <p class="text-gray-300 text-sm" style="font-family: 'Inter', sans-serif;">Kevin Burtt — Owner/Operator</p>
     </div>
 
     <!-- Location -->
-    <div class="flex flex-col w-full md:w-1/4 text-center md:text-left">
+    <div class="flex flex-col text-center md:text-left">
       <h4 class="text-base font-bold mb-4 tracking-widest uppercase" style="font-family: 'Playfair Display', serif;">LOCATION</h4>
-      <p class="text-sm mb-1 font-bold text-white" style="font-family: 'Inter', sans-serif;">Serving Central Florida</p>
-      <p class="text-gray-400 text-xs mt-2 leading-relaxed" style="font-family: 'Inter', sans-serif;">Daytona Beach &bull; Ocala &bull; The Villages &bull; Clermont &bull; Winter Garden<br/>Orlando &bull; Oviedo &bull; Altamonte Springs &bull; Apopka &bull; Winter Park &bull; Deland &bull; Orange City</p>
+      <p class="text-sm font-bold text-white mb-2" style="font-family: 'Inter', sans-serif;">Serving Central Florida</p>
+      <p class="text-gray-400 text-xs leading-relaxed" style="font-family: 'Inter', sans-serif;">Daytona Beach &bull; Ocala &bull; The Villages &bull; Clermont &bull; Winter Garden &bull; Orlando &bull; Oviedo &bull; Altamonte Springs &bull; Apopka &bull; Winter Park &bull; Deland &bull; Orange City</p>
+    </div>
+
+    <!-- Follow Us -->
+    <div class="flex flex-col items-center md:items-start">
+      <h4 class="text-base font-bold mb-4 tracking-widest uppercase" style="font-family: 'Playfair Display', serif;">FOLLOW US</h4>
+      <SocialIcons client:load />
     </div>
 
   </div>
