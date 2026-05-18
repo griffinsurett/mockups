@@ -50,13 +50,6 @@ export default function PricingSelector() {
   return (
     <div className="border border-white/15 bg-black">
 
-      {/* PRICING header */}
-      <div className="flex items-center gap-4 px-8 py-6 border-b border-white/10">
-        <div className="flex-1 h-px bg-white/20" />
-        <h2 className="text-2xl md:text-3xl font-black tracking-[0.25em] text-white uppercase" style={{ fontFamily: "'Inter', sans-serif" }}>PRICING</h2>
-        <div className="flex-1 h-px bg-white/20" />
-      </div>
-
       <div className="p-6 md:p-8 flex flex-col gap-6">
 
         {/* Step 1 — Vehicle type */}
