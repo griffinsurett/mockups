@@ -1,0 +1,53 @@
+---
+const faqs = [
+  {
+    q: "What areas do you service?",
+    a: "We are licensed to operate throughout New Jersey and southeastern Pennsylvania. We've been serving both states since 1977.",
+  },
+  {
+    q: "How often does my fire sprinkler system need to be inspected?",
+    a: "NFPA 25 requires inspections on a quarterly, semi-annual, and annual basis depending on the system components. We'll put together a compliant schedule specific to your facility.",
+  },
+  {
+    q: "Are you licensed and insured?",
+    a: "Yes. We hold NJ License #P01629 and NJ Fire Safety Certification #195457. We carry full general liability and workers' compensation coverage.",
+  },
+  {
+    q: "Do you handle emergency repairs?",
+    a: "Yes — our rapid-response teams are available 24 hours a day, 365 days a year. Call us at 732-521-1666 any time.",
+  },
+  {
+    q: "What types of buildings do you work on?",
+    a: "We serve commercial, industrial, institutional, and residential facilities — from high-rises and warehouses to hospitals, schools, and multi-family housing.",
+  },
+  {
+    q: "Can you retrofit an existing building with a sprinkler system?",
+    a: "Absolutely. Retrofitting existing structures is one of our core specialties. Our engineers will assess your building and design a system that meets current code requirements.",
+  },
+];
+---
+
+<section class="w-full py-24 px-6 md:px-16" style="background: #fff8f7;">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="text-center mb-14">
+      <span class="as-label-caps text-as-primary mb-2 block">GOT QUESTIONS</span>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight" style="color: #291715;">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="flex flex-col divide-y" style="border-top: 1px solid #e7bdb7; border-bottom: 1px solid #e7bdb7;">
+      {faqs.map((faq) => (
+        <details class="group py-5 cursor-pointer list-none" style="color: #291715;">
+          <summary class="flex items-center justify-between gap-4 font-bold text-base md:text-lg select-none list-none" style="color: #291715;">
+            {faq.q}
+            <span class="shrink-0 w-6 h-6 flex items-center justify-center rounded-full border transition-transform duration-300 group-open:rotate-45" style="border-color: #b10006; color: #b10006;">
+              +
+            </span>
+          </summary>
+          <p class="mt-4 text-sm md:text-base leading-relaxed" style="color: #5d3f3b;">{faq.a}</p>
+        </details>
+      ))}
+    </div>
+
+  </div>
+</section>
