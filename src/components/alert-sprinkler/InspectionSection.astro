@@ -69,29 +69,30 @@ const credentials = [
       </div>
     </div>
 
-    <!-- Right: 2×2 image grid + stat callout -->
+    <!-- Right: 2×2 image grid with logo centered over the gap -->
     <div class="relative">
-      <!-- Logo overlay top-right -->
-      <img
-        src="/alert-sprinkler/alert-logo.png"
-        alt=""
-        aria-hidden="true"
-        class="hidden lg:block absolute -top-16 -right-12 z-10 w-44 pointer-events-none"
-      />
 
       <div class="grid grid-cols-2 gap-2">
+        <!-- Logo centered over the intersection of all 4 images -->
+        <img
+          src="/alert-sprinkler/alert-logo.png"
+          alt=""
+          aria-hidden="true"
+          class="hidden lg:block absolute z-10 pointer-events-none"
+          style="width: 22rem; top: calc(50% + 0.1rem); left: 50%; transform: translate(-50%, -50%);"
+        />
         <div class="overflow-hidden border border-as-border" style="border-radius: 0.25rem; aspect-ratio: 1;">
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaBsZ8KP8agvAtmGrY0n20wVEZ77rC_1jL6iY3FgIesxT97sirkIgflr420yT8DWbSIadTcUniCqhyu0YUq8RlgFfKLP3DBlR5iDQUvGgiMoyQ5Oe1LXJtEmNF5duKhN2Wdd48EU8UMPGewrwtMsbOeeo4MgpO-kxYNY_M3WR_sSEFfVaBJhxJG6D9nyVsD3c5_nSzwmABwLccO05NvPOs0ibqmy3zkIXMgX1hHEaHe5se87BglB4-8D7C1i4EwyR2GUSPGgoTNpM"
-            alt="Fire protection engineer inspecting system"
+            src="/alert-sprinkler/sprinkler.jpg"
+            alt="Sprinkler system components"
             class="w-full h-full object-cover"
             loading="lazy"
           />
         </div>
         <div class="overflow-hidden border border-as-border" style="border-radius: 0.25rem; aspect-ratio: 1;">
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvHM3RTVyeq5o4x7hCtXOW2Qd21YYy9ckx_KtZ6qgtCVyUNu8ahxLkvWAbWn_j7J7xoKwxcvwQeNjqu74i52DvQpaKhEz2Kh2bQ3bXNRgRMCWfYxCN5dIXEi7m2XYELdMM75GYy3pVVgewdNwQoGKjr6Lmj9KLjO1ufVp6GxZjEW7Alzjbjusi1p6Tpn443uO8WqbxghO68nhRyotXtwn1LTXgwGQhjXf83BZfxH0qYgLfrFTe8dnQw0mZ6BSP-XuK9TMrdWJXotgc"
-            alt="Industrial sprinkler system"
+            src="/alert-sprinkler/turnoff.jpg"
+            alt="Sprinkler shutoff valve"
             class="w-full h-full object-cover"
             loading="lazy"
           />
