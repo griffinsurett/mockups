@@ -16,8 +16,8 @@ const topNav = pages
 const header = `
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="index.html" aria-label="Action Restoration Services home page">
-      <img class="brand-logo" src="assets/site-logo.png" alt="Action Restoration Services logo" />
+    <a class="brand" href="index.html" aria-label="Reactive Restoration Services home page">
+      <img class="brand-logo" src="assets/site-logo.png" alt="Reactive Restoration Services logo" />
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="top-nav">&#9776;</button>
     <nav id="top-nav" class="top-nav" aria-label="Primary">
@@ -86,7 +86,7 @@ const footer = `
   <div class="footer-inner">
     <div class="footer-grid">
       <div>
-        <img class="footer-logo" src="assets/site-logo-dark-bg.png" alt="Action Restoration Services logo" />
+        <img class="footer-logo" src="assets/site-logo-dark-bg.png" alt="Reactive Restoration Services logo" />
         <p>Restoration Company / Contractor focused on fast mitigation, full-service restoration, and pre-loss condition recovery.</p>
       </div>
       <div>
@@ -124,7 +124,7 @@ const footer = `
         </div>
       </div>
     </div>
-    <div class="footer-meta" style="text-align:center;">© ${new Date().getFullYear()} Action Restoration Services.</div>
+    <div class="footer-meta" style="text-align:center;">© ${new Date().getFullYear()} Reactive Restoration Services.</div>
   </div>
 </footer>`;
 
