@@ -5,3 +5,26 @@
               @media(max-width:1024px){#towns-grid{grid-auto-flow:row;grid-template-rows:none;grid-auto-columns:unset;grid-template-columns:1fr 1fr;column-gap:1rem;}}
             
 #process-grid{display:grid;gap:12px;grid-template-columns:repeat(5,1fr);}@media(max-width:640px){#process-grid{grid-template-columns:1fr;}}
+/* Separate the message and actions across wide desktop displays. */
+@media (min-width: 1440px) {
+  .home-cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  .home-cta-copy { min-width: 0; }
+
+  .home-cta-content .cta-actions {
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    margin-top: 0;
+  }
+}
+
+/* Keep the hero copy on the left with open image space on wide screens. */
+@media (min-width: 1440px) {
+  .hero-content > h1 { max-width: 1100px; }
+  .hero-content > p { max-width: 900px; }
+}
