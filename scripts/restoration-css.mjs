@@ -18,7 +18,7 @@ export async function buildRestorationCss() {
           'orange-600': '#d95b17', 'orange-500': '#f26a21', 'orange-100': '#ffe6d6',
         },
         fontFamily: { sora: ['"Sora"', '"Segoe UI"', 'sans-serif'], body: ['"Source Sans 3"', '"Segoe UI"', 'sans-serif'] },
-        maxWidth: { site: '1180px' },
+        maxWidth: { site: 'var(--restoration-content-width)' },
       },
     },
     corePlugins: { preflight: false },

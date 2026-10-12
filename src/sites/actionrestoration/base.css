@@ -1,4 +1,8 @@
 /* ─── Reset & base ─────────────────────────────────────────── */
+:root {
+  /* Keep the laptop layout; let content grow on wider displays. */
+  --restoration-content-width: clamp(1180px, calc(100vw - 260px), 1720px);
+}
 *, *::before, *::after { box-sizing: border-box; border: 0; }
 html, body { margin: 0; padding: 0; overflow-x: clip; }
 body { min-height: 100vh; color: #202d3d; font-family: "Source Sans 3","Segoe UI",sans-serif; line-height: 1.55; text-rendering: optimizeLegibility; }
@@ -219,7 +223,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .before-after-shell {
-  width: min(1180px, 100%);
+  width: min(var(--restoration-content-width), 100%);
   margin: 0 auto;
 }
 
@@ -280,5 +284,4 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .before-after-handle { width: 48px; height: 48px; }
   .before-after-slide h3 { padding: 15px 16px 17px; font-size: .92rem; }
 }
-
 
