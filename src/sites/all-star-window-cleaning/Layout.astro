@@ -1,0 +1,150 @@
+---
+import "./styles.css";
+import Star from "./components/Star.astro";
+import GoogleRating from "./components/GoogleRating.astro";
+import ChatBot from "./components/ChatBot.tsx";
+
+interface Props {
+  title?: string;
+}
+const { title = "All Star Window Cleaning" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="overflow-x-hidden bg-white" style="font-family: 'Segoe UI', Arial, sans-serif;">
+
+    <header id="site-header" class="sticky top-0 z-50">
+
+      <!-- ── Desktop top bar ── -->
+      <div class="hidden md:grid grid-cols-[1fr_auto_1fr] items-center gap-4 px-8 py-3.5 w-full bg-[#111] text-white">
+
+        <!-- Left: rating + serving -->
+        <div class="flex flex-col gap-6">
+          <GoogleRating textColor="rgba(255,255,255,0.85)" />
+          <div class="text-[0.78rem] uppercase tracking-[0.04em] text-aswc-lime">
+            Serving
+            <strong class="block text-base text-white normal-case tracking-normal font-bold">Central NJ</strong>
+          </div>
+        </div>
+
+        <!-- Center: logo -->
+        <div class="flex justify-center items-center">
+          <img src="/all-star-window-cleaning/logo.png" alt="All Star Window Cleaning" id="desktop-logo" class="w-auto object-contain" />
+        </div>
+
+        <!-- Right: CTA + phone -->
+        <div class="flex flex-col items-end gap-7">
+          <a href="/all-star-window-cleaning/contact" class="aswc-btn-purple bg-aswc-accent text-white font-bold text-[0.95rem] px-6 py-2.5 rounded tracking-wide">
+            Request Service
+          </a>
+          <div class="text-right leading-snug">
+            <div class="text-[0.78rem] uppercase tracking-[0.04em] text-aswc-lime">Call Us Today</div>
+            <a href="tel:8482053063" class="text-[1.45rem] font-extrabold text-white tracking-tight">(848) 205-3063</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Mobile top bar ── -->
+      <div class="relative flex md:hidden flex-col gap-1 px-5 pt-1 pb-2 w-full bg-[#111] text-white">
+
+        <!-- Hamburger absolute top-right -->
+        <button class="absolute top-3 right-4 flex flex-col justify-center items-center gap-1.5 p-2 bg-transparent border-0" aria-label="Open menu">
+          <span class="block w-6 rounded" style="height:2px; background:#dcfb19"></span>
+          <span class="block w-6 rounded" style="height:2px; background:#dcfb19"></span>
+          <span class="block w-6 rounded" style="height:2px; background:#dcfb19"></span>
+        </button>
+
+        <!-- Logo centered -->
+        <div class="flex justify-center">
+          <img src="/all-star-window-cleaning/logo.png" alt="All Star Window Cleaning" id="mobile-logo" class="w-auto object-contain" />
+        </div>
+
+        <!-- CTA + phone 50/50 -->
+        <div class="flex items-center gap-3">
+          <a href="/all-star-window-cleaning/contact" class="aswc-btn-purple flex-1 text-center bg-aswc-accent text-white font-bold text-sm py-2 rounded-md tracking-wide">
+            Request Service
+          </a>
+          <div class="flex-1 text-center">
+            <div class="text-[0.7rem] uppercase tracking-[0.04em] text-aswc-lime">Call Us Today</div>
+            <a href="tel:8482053063" class="text-[1.1rem] font-extrabold text-white tracking-tight">(848) 205-3063</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Nav (desktop only) ── -->
+      <nav class="hidden md:flex items-center justify-center gap-1 px-8 bg-white border-b-2 border-[#e5e5e5]">
+        <a href="/all-star-window-cleaning" class="aswc-nav-link active">Home</a>
+        <a href="#" class="aswc-nav-link">Window Cleaning</a>
+        <a href="#" class="aswc-nav-link">Power Washing</a>
+        <a href="#" class="aswc-nav-link">Gutter Cleaning</a>
+        <a href="#" class="aswc-nav-link">Junk Removal</a>
+        <a href="#" class="aswc-nav-link">Gallery</a>
+        <a href="#" class="aswc-nav-link">About</a>
+        <a href="/all-star-window-cleaning/contact" class="aswc-nav-link">Contact</a>
+      </nav>
+
+    </header>
+
+    <slot />
+
+    <ChatBot client:only="react" />
+
+  </body>
+
+  <style>
+    #desktop-logo {
+      height: 10rem;
+      transition: height 400ms ease;
+    }
+    #site-header[data-compact="true"] #desktop-logo {
+      height: 7rem;
+    }
+
+    #mobile-logo {
+      height: 8rem;
+      transition: height 400ms ease;
+    }
+    #site-header[data-compact="true"] #mobile-logo {
+      height: 4rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #desktop-logo, #mobile-logo { transition: none; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      const header = document.getElementById("site-header");
+      if (!header) return;
+
+      let ticking = false;
+
+      const update = () => {
+        if (window.scrollY > 10) {
+          header.setAttribute("data-compact", "true");
+        } else {
+          header.removeAttribute("data-compact");
+        }
+        ticking = false;
+      };
+
+      window.addEventListener("scroll", () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(update);
+      }, { passive: true });
+
+      update();
+    })();
+  </script>
+
+</html>

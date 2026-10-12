@@ -1,0 +1,109 @@
+{
+  "redirects": [
+    {
+      "source": "/mockup-ar/about-us.html",
+      "destination": "/actionrestoration/about-us",
+      "permanent": false
+    },
+    {
+      "source": "/mockup-ar/services.html",
+      "destination": "/actionrestoration/services",
+      "permanent": false
+    },
+    {
+      "source": "/mockup-ar/contact.html",
+      "destination": "/actionrestoration/contact",
+      "permanent": false
+    },
+    {
+      "source": "/mockup-ar/faq.html",
+      "destination": "/actionrestoration/faq",
+      "permanent": false
+    },
+    {
+      "source": "/mockup-ar/water-damage.html",
+      "destination": "/actionrestoration/water-damage",
+      "permanent": false
+    },
+    {
+      "source": "/mockup-ar/fire-damage.html",
+      "destination": "/actionrestoration/fire-damage",
+      "permanent": false
+    },
+    {
+      "source": "/mockup-ar/mold-remediation.html",
+      "destination": "/actionrestoration/mold-remediation",
+      "permanent": false
+    },
+    {
+      "source": "/mockup-ar/gallery.html",
+      "destination": "/actionrestoration/about-us",
+      "permanent": false
+    },
+    {
+      "source": "/mockup-ar/service.html",
+      "destination": "/actionrestoration/services",
+      "permanent": false
+    },
+    {
+      "source": "/actionrestoration/about-us.html",
+      "destination": "/actionrestoration/about-us",
+      "permanent": false
+    },
+    {
+      "source": "/actionrestoration/services.html",
+      "destination": "/actionrestoration/services",
+      "permanent": false
+    },
+    {
+      "source": "/actionrestoration/contact.html",
+      "destination": "/actionrestoration/contact",
+      "permanent": false
+    },
+    {
+      "source": "/actionrestoration/faq.html",
+      "destination": "/actionrestoration/faq",
+      "permanent": false
+    },
+    {
+      "source": "/actionrestoration/water-damage.html",
+      "destination": "/actionrestoration/water-damage",
+      "permanent": false
+    },
+    {
+      "source": "/actionrestoration/fire-damage.html",
+      "destination": "/actionrestoration/fire-damage",
+      "permanent": false
+    },
+    {
+      "source": "/actionrestoration/mold-remediation.html",
+      "destination": "/actionrestoration/mold-remediation",
+      "permanent": false
+    },
+    {
+      "source": "/actionrestoration/gallery.html",
+      "destination": "/actionrestoration/about-us",
+      "permanent": false
+    },
+    {
+      "source": "/actionrestoration/service.html",
+      "destination": "/actionrestoration/services",
+      "permanent": false
+    },
+    {
+      "source": "/ebersole/ebersole-enterprises.html",
+      "destination": "/ebersole",
+      "permanent": false
+    },
+    {
+      "source": "/actionrestoration/index.html",
+      "destination": "/actionrestoration",
+      "permanent": false
+    },
+    {
+      "source": "/mockup-ar/index.html",
+      "destination": "/actionrestoration",
+      "permanent": false
+    }
+  ]
+}

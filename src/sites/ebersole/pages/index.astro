@@ -1,0 +1,617 @@
+---
+import Layout from "../Layout.astro";
+import script1 from "../scripts/script-1.js?url";
+import script2 from "../scripts/script-2.js?url";
+import script3 from "../scripts/script-3.js?url";
+import script4 from "../scripts/script-4.js?url";
+import script5 from "../scripts/script-5.js?url";
+---
+<Layout>
+<Fragment slot="head"></Fragment>
+
+
+<!-- TWEAKS DEFAULTS (block parsed by host on save) -->
+<script is:inline src={script1}></script>
+
+<!-- ====== TOP BAR ====== -->
+<header class="topbar">
+  <div class="container">
+    <a class="brand-lockup" href="#" aria-label="C. Ebersole Enterprises home">
+      <img class="wordmark" src="/sites/ebersole/84ae35a9997bc653.png" alt="C. Ebersole Enterprises LLC">
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#work">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#estimate">Contact</a>
+    </nav>
+    <div class="topbar-cta">
+      <a class="phone" href="tel:8145025332" aria-label="Call (814) 502-5332">
+        <svg class="ico-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.47 11.47 0 0 0 .57 3.58 1 1 0 0 1-.25 1.01z"/></svg>
+        <span class="phone-text">(814) 502-5332</span>
+      </a>
+      <a class="btn-estimate desktop-only" href="#estimate">Get a Free Estimate</a>
+    </div>
+    <div class="topbar-spacer" aria-hidden="true"></div>
+  </div>
+  <a class="mobile-estimate-bar" href="#estimate">Get a Free Estimate</a>
+</header>
+
+<!-- ====== HERO 1 — DARK SIGNAGE ====== -->
+<section class="hero hero-signage" data-hero-variant="signage">
+  <div class="hero-slides" id="heroSlides" aria-hidden="true">
+    <div class="hero-slide active"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+  </div>
+  <div class="container">
+    <div class="hero-pipe">
+      RESIDENTIAL<span class="pipe">|</span>COMMERCIAL<span class="pipe">|</span>ELIZABETHTOWN, PA
+    </div>
+    <h1 class="hero-headline">Master<br>Craftsmanship.<br>Built right.</h1>
+    <p class="hero-tag">Whole-home renovations, custom carpentry, kitchens, and commercial fit-out across Lancaster County. Caleb Ebersole runs every job himself — from first measurement to final punch list.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#estimate">Request an Estimate</a>
+      <a class="btn btn-secondary" href="tel:8145025332">
+        <svg class="ico-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.47 11.47 0 0 0 .57 3.58 1 1 0 0 1-.25 1.01z"/></svg>
+        Call (814) 502.5332
+      </a>
+    </div>
+    <div class="hero-rating">
+      <span class="rating-text">Rated</span>
+      <div class="stars" aria-label="Rated 5 out of 5 stars">
+        <svg class="star" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+        <svg class="star" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+        <svg class="star" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+        <svg class="star" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+        <svg class="star" viewBox="0 0 24 24" fill="#FBBC04"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+      </div>
+      <span class="rating-text">on</span>
+      <img class="google-logo" src="/sites/ebersole/a33a47a20c0ec6b0.svg" alt="Google">
+    </div>
+  </div>
+  <div class="hero-credentials" aria-label="Accreditations">
+    <img src="/sites/ebersole/959e149628b691ae.png" alt="National Association of Home Builders — Member">
+    <img src="/sites/ebersole/307b16704cb801f7.png" alt="BBB Accredited Business — A+ Rating">
+  </div>
+</section>
+
+<!-- ====== HERO 2 — FULL-BLEED PHOTO ====== -->
+<section class="hero hero-photo" data-hero-variant="photo" style="display:none">
+  <div class="container">
+    <div class="hero-pipe">RENOVATIONS<span class="pipe">|</span>KITCHENS<span class="pipe">|</span>ADDITIONS<span class="pipe">|</span>DECKS</div>
+    <h1 class="hero-headline">We frame it.<br>Finish it.<br>Stand behind it.</h1>
+    <p class="hero-tag">Hands-on general contracting in central Pennsylvania. Custom homes, additions, kitchens, and commercial fit-out — built right the first time.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#estimate">Request an Estimate</a>
+      <a class="btn btn-secondary" href="tel:8145025332" style="color:var(--paper)">
+        <svg class="ico-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.47 11.47 0 0 0 .57 3.58 1 1 0 0 1-.25 1.01z"/></svg>
+        Call (814) 502.5332
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== HERO 3 — SPLIT ====== -->
+<section class="hero hero-split" data-hero-variant="split" style="display:none">
+  <div class="panel-text">
+    <div class="inner">
+      <div class="hero-pipe">GENERAL CONTRACTING<span class="pipe">|</span>EST. 2018</div>
+      <h1 class="hero-headline">Built with<br>precision.</h1>
+      <p class="hero-tag">Caleb Ebersole runs every project end-to-end — design, framing, finish work — across Lancaster County and beyond.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#estimate">Request an Estimate</a>
+        <a class="btn btn-secondary" href="tel:8145025332" style="color:var(--paper)">Call (814) 502.5332</a>
+      </div>
+    </div>
+  </div>
+  <div class="panel-photo" aria-hidden="true"></div>
+</section>
+
+<!-- ====== TRUST BAR ====== -->
+<section class="trust" style="padding: 0">
+  <div class="container">
+    <div class="row">
+      <div class="badge">
+        <i data-lucide="shield-check" class="ico"></i>
+        <div class="text">Licensed &amp; Insured<small>Pennsylvania PA-HIC</small></div>
+      </div>
+      <div class="badge">
+        <i data-lucide="hard-hat" class="ico"></i>
+        <div class="text">7+ Years Building<small>Residential &amp; Commercial</small></div>
+      </div>
+      <div class="badge">
+        <i data-lucide="map-pin" class="ico"></i>
+        <div class="text">Lancaster County<small>&amp; surrounding PA</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SERVICES ====== -->
+<section id="services">
+  <div class="container">
+    <p class="section-eyebrow">What we do</p>
+    <h2 class="section-title">Our services.</h2>
+    <p class="section-lede">From whole-home renovations to a single new door — Caleb runs every job himself. Built right. Finished clean.</p>
+
+    <div class="services-masonry">
+      <a class="svc-card svc-tall" href="#renovations">
+        <div class="svc-photo" style="background-image:url(&quot;/sites/ebersole/cc7acc578f40d650.jpg&quot;)"></div>
+        <h3>Renovations</h3>
+      </a>
+      <a class="svc-card" href="#kitchens">
+        <div class="svc-photo" style="background-image:url(&quot;/sites/ebersole/2fe52275ee10067b.jpg&quot;)"></div>
+        <h3>Kitchens</h3>
+      </a>
+      <a class="svc-card svc-tall" href="#additions">
+        <div class="svc-photo" style="background-image:url(&quot;/sites/ebersole/3badcc0a4fc192a0.jpg&quot;)"></div>
+        <h3>Additions</h3>
+      </a>
+      <a class="svc-card" href="#windows">
+        <div class="svc-photo" style="background-image:url(&quot;/sites/ebersole/4b5b71664e38891c.jpg&quot;)"></div>
+        <h3>Windows</h3>
+      </a>
+      <a class="svc-card" href="#doors">
+        <div class="svc-photo" style="background-image:url(&quot;/sites/ebersole/c1d3c226943f0b7a.jpg&quot;)"></div>
+        <h3>Doors</h3>
+      </a>
+      <a class="svc-card svc-tall" href="#decks">
+        <div class="svc-photo" style="background-image:url(&quot;/sites/ebersole/7d2569b49ab524e8.jpg&quot;)"></div>
+        <h3>Decks</h3>
+      </a>
+    </div>
+
+    <div class="services-cta">
+      <a class="btn-estimate" href="#all-services">View More Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== STATS STRIP ====== -->
+<section class="stats-section">
+  <div class="about-stats">
+    <div class="stats-row">
+      <div class="stat-cell">
+        <div class="stat-num">7+</div>
+        <div class="stat-lbl">Years In Business</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">120+</div>
+        <div class="stat-lbl">Projects Completed</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">35K</div>
+        <div class="stat-lbl">Sq. Ft. Built &amp; Renovated</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">100%</div>
+        <div class="stat-lbl">Owner On Every Job</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ABOUT ====== -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <p class="section-eyebrow">About the shop</p>
+        <h2 class="section-title">One craftsman. Every project.</h2>
+        <p class="section-lede">C. Ebersole Enterprises is owner-operated by <strong>Caleb Ebersole</strong> out of Elizabethtown, PA. We don't farm out the management of your job. The person quoting the work is the person doing the work — and the person standing behind it when it's done.</p>
+        <p class="section-lede" style="margin-top: 20px;">From whole-home renovations to custom carpentry and commercial fit-outs, every project gets the same hands-on attention. Built right the first time, finished clean, and warrantied like our name's on it — because it is.</p>
+        <div class="about-actions">
+          <a class="btn btn-primary" href="#estimate">Get an Estimate</a>
+          <a class="btn btn-secondary" href="tel:8145025332">
+            <svg class="ico-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.47 11.47 0 0 0 .57 3.58 1 1 0 0 1-.25 1.01z"/></svg>
+            (814) 502-5332
+          </a>
+        </div>
+      </div>
+      <div class="about-photo" aria-hidden="true"></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ====== PROJECTS ====== -->
+<section id="work">
+  <div class="work-carousel" data-carousel>
+      <div class="t-viewport">
+        <div class="t-track">
+              <article class="t-slide work-slide" aria-roledescription="slide" aria-label="1 of 5" style="background-image:url(&quot;/sites/ebersole/1a5e03a094f2fbba.jpg&quot;)">
+              </article>
+              <article class="t-slide work-slide" aria-roledescription="slide" aria-label="2 of 5" style="background-image:url(&quot;/sites/ebersole/2e03ec4bc77d14dc.jpg&quot;)">
+              </article>
+              <article class="t-slide work-slide" aria-roledescription="slide" aria-label="3 of 5" style="background-image:url(&quot;/sites/ebersole/e9c3ae9d3e774d00.jpg&quot;)">
+              </article>
+              <article class="t-slide work-slide" aria-roledescription="slide" aria-label="4 of 5" style="background-image:url(&quot;/sites/ebersole/79258d078871d847.jpg&quot;)">
+              </article>
+              <article class="t-slide work-slide" aria-roledescription="slide" aria-label="5 of 5" style="background-image:url(&quot;/sites/ebersole/2513575138d65e99.jpg&quot;)">
+              </article>
+        </div>
+      </div>
+      <button type="button" class="t-arrow t-prev work-arrow" aria-label="Previous project">
+        <i data-lucide="chevron-left" class="ico"></i>
+      </button>
+      <button type="button" class="t-arrow t-next work-arrow" aria-label="Next project">
+        <i data-lucide="chevron-right" class="ico"></i>
+      </button>
+    </div>
+</section>
+
+<!-- ====== TESTIMONIALS ====== -->
+<section class="proof">
+  <div class="proof-grid">
+    <!-- LEFT: testimonials -->
+    <div class="proof-left">
+      <div class="proof-inner">
+        <p class="section-eyebrow">What clients say</p>
+        <h2 class="section-title">Real projects. Real reviews.</h2>
+        <div class="reviews-summary">
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <span class="rating-text">5.0 average — clients across Lancaster County</span>
+        </div>
+
+        <div class="t-carousel" data-carousel>
+          <div class="t-viewport">
+            <div class="t-track">
+              <article class="t-card t-slide" aria-roledescription="slide" aria-label="1 of 4">
+                <div class="t-head">
+                  <div class="t-avatar" aria-hidden="true">M</div>
+                  <div class="t-meta">
+                    <span class="t-name">Mark &amp; Allison Hostetter</span>
+                    <span class="t-when">Lititz, PA · March 2026</span>
+                  </div>
+                  <svg class="t-google" viewBox="0 0 24 24" aria-label="Google review" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                </div>
+                <div class="t-stars-row" aria-label="5 out of 5 stars">
+                  <span class="t-stars">★★★★★</span>
+                </div>
+                <p class="t-quote">"We got three quotes and Caleb wasn't the cheapest. What sold us was that he sat at our kitchen table for two hours going through every detail. Six weeks later the job was done — and we have not had a single thing to call back about."</p>
+                <span class="t-tag">Kitchen renovation</span>
+              </article>
+
+              <article class="t-card t-slide" aria-roledescription="slide" aria-label="2 of 4">
+                <div class="t-head">
+                  <div class="t-avatar t-avatar-alt" aria-hidden="true">J</div>
+                  <div class="t-meta">
+                    <span class="t-name">Jeff Mascaro</span>
+                    <span class="t-when">Property Mgr · Lancaster, PA · Jan 2026</span>
+                  </div>
+                  <svg class="t-google" viewBox="0 0 24 24" aria-label="Google review" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                </div>
+                <div class="t-stars-row" aria-label="5 out of 5 stars">
+                  <span class="t-stars">★★★★★</span>
+                </div>
+                <p class="t-quote">"Tight schedule, tight budget. He kept the site clean enough we could keep half the floor open during the build. The trim work is exceptional — the kind of stuff you only notice when it's wrong, and here you don't."</p>
+                <span class="t-tag">Office fit-out · 4,200 sq ft</span>
+              </article>
+
+              <article class="t-card t-slide" aria-roledescription="slide" aria-label="3 of 4">
+                <div class="t-head">
+                  <div class="t-avatar" aria-hidden="true" style="background: var(--brand-dark);">D</div>
+                  <div class="t-meta">
+                    <span class="t-name">Dan &amp; Renee Stoltzfus</span>
+                    <span class="t-when">Mount Joy, PA · Nov 2025</span>
+                  </div>
+                  <svg class="t-google" viewBox="0 0 24 24" aria-label="Google review" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                </div>
+                <div class="t-stars-row" aria-label="5 out of 5 stars">
+                  <span class="t-stars">★★★★★</span>
+                </div>
+                <p class="t-quote">"We added 600 square feet onto the back of the house. Caleb walked the framing with me before drywall and showed me every change he'd made and why. I've never had a contractor explain things like that. Would hire him again tomorrow."</p>
+                <span class="t-tag">Rear addition · framed &amp; finished</span>
+              </article>
+
+              <article class="t-card t-slide" aria-roledescription="slide" aria-label="4 of 4">
+                <div class="t-head">
+                  <div class="t-avatar" aria-hidden="true" style="background: var(--brand-mauve);">S</div>
+                  <div class="t-meta">
+                    <span class="t-name">Sarah Kreider</span>
+                    <span class="t-when">Elizabethtown, PA · Aug 2025</span>
+                  </div>
+                  <svg class="t-google" viewBox="0 0 24 24" aria-label="Google review" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                </div>
+                <div class="t-stars-row" aria-label="5 out of 5 stars">
+                  <span class="t-stars">★★★★★</span>
+                </div>
+                <p class="t-quote">"Replaced our front door, two side windows, and rebuilt the porch. He showed up when he said he would every single day. The porch looks like it has been there forever — better than the original."</p>
+                <span class="t-tag">Doors, windows &amp; porch rebuild</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="t-controls">
+            <button type="button" class="t-arrow t-prev" aria-label="Previous review">
+              <i data-lucide="chevron-left" class="ico"></i>
+            </button>
+            <div class="t-dots" role="tablist" aria-label="Reviews">
+              <button type="button" class="t-dot active" data-i="0" aria-label="Review 1"></button>
+              <button type="button" class="t-dot" data-i="1" aria-label="Review 2"></button>
+              <button type="button" class="t-dot" data-i="2" aria-label="Review 3"></button>
+              <button type="button" class="t-dot" data-i="3" aria-label="Review 4"></button>
+            </div>
+            <button type="button" class="t-arrow t-next" aria-label="Next review">
+              <i data-lucide="chevron-right" class="ico"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: why choose us -->
+    <div class="proof-right">
+      <div class="proof-inner">
+        <p class="section-eyebrow">Why us</p>
+        <h2 class="section-title">Why hire Caleb?</h2>
+
+        <ul class="why-list">
+          <li>
+            <i data-lucide="user-check" class="ico"></i>
+            <div>
+              <strong>Owner-operated.</strong>
+              <span>The person quoting the work is the person swinging the hammer.</span>
+            </div>
+          </li>
+          <li>
+            <i data-lucide="hammer" class="ico"></i>
+            <div>
+              <strong>Seven-plus years building.</strong>
+              <span>Residential and commercial across Lancaster County.</span>
+            </div>
+          </li>
+          <li>
+            <i data-lucide="shield-check" class="ico"></i>
+            <div>
+              <strong>Licensed &amp; insured.</strong>
+              <span>Pennsylvania PA-HIC. BBB Accredited with an A+ rating.</span>
+            </div>
+          </li>
+          <li>
+            <i data-lucide="award" class="ico"></i>
+            <div>
+              <strong>NAHB Member.</strong>
+              <span>Held to the national standards of home builders.</span>
+            </div>
+          </li>
+          <li>
+            <i data-lucide="sparkles" class="ico"></i>
+            <div>
+              <strong>Clean every day.</strong>
+              <span>Job sites stay tidy. Finish-quality work from framing to final coat.</span>
+            </div>
+          </li>
+          <li>
+            <i data-lucide="file-check" class="ico"></i>
+            <div>
+              <strong>Fixed quotes.</strong>
+              <span>What we agree to is what you pay. No surprises mid-project.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SERVICE AREA ====== -->
+<section id="area" class="area">
+  <div class="container">
+    <p class="section-eyebrow">Where we work</p>
+    <h2 class="section-title area-title">We are located in Elizabethtown, PA.</h2>
+
+    <div class="area-grid">
+      <div class="area-locations">
+        <h3 class="locations-heading">Our Service Locations</h3>
+        <ul class="towns-list">
+          <li><a href="#estimate"><span>Elizabethtown</span></a></li>
+          <li><a href="#estimate"><span>Lancaster</span></a></li>
+          <li><a href="#estimate"><span>Lititz</span></a></li>
+          <li><a href="#estimate"><span>Mount Joy</span></a></li>
+          <li><a href="#estimate"><span>Manheim</span></a></li>
+          <li><a href="#estimate"><span>Hershey</span></a></li>
+          <li><a href="#estimate"><span>Mountville</span></a></li>
+          <li><a href="#estimate"><span>Columbia</span></a></li>
+          <li><a href="#estimate"><span>Marietta</span></a></li>
+          <li><a href="#estimate"><span>Middletown</span></a></li>
+          <li><a href="#estimate"><span>Hummelstown</span></a></li>
+          <li><a href="#estimate"><span>Ephrata</span></a></li>
+        </ul>
+      </div>
+
+      <div class="area-map-pane" aria-label="Elizabethtown, Pennsylvania map">
+        <iframe src="https://www.google.com/maps?q=Elizabethtown,PA+17022&amp;z=11&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" title="Elizabethtown, PA"></iframe>
+      </div>
+    </div>
+
+    <div class="area-outside">
+      <h2 class="section-title">Outside of this area?</h2>
+      <p class="section-lede">We'd still love to work with you. Reach out with your location and the scope of the job — Caleb will follow up direct.</p>
+      <a class="btn btn-primary" href="#estimate">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SCRIPTURE ====== -->
+<section class="scripture">
+  <p class="quote">
+    Work willingly at whatever you do, as though you were working for the Lord rather than for people.
+    <span class="cite">— Colossians 3:23</span>
+  </p>
+</section>
+
+<!-- ====== ESTIMATE FORM ====== -->
+<section id="estimate" class="estimate">
+  <div class="container">
+    <div class="estimate-grid">
+      <div class="copy">
+        <p class="section-eyebrow">Start a project</p>
+        <h2 class="section-title">Request an estimate.</h2>
+        <p>Tell us a little about the project. We'll reply within one business day to set up a walk-through and quote.</p>
+        <ul class="contact-list">
+          <li>
+            <svg class="ico-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.47 11.47 0 0 0 .57 3.58 1 1 0 0 1-.25 1.01z"/></svg>
+            <div>
+              <span class="label">Direct</span>
+              <span class="value">(814) 502.5332</span>
+            </div>
+          </li>
+          <li>
+            <i data-lucide="mail" class="ico"></i>
+            <div>
+              <span class="label">Email</span>
+              <span class="value">cebersoleenterprises@gmail.com</span>
+            </div>
+          </li>
+          <li>
+            <i data-lucide="map-pin" class="ico"></i>
+            <div>
+              <span class="label">Shop</span>
+              <span class="value">Elizabethtown, PA 17022</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <form class="form" onsubmit="event.preventDefault(); alert('Thanks — we\\'ll be in touch within one business day.');">
+        <label>
+          <span class="lbl">Name</span>
+          <input class="input" placeholder="Your name" required="">
+        </label>
+        <label>
+          <span class="lbl">Phone</span>
+          <input class="input" placeholder="(___) ___.____" required="">
+        </label>
+        <label class="full">
+          <span class="lbl">Email</span>
+          <input class="input" type="email" placeholder="you@example.com">
+        </label>
+        <label class="full">
+          <span class="lbl">Project type</span>
+          <select>
+            <option>Whole-home renovation</option>
+            <option>Kitchen</option>
+            <option>Bathroom</option>
+            <option>Addition</option>
+            <option>Custom carpentry / built-ins</option>
+            <option>Deck</option>
+            <option>Commercial fit-out</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="full">
+          <span class="lbl">Tell us about the job</span>
+          <textarea placeholder="Scope, location, timeline, anything we should know."></textarea>
+        </label>
+        <div class="full" style="display:flex; gap:14px; align-items:center; margin-top:6px">
+          <button type="submit" class="btn btn-primary">Send Request</button>
+          <a class="btn btn-secondary" href="tel:8145025332">Call instead</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="foot">
+  <div class="container">
+    <div class="row1">
+      <div class="lockup">
+        <img class="wordmark-foot" src="/sites/ebersole/84ae35a9997bc653.png" alt="C. Ebersole Enterprises LLC">
+        <p class="tagline">Master craftsmanship. Built with precision.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Renovations</a></li>
+          <li><a href="#services">Kitchens</a></li>
+          <li><a href="#services">Custom Carpentry</a></li>
+          <li><a href="#services">Commercial Fit-out</a></li>
+          <li><a href="#services">Decks &amp; More</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#area">Service Area</a></li>
+          <li><a href="#estimate">Estimate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:8145025332">(814) 502.5332</a></li>
+          <li><a href="mailto:cebersoleenterprises@gmail.com">cebersoleenterprises@gmail.com</a></li>
+          <li>Elizabethtown, PA</li>
+          <li class="foot-social">
+            <a href="#" aria-label="Facebook">
+              <svg class="ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg class="ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-pipe">
+      RESIDENTIAL<span class="pipe">|</span>COMMERCIAL<span class="pipe">|</span>LICENSED<span class="pipe">|</span>INSURED<span class="pipe">|</span>NAHB<span class="pipe">|</span>BBB
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2025 C. Ebersole Enterprises LLC. All rights reserved.</span>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====== TWEAKS PANEL ====== -->
+<div id="tweaks" role="dialog" aria-label="Tweaks">
+  <h6>Tweaks <button class="close" aria-label="Close">×</button></h6>
+  <div class="group">
+    <div class="gname">Hero Variant</div>
+    <div class="seg" data-tweak="hero">
+      <button data-val="signage">Signage</button>
+      <button data-val="photo">Photo</button>
+      <button data-val="split">Split</button>
+    </div>
+  </div>
+  <div class="group">
+    <div class="gname">Theme</div>
+    <div class="seg" data-tweak="theme">
+      <button data-val="light">Light</button>
+      <button data-val="dark">Dark</button>
+    </div>
+  </div>
+  <div class="group">
+    <div class="gname">Density</div>
+    <div class="seg" data-tweak="density">
+      <button data-val="default">Roomy</button>
+      <button data-val="cozy">Cozy</button>
+      <button data-val="compact">Compact</button>
+    </div>
+  </div>
+</div>
+
+<!-- ====== SCRIPTS ====== -->
+<script is:inline src={script2}></script>
+<script is:inline src={script3}></script>
+
+
+
+<script is:inline src={script4}></script>
+
+<script is:inline src={script5}></script>
+
+</Layout>

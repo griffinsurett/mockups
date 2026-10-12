@@ -1,38 +1,7 @@
 ---
-import Base from "../layouts/Base.astro";
+import Base from "../hub/Layout.astro";
 
-const mockups = [
-  {
-    slug: "alert-sprinkler",
-    name: "Alert Sprinkler Co., Inc.",
-    description: "Fire Protection · Jamesburg, NJ",
-    type: "Astro",
-  },
-  {
-    slug: "ebersole",
-    name: "C. Ebersole Enterprises",
-    description: "General Contracting · Lancaster County, PA",
-    type: "HTML",
-  },
-  {
-    slug: "actionrestoration",
-    name: "Reactive Restoration",
-    description: "Water, Fire & Mold Restoration Services",
-    type: "HTML",
-  },
-  {
-    slug: "all-star-window-cleaning",
-    name: "All Star Window Cleaning",
-    description: "Window Cleaning · Sayreville, NJ",
-    type: "Astro",
-  },
-  {
-    slug: "car-detailing-cen-fl",
-    name: "Central FLA. Auto Detail LLC",
-    description: "Mobile Car Detailing · Central Florida",
-    type: "Astro",
-  },
-];
+import { sites as mockups } from "../registry";
 ---
 
 <Base title="Client Mockups">
@@ -55,7 +24,7 @@ const mockups = [
                 <p class="text-sm text-gray-400 mt-1">{m.description}</p>
               </div>
               <span class="shrink-0 text-xs font-mono px-2 py-1 rounded bg-gray-800 text-gray-400 border border-gray-700">
-                {m.type}
+                Astro
               </span>
             </div>
           </a>

@@ -1,0 +1,39 @@
+---
+interface Props { active?: string; }
+const { active = "" } = Astro.props;
+---
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/actionrestoration" aria-label="Reactive Restoration Services home page">
+      <img class="brand-logo" src="/sites/actionrestoration/assets/reactive-restoration-logo.png" alt="Reactive Restoration 24/7" />
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="top-nav" aria-label="Open navigation"><span class="menu-bar"></span><span class="menu-bar"></span><span class="menu-bar"></span></button>
+    <nav id="top-nav" class="top-nav" aria-label="Primary">
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <span>Navigation</span>
+          <button class="menu-close" type="button" aria-label="Close menu">Close</button>
+        </div>
+        <div class="drawer-links">
+        <a class={active === "/actionrestoration" ? "active" : ""} href="/actionrestoration">Home</a>
+        <a class={active === "/actionrestoration/services" ? "active" : ""} href="/actionrestoration/services">Services</a>
+        <a class={active === "#" ? "active" : ""} href="#">Case Studies</a>
+        <a class={active === "/actionrestoration/about-us" ? "active" : ""} href="/actionrestoration/about-us">About Us</a>
+        <a class={active === "/actionrestoration/contact" ? "active" : ""} href="/actionrestoration/contact">Contact</a>
+        <a class={active === "/actionrestoration/faq" ? "active" : ""} href="/actionrestoration/faq">FAQ</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary header-schedule-btn" href="/actionrestoration/contact#emergency">Schedule Service</a>
+      <div class="emergency-call-block">
+        <span class="emergency-call-label">24/7 Emergency Service</span>
+        <a class="emergency-call-number phone-link-light" href="tel:+17325108149"><svg class="fa-phone-icon" aria-hidden="true" viewBox="0 0 512 512" fill="currentColor"><path d="M164.9 24.6C157.2 6 136.9-3.9 117.5 1.4l-88 24C12.6 30 0 45.4 0 62.9 0 311.9 201.9 512 449.1 512c17.4 0 32.9-12.6 37.5-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6l-40.4 49.3c-70.7-33.3-127.4-90-160.7-160.7l49.3-40.4c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg><span>(732) 510-8149</span></a>
+      </div>
+    </div>
+  </div>
+  <a class="mobile-call-bar" href="tel:+17325108149">
+    <svg class="fa-phone-icon" aria-hidden="true" viewBox="0 0 512 512" fill="currentColor"><path d="M164.9 24.6C157.2 6 136.9-3.9 117.5 1.4l-88 24C12.6 30 0 45.4 0 62.9 0 311.9 201.9 512 449.1 512c17.4 0 32.9-12.6 37.5-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6l-40.4 49.3c-70.7-33.3-127.4-90-160.7-160.7l49.3-40.4c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+    Call Now &mdash; (732) 510-8149
+  </a>
+</header>
