@@ -1,7 +1,10 @@
 ---
-import Star from "./Star.astro";
-
-const secondary = [
+const services = [
+  {
+    img: "/all-star-window-cleaning/commercial.webp",
+    title: "Window Cleaning",
+    body: "Interior and exterior window cleaning for homes and businesses. Streak-free results, every time.",
+  },
   {
     img: "/all-star-window-cleaning/wash-equipment_files/unnamed(11).webp",
     title: "Power Washing",
@@ -20,56 +23,16 @@ const secondary = [
 ];
 ---
 
-<section class="w-full bg-[#0a0a0a] py-24 px-6">
-  <div class="max-w-[1200px] mx-auto">
-
-    <!-- Header -->
-    <div class="flex flex-col items-center text-center mb-14">
-      <h2 class="flex items-center gap-4 text-4xl md:text-5xl font-black uppercase tracking-tight" style="color:#dcfb19">
-        <Star class="text-2xl shrink-0" />
-        Our Services
-        <Star class="text-2xl shrink-0" />
-      </h2>
-    </div>
-
-    <!-- Grid: 1 large left + 3 stacked right -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-      <!-- Featured: Window Cleaning -->
-      <a href="/all-star-window-cleaning/contact" class="group relative overflow-hidden rounded-2xl min-h-[480px] flex flex-col justify-end md:row-span-3">
-        <img
-          src="/all-star-window-cleaning/commercial.webp"
-          alt="Window Cleaning"
-          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.3) 100%);"></div>
-        <div class="relative z-10 p-8">
-          <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-3">Window Cleaning</h3>
-          <p class="text-white/70 text-[14px] leading-relaxed max-w-sm">
-            Interior and exterior window cleaning for homes and businesses across Central NJ. Streak-free results, every time. Free estimates guaranteed.
-          </p>
-          <span class="inline-flex items-center gap-2 mt-6 text-[13px] font-bold uppercase tracking-widest group-hover:gap-4 transition-all duration-300" style="color:#dcfb19;">
-            Get a Free Estimate →
-          </span>
-        </div>
-      </a>
-
-      <!-- 3 smaller cards -->
-      {secondary.map((s) => (
-        <a href="/all-star-window-cleaning/contact" class="group relative overflow-hidden rounded-2xl min-h-[148px] flex flex-col justify-end">
-          <img
-            src={s.img}
-            alt={s.title}
-            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.45) 100%);"></div>
-          <div class="relative z-10 p-6">
-            <h3 class="text-xl font-black uppercase tracking-tight text-white mb-1">{s.title}</h3>
-            <p class="text-white/60 text-[13px] leading-snug">{s.body}</p>
-          </div>
-        </a>
-      ))}
-
-    </div>
-  </div>
+<section aria-label="Our services" class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 bg-black">
+  {services.map(service => (
+    <a href="/all-star-window-cleaning/contact" class="group relative h-[350px] lg:h-[400px] overflow-hidden flex flex-col justify-end border-r border-white/10 last:border-r-0 focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-[#dcfb19]">
+      <img src={service.img} alt={service.title} loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.92), rgba(0,0,0,0.25));" aria-hidden="true"></div>
+      <div class="relative z-10 p-6 lg:p-8">
+        <h2 class="text-xl xl:text-2xl font-black uppercase tracking-tight text-white mb-3">{service.title}</h2>
+        <p class="text-white/80 text-sm leading-relaxed">{service.body}</p>
+        <span class="inline-block mt-5 text-xs font-bold uppercase tracking-widest text-[#dcfb19]">Get a Free Estimate →</span>
+      </div>
+    </a>
+  ))}
 </section>

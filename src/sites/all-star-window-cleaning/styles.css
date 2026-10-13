@@ -81,17 +81,18 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    padding: 16px 20px;
+    padding: 10px 20px;
+    margin-block: 6px;
+    border-radius: 4px;
     font-size: 0.96rem;
     font-weight: 600;
     color: #222;
     white-space: nowrap;
-    transition: color 0.2s;
-    border-bottom: 3px solid transparent;
+    transition: color 0.2s, background-color 0.2s;
   }
   .aswc-nav-link:hover { color: #974ff5; }
   .aswc-nav-link.active {
-    border-bottom-color: #111;
-    margin-bottom: -2px;
+    background-color: var(--color-aswc-accent);
+    color: #000;
   }
 }

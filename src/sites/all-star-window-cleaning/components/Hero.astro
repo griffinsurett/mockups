@@ -11,32 +11,30 @@ import heroImg from "../assets/hero-img.webp";
         src: heroImg,
         aboveTheFold: true,
       },
-      overlayClass: "bg-black/40",
+      overlayClass: "bg-black/60",
     }}
   />
-  <!-- Bottom fade to black -->
-  <div class="absolute inset-0 z-0" style="background: linear-gradient(to bottom, transparent 40%, #000 100%);"></div>
 
-  <div class="relative z-10 flex flex-col items-center text-center gap-8 w-full px-6">
+  <!-- Bottom fade to black -->
+  <div class="absolute inset-0 z-0 pointer-events-none" style="background: linear-gradient(to bottom, transparent 40%, #000 100%);" aria-hidden="true"></div>
+
+  <div class="relative z-10 flex flex-col items-center text-center gap-10 w-full px-6">
     <!-- Contained content -->
-    <div class="flex flex-col items-center gap-6 max-w-5xl w-full">
+    <div class="flex flex-col items-center gap-6 max-w-5xl lg:max-w-none w-full">
       <p class="flex items-center gap-3 text-sm md:text-base font-semibold uppercase tracking-[0.2em]" style="color:#dcfb19">
         <Star class="text-xl" />
         Based in Sayreville, NJ &amp; Serving All of Central NJ
         <Star class="text-xl" />
       </p>
-      <h1 class="text-white font-black uppercase leading-none text-5xl md:text-8xl drop-shadow-lg">
+      <h1 class="text-white font-black uppercase leading-none text-5xl md:text-8xl lg:text-[clamp(3rem,5.2vw,6rem)] lg:whitespace-nowrap drop-shadow-lg">
         All Star Shine Every Time
       </h1>
-      <p class="text-white/70 text-base md:text-lg max-w-xl">
-        Spotless windows for homes &amp; businesses across Central NJ. Free estimates, guaranteed satisfaction.
-      </p>
     </div>
 
     <!-- Button outside container -->
     <a
       href="/all-star-window-cleaning/contact"
-      class="aswc-btn-purple bg-aswc-accent text-white font-bold text-lg px-10 py-4 rounded tracking-wide"
+      class="aswc-btn-purple inline-flex items-center justify-center w-[300px] max-w-full h-20 bg-aswc-accent text-black font-bold text-[25px] rounded-md"
     >
       Get a Free Estimate
     </a>

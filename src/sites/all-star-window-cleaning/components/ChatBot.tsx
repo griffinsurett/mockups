@@ -305,7 +305,7 @@ function ChatBot() {
             />
           </div>
           <button type="submit" aria-label="Send" disabled={!input.trim()}
-            className="w-9 h-9 rounded-xl border-2 border-black cursor-pointer shrink-0 flex items-center justify-center text-white transition-[transform,opacity] duration-200 hover:enabled:scale-110 hover:enabled:brightness-110 active:enabled:scale-[.92] disabled:opacity-30 disabled:cursor-not-allowed"
+            className="w-9 h-9 rounded-xl border-2 border-black cursor-pointer shrink-0 flex items-center justify-center text-black transition-[transform,opacity] duration-200 hover:enabled:scale-110 hover:enabled:brightness-110 active:enabled:scale-[.92] disabled:opacity-30 disabled:cursor-not-allowed"
             style={{ background: PURPLE }}>
             <SendIcon />
           </button>
