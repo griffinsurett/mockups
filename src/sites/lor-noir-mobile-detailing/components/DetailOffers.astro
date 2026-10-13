@@ -1,0 +1,41 @@
+---
+const offers = [
+  {
+    id: "exterior-detail", eyebrow: "THE EXTERIOR", title: "A finish worth a second look.", name: "Exterior Only", price: 70, largePrice: 75,
+    image: "/sites/lor-noir-mobile-detailing/images/gallery-4.webp", alt: "Hand finishing glossy black automotive paint",
+    description: "Focused care for everything on the outside. A thorough hand wash, clean wheels, and a protective finish that brings out the depth in your paint.",
+    features: ["Careful hand wash and dry", "Wheels, tires, and wheel wells", "Exterior glass cleaned", "Protective wax finish"],
+  },
+  {
+    id: "interior-detail", eyebrow: "THE INTERIOR", title: "A fresh start for every drive.", name: "Interior Only", price: 165, largePrice: 165,
+    image: "/sites/lor-noir-mobile-detailing/images/gallery-3.webp", alt: "Freshly detailed saddle leather seats and center console",
+    description: "Give your cabin the attention it deserves. From carpets and seats to the small spaces in between, a considered clean for the part of your car you spend the most time in.",
+    features: ["Thorough cabin and carpet vacuum", "Seats cleaned for their material", "Console, vents, and trim detailed", "Interior glass cleaned"],
+  },
+];
+---
+<section id="individual-details" class="bg-[#050508] text-white px-6 md:px-16 py-16 md:py-24 border-t border-white/10">
+  <div class="max-w-7xl mx-auto space-y-12 md:space-y-20">
+    {offers.map((offer, index) => (
+      <article id={offer.id} class="grid lg:grid-cols-2 border border-white/10 overflow-hidden">
+        <div class:list={["relative min-h-72 sm:min-h-96 lg:min-h-full", { "lg:order-2": index === 1 }]}>
+          <img src={offer.image} alt={offer.alt} loading="lazy" class="absolute inset-0 w-full h-full object-cover" />
+        </div>
+        <div class="bg-black p-7 sm:p-10 lg:p-14">
+          <p class="text-[#bca477] text-xs font-bold tracking-[0.3em] mb-4">{offer.eyebrow}</p>
+          <h2 class="text-3xl md:text-4xl leading-tight mb-5" style="font-family: 'Playfair Display', serif;">{offer.title}</h2>
+          <p class="text-white/60 text-sm leading-relaxed mb-7">{offer.description}</p>
+          <div class="flex flex-wrap items-end justify-between gap-4 border-y border-white/10 py-5 mb-6">
+            <h3 class="text-xl font-bold">{offer.name}</h3>
+            <div><span class="text-xs text-white/50 mr-2">From</span><span class="text-4xl text-[#e4d5b5]" style="font-family: 'Playfair Display', serif;">${offer.price}</span></div>
+          </div>
+          <ul class="space-y-3 mb-6">
+            {offer.features.map(feature => <li class="flex items-start gap-3 text-sm text-white/80"><svg class="w-4 h-4 mt-0.5 shrink-0 text-[#bca477]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>{feature}</li>)}
+          </ul>
+          <p class="text-xs text-white/50 mb-8">Sedans &amp; coupes ${offer.price} · SUVs &amp; trucks ${offer.largePrice}</p>
+          <a href={`/lor-noir-mobile-detailing/pricing?service=${offer.id === "exterior-detail" ? "exterior" : "interior"}#pricing`} class="inline-block border border-[#bca477] text-[#e4d5b5] hover:bg-[#bca477] hover:text-black transition-colors px-6 py-3 text-xs font-bold uppercase tracking-widest">Choose {offer.name}</a>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

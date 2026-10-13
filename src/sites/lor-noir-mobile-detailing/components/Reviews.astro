@@ -1,0 +1,14 @@
+---
+const steps = [
+  { number: "01", title: "Choose your care", text: "Explore interior, exterior, and complete detailing packages for your vehicle." },
+  { number: "02", title: "Make room in your day", text: "Choose a convenient location in Miami. The detailing service comes to you." },
+  { number: "03", title: "Enjoy the finish", text: "A considered clean, from the surfaces you touch to the paint you admire." },
+];
+---
+<section class="bg-black py-20 px-6 text-white">
+  <div class="max-w-6xl mx-auto">
+    <p class="text-[#bca477] text-xs tracking-[0.3em] text-center mb-4">MADE TO FIT YOUR DAY</p>
+    <h2 class="text-3xl md:text-5xl text-center mb-12" style="font-family: 'Playfair Display', serif;">A little less effort. A finer finish.</h2>
+    <div class="grid md:grid-cols-3 gap-6">{steps.map(step => <article class="border border-white/10 p-8"><span class="text-[#bca477] text-sm">{step.number}</span><h3 class="text-xl mt-5 mb-3">{step.title}</h3><p class="text-white/60 leading-relaxed text-sm">{step.text}</p></article>)}</div>
+  </div>
+</section>

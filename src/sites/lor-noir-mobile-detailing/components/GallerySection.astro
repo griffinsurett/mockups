@@ -1,0 +1,9 @@
+---
+import GalleryCarousel from "./GalleryCarousel";
+
+import { galleryImages as images } from "../data/images";
+---
+
+<section id="gallery" class="w-full border-b-[6px] border-[#bca477]">
+  <GalleryCarousel items={images} client:visible />
+</section>

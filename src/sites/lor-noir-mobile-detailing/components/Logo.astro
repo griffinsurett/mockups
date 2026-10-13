@@ -1,0 +1,12 @@
+---
+interface Props { class?: string; variant?: 'full' | 'mark' | 'signature'; }
+const { class: className = '' } = Astro.props;
+---
+<img
+  src="/sites/lor-noir-mobile-detailing/images/lor-noir-logo.png"
+  alt="L’Or Noir Mobile Detailing"
+  width="1944"
+  height="809"
+  class:list={['block h-auto object-contain', className]}
+  decoding="async"
+/>

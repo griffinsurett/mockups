@@ -1,0 +1,72 @@
+[
+  {
+    "id": "gallery1",
+    "prompt": "Create a photorealistic luxury automotive detailing gallery photograph, landscape 3:2. A spotless obsidian black premium sports coupe, front three-quarter view, parked outside a refined modern Florida villa with pale limestone, understated palms and clean driveway. Warm late afternoon light, mirrorlike carefully detailed paint, realistic wheel geometry, sophisticated editorial car photography, natural contrast, immaculate but believable. Entire vehicle visible with breathing space, no people, no writing, no logo, no visible brand badge, blank license plate. This is an original fictional automotive detailing portfolio asset.",
+    "generationTool": "built-in image_gen",
+    "sourceOutput": "/Users/griffinsurett/.codex/generated_images/01a13132-171a-7dc0-bacd-fb959c71215b/exec-fe84e74d-2afe-44ef-ac3d-595b61f6f63d.png",
+    "asset": "public/sites/lor-noir-mobile-detailing/images/gallery-1.webp"
+  },
+  {
+    "id": "gallery2",
+    "prompt": "Photorealistic luxury MOBILE detailing portfolio photograph, landscape 3:2. Immaculate pearl white luxury SUV side rear three-quarter view on the driveway of an understated contemporary Central Florida residence, palms, pale stucco, soft morning light. Rich clean black tires, precise realistic alloy wheels and pristine paint reflections. A discreet unbranded compact detailing cart in far background suggests on-site service. Entire vehicle visible. Premium editorial photography, believable real materials, no text, no logos, no readable plates, no people. Not a showroom.",
+    "generationTool": "built-in image_gen",
+    "sourceOutput": "/Users/griffinsurett/.codex/generated_images/01a13132-171a-7dc0-bacd-fb959c71215b/exec-13fb468f-47d6-4895-8756-517696939e54.png",
+    "asset": "public/sites/lor-noir-mobile-detailing/images/gallery-2.webp"
+  },
+  {
+    "id": "gallery3",
+    "prompt": "Luxury mobile car detailing gallery photograph, photorealistic, landscape 3:2. Close view through open passenger door of an immaculate modern grand touring coupe interior, saddle tan leather seats with precise perforations, black floor mat and center console, clean realistic stitching and matte natural leather finish. Parked on shaded driveway in Miami Florida, soft tropical daylight, discreet palm foliage bokeh outside. Premium editorial photography, no people, no logos, no writing, not a collage. All textures realistic, no plastic CGI look.",
+    "generationTool": "built-in image_gen",
+    "sourceOutput": "/Users/griffinsurett/.codex/generated_images/01a13132-171a-7dc0-bacd-fb959c71215b/exec-a681ec1c-2505-427d-a6b2-3340b614a3d2.png",
+    "asset": "public/sites/lor-noir-mobile-detailing/images/gallery-3.webp"
+  },
+  {
+    "id": "gallery4",
+    "prompt": "Photorealistic premium mobile automotive detailing portfolio photograph, landscape 3:2. Close editorial view of a professional detailer's black nitrile gloved hand using a folded plush charcoal microfiber towel on the glossy deep graphite hood of a luxury sports car. Partial arm only, anatomically correct hand with towel, no face. A shaded upscale Miami residential driveway with subtle palm reflections in paint, soft daylight, meticulous tactile textures, restrained warm highlights. Vehicle parked at customer's home not a workshop. No branding, no letters, no watermarks. Beautiful luxury detailing feel, natural photograph.",
+    "generationTool": "built-in image_gen",
+    "sourceOutput": "/Users/griffinsurett/.codex/generated_images/01a13132-171a-7dc0-bacd-fb959c71215b/exec-fc3069ef-d430-4887-a12e-a4fbf068d101.png",
+    "asset": "public/sites/lor-noir-mobile-detailing/images/gallery-4.webp"
+  },
+  {
+    "id": "paint-before",
+    "prompt": "Create a photorealistic BEFORE mobile detailing photograph, landscape 3:2, one image only. Close three-quarter view of the front quarter of an unbranded deep black luxury coupe on a pale paved Miami residential driveway. Hood, headlight, front wheel and fender dominate frame. Paint covered with realistic road film, dust and fine wash swirl marks, dirty lower rocker, light brake dust. Neglected for a few weeks, not damaged, no dents or rust. Soft overcast daylight gives consistent reflections. Camera tripod at hood height, 50mm lens, luxury house and palms subtly visible background. This will be the fixed composition of a before/after slider; believable car geometry, precise materials, no text, no logos, no people, no split screen.",
+    "generationTool": "built-in image_gen",
+    "sourceOutput": "/Users/griffinsurett/.codex/generated_images/01a13132-171a-7dc0-bacd-fb959c71215b/exec-5abcffe3-ea36-48a0-9ac5-b6fc30c0d082.png",
+    "asset": "public/sites/lor-noir-mobile-detailing/images/paint-before.webp"
+  },
+  {
+    "id": "paint-after",
+    "prompt": "Edit this exact photo to show the AFTER professional detailing result. Keep pixel-aligned composition: identical car body, headlight, wheel spokes, camera angle, framing, background buildings, paving, palm trees, and soft overcast lighting. Change only cleanliness: remove all dust, road film, muddy marks and fine wash swirls; reveal pristine glossy deep black paint, clear headlight, clean alloy wheel and satin black tire. Preserve natural reflections in same positions. No new objects or design changes. Landscape 3:2, one photo, no text. Must align convincingly in a before/after comparison slider.",
+    "generationTool": "built-in image_gen",
+    "sourceOutput": "/Users/griffinsurett/.codex/generated_images/01a13132-171a-7dc0-bacd-fb959c71215b/exec-16abc3d7-6640-4f94-b629-42000bf6b620.png",
+    "asset": "public/sites/lor-noir-mobile-detailing/images/paint-after.webp"
+  },
+  {
+    "id": "interior-before",
+    "prompt": "Photorealistic BEFORE mobile detailing photo, landscape 3:2. Camera looks downward through open passenger door at front passenger seat and footwell of a modern luxury car. Cream beige leather seat with ordinary surface grime, a few subtle dark smudges and sand in seams; black fitted carpet floor mat has obvious Florida beach sand and a few tiny dry leaf fragments. No torn materials, no permanent damage, no trash pile. Seat, floor and lower console dominate image; exact coherent seams and seat geometry, soft diffused natural daylight on a Miami driveway. Realistic used car needing a thorough interior detail. One photograph, no text, no logos, no people, no split frame. Composition intended for pixel-aligned before and after comparison.",
+    "generationTool": "built-in image_gen",
+    "sourceOutput": "/Users/griffinsurett/.codex/generated_images/01a13132-171a-7dc0-bacd-fb959c71215b/exec-067c6e3a-d962-4fec-811f-cd4b7223555e.png",
+    "asset": "public/sites/lor-noir-mobile-detailing/images/interior-before.webp"
+  },
+  {
+    "id": "interior-after",
+    "prompt": "Edit this EXACT photograph into the AFTER interior detailing result. Strict pixel-aligned same framing, seat geometry, seams, door sill, center console, carpet outline and lighting. Change ONLY cleanliness: remove every grain of sand and leaf from black carpet and seat seams, clean surface grime and dark smudges from cream beige leather to its original clean matte finish, dust-free console. Retain stitching, perforations, natural gentle leather creases and all hardware exactly. Not a new seat or different car. One landscape 3:2 image, no labels or text, for an aligned before/after slider.",
+    "generationTool": "built-in image_gen",
+    "sourceOutput": "/Users/griffinsurett/.codex/generated_images/01a13132-171a-7dc0-bacd-fb959c71215b/exec-54b4d93d-6660-4fa4-9857-5766d4350dc1.png",
+    "asset": "public/sites/lor-noir-mobile-detailing/images/interior-after.webp"
+  },
+  {
+    "id": "wheel-before",
+    "prompt": "Photorealistic BEFORE mobile wheel detailing photograph, landscape 3:2. Precisely side-on close-up of a single five-spoke silver alloy wheel and black tire on a dark graphite premium sports car, complete circular wheel visible centered, lower fender and wheel arch visible around it, beige Miami driveway pavers below. Wheel coated in realistic brown-gray brake dust with grime between spokes, slightly dusty tire, no damage or corrosion, no logos on center cap, no readable tire lettering. Soft overcast light, sharp material texture, accurate circular geometry and five spokes. Intended as fixed before/after slider composition, one photograph, no labels or people.",
+    "generationTool": "built-in image_gen",
+    "sourceOutput": "/Users/griffinsurett/.codex/generated_images/01a13132-171a-7dc0-bacd-fb959c71215b/exec-964a43e3-c968-41ec-be0b-bfef598b26fd.png",
+    "asset": "public/sites/lor-noir-mobile-detailing/images/wheel-before.webp"
+  },
+  {
+    "id": "wheel-after",
+    "prompt": "Edit the supplied EXACT wheel photograph into AFTER professional detailing. Lock camera, framing, five spokes, wheel shape, valve stem, lug nuts, brake disc and caliper, body panels, paving and background pixel-aligned. Change only cleanliness: remove brown-gray brake dust and grime from silver alloy spokes and rim, clean tire to natural satin black, clean adjacent graphite bodywork. Retain realistic metal textures and brake disc wear; no new wheels or tire tread, no overshiny wet tire. Same overcast daylight. One landscape 3:2 photograph, no labels, text or logos. For precisely matched before/after slider.",
+    "generationTool": "built-in image_gen",
+    "sourceOutput": "/Users/griffinsurett/.codex/generated_images/01a13132-171a-7dc0-bacd-fb959c71215b/exec-ae49a94f-517a-427e-bcc9-b439c7ba089c.png",
+    "asset": "public/sites/lor-noir-mobile-detailing/images/wheel-after.webp"
+  }
+]

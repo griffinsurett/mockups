@@ -1,0 +1,20 @@
+---
+import DetailOffers from "../components/DetailOffers.astro";
+import Layout from "../Layout.astro";
+import TopBar from "../components/TopBar.astro";
+import Header from "../components/Header.astro";
+import PricingSection from "../components/PricingSection.astro";
+import PageHero from "../components/PageHero.astro";
+import GallerySection from "../components/GallerySection.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Pricing — L’Or Noir Mobile Detailing" description="Transparent pricing for mobile car detailing in Miami, Florida. Sedans, SUVs, trucks, and add-ons.">
+  <TopBar />
+  <Header />
+  <PageHero title="Premium Pricing Packages" subtitle="Transparent Pricing · No Hidden Fees" breadcrumb="Pricing" />
+  <PricingSection />
+  <DetailOffers />
+  <GallerySection />
+  <Footer />
+</Layout>

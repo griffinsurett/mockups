@@ -1,0 +1,93 @@
+---
+import Logo from './Logo.astro';
+import navItems from '../data/nav.json';
+---
+<header id="cd-header" class="w-full fixed top-11 left-0 py-4 px-4 lg:px-16 flex justify-between items-center z-50 transition-colors duration-300 bg-transparent">
+  <!-- Mobile: phone icon left -->
+  <a href="/lor-noir-mobile-detailing/contact#inquiry" class="flex lg:hidden items-center text-[#bca477] hover:text-[#e4d5b5] transition-colors" aria-label="Explore detailing packages">
+    <i class="ph-fill ph-calendar-check text-2xl"></i>
+  </a>
+
+  <!-- Logo: centered on mobile, left on desktop -->
+  <div class="absolute left-1/2 -translate-x-1/2 lg:static lg:left-auto lg:translate-x-0 flex items-center text-white">
+    <a href="/lor-noir-mobile-detailing"><Logo class="w-44 lg:w-56" /></a>
+  </div>
+
+  <nav class="hidden lg:flex items-center text-white text-sm font-bold tracking-wider space-x-6">
+    {navItems.map((item, i) => (
+      <>
+        <a href={item.href} class={i === 0 ? "border-b-2 border-[#bca477] pb-1" : "hover:text-gray-300 pb-1"}>{item.label}</a>
+        {i < navItems.length - 1 && <span class="text-gray-500">|</span>}
+      </>
+    ))}
+  </nav>
+
+  <div class="hidden lg:block">
+    <a href="/lor-noir-mobile-detailing/contact" class="bg-linear-to-r from-[#bca477] to-[#e4d5b5] text-black font-bold py-3 px-6 rounded text-sm tracking-wider hover:opacity-90 transition-opacity uppercase">
+      BOOK NOW
+    </a>
+  </div>
+
+  <button id="cd-menu-btn" class="block lg:hidden text-white focus:outline-none p-1 z-50" aria-label="Toggle Menu" aria-controls="cd-mobile-menu" aria-expanded="false">
+    <i class="ph ph-list text-3xl transition-transform duration-300" id="cd-menu-icon"></i>
+  </button>
+
+  <div id="cd-mobile-menu" class="hidden absolute top-full left-0 w-full bg-black border-t border-gray-900 py-6 px-8 flex flex-col space-y-6 z-40 shadow-2xl">
+    {navItems.map((item) => (
+      <a href={item.href} class="text-white hover:text-[#bca477] font-bold tracking-wider py-2 border-b border-gray-950 transition-colors">{item.label}</a>
+    ))}
+    <a href="/lor-noir-mobile-detailing/contact" class="bg-linear-to-r from-[#bca477] to-[#e4d5b5] text-black font-bold text-center py-3 rounded text-sm tracking-wider hover:opacity-90 transition-opacity uppercase block">
+      BOOK NOW
+    </a>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('cd-header');
+  const menuBtn = document.getElementById('cd-menu-btn');
+  const mobileMenu = document.getElementById('cd-mobile-menu');
+  const menuIcon = document.getElementById('cd-menu-icon');
+  const topbar = document.getElementById('cd-topbar');
+
+  const topbarH = topbar ? topbar.offsetHeight : 44;
+
+  if (header) {
+    const onScroll = () => {
+      const scrolled = window.scrollY;
+      if (scrolled > 10) {
+        // Slide topbar up out of view
+        if (topbar) topbar.style.transform = `translateY(-100%)`;
+        // Move header to top
+        header.style.top = '0px';
+        header.classList.add('bg-black');
+        header.classList.remove('bg-transparent');
+      } else {
+        // Restore topbar
+        if (topbar) topbar.style.transform = 'translateY(0)';
+        header.style.top = topbarH + 'px';
+        header.classList.remove('bg-black');
+        header.classList.add('bg-transparent');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  if (menuBtn && mobileMenu && menuIcon) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
+      menuIcon.className = mobileMenu.classList.contains('hidden')
+        ? 'ph ph-list text-3xl'
+        : 'ph ph-x text-3xl';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.className = 'ph ph-list text-3xl';
+      });
+    });
+  }
+</script>

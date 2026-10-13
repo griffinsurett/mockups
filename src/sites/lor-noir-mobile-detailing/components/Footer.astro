@@ -1,0 +1,24 @@
+---
+import Logo from './Logo.astro';
+---
+<footer class="bg-black text-white px-4 lg:px-16 pt-16 pb-8">
+  <div class="w-full grid sm:grid-cols-2 lg:grid-cols-[1.15fr_1.5fr_1fr_1fr] gap-10 pb-12">
+    <Logo class="w-72 max-w-full" />
+    <div><h3 class="text-[#bca477] text-xs tracking-widest mb-4">AT YOUR ADDRESS</h3><p class="text-sm text-white/70 leading-loose">Based in Miami, Florida<br />Serving Miami and the Surrounding Areas<br />Including Fort Lauderdale</p></div>
+    <div><h3 class="text-[#bca477] text-xs tracking-widest mb-4">EXPLORE L’OR NOIR</h3><a class="block text-sm mb-3" href="/lor-noir-mobile-detailing/pricing">Detailing packages</a><a class="block text-sm" href="/lor-noir-mobile-detailing/contact">Book your detail</a></div>
+    <nav aria-label="Legal policies"><h3 class="text-[#bca477] text-xs tracking-widest mb-4">LEGAL</h3>
+      {['Privacy Policy', 'Cookie Policy', 'Terms of Service'].map(label => (
+        <a href="#" data-policy-placeholder class="block text-sm mb-3 hover:text-[#e4d5b5] hover:underline underline-offset-4 transition-colors">{label}</a>
+      ))}
+    </nav>
+  </div>
+  <div class="w-full border-t border-white/10 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-base leading-relaxed text-[#b3b3b3]">
+  <p class="leading-relaxed">© {new Date().getFullYear()} L’Or Noir Mobile Detailing. All rights reserved.</p>
+    <p class="md:text-right">Powered by <a href="https://webmaxxers.com" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-6 items-center font-semibold text-[#e6e6e6] hover:text-white hover:underline underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e4d5b5]">Webmaxxers</a></p>
+  </div>
+</footer>
+<script>
+  document.querySelectorAll('[data-policy-placeholder]').forEach(link => {
+    link.addEventListener('click', event => event.preventDefault());
+  });
+</script>
